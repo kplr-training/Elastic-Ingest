@@ -17,3 +17,4 @@
 - Agent policies are used to manage settings across a group of agents. 
 - You can add integrations to your agent policy to specify what data your agents collect.
 - Policy need to be linked to a fleet server host
+- https://www.elastic.co/guide/en/fleet/current/agent-policy.html#change-policy-output
