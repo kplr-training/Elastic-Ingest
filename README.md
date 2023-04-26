@@ -13,3 +13,4 @@
 - one elastic agent can be configured to have many integrations 
 - An integration can be added to only one policy, a policy can be tied to many integrations
 - Many agents can be enrolled to a policy
+- Each Elastic Agent can only be enrolled in a single policy.
