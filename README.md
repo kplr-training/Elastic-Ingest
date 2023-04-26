@@ -19,3 +19,5 @@
 - Policy need to be linked to a fleet server host
 - https://www.elastic.co/guide/en/fleet/current/agent-policy.html#change-policy-output
 - Configuration des outputs : Fleet > settings > outputs
+- By default, each policy enables the system integration, which collects system information and metrics.
+- Each integration class has one common set of assets ( dashboards, viz, etc)
