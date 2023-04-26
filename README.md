@@ -14,4 +14,6 @@
 - An integration can be added to only one policy, a policy can be tied to many integrations
 - Many agents can be enrolled to a policy
 - Each Elastic Agent can only be enrolled in a single policy.
-- Agent policies are used to manage settings across a group of agents. You can add integrations to your agent policy to specify what data your agents collect.
+- Agent policies are used to manage settings across a group of agents. 
+- You can add integrations to your agent policy to specify what data your agents collect.
+- Policy need to be linked to a fleet server host
