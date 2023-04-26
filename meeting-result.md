@@ -39,3 +39,16 @@ Donc, on ajoute une configuration pour reconstruire une seule ligne de log à pa
 ## La configuration de Logstash Output
 
 - On choisit comme type d'output: logstash
+
+![image](https://user-images.githubusercontent.com/123748177/234723165-47bf7e64-07c8-4eba-b67d-ed2964350c37.png)
+
+- On doit ajouter une configuration additionelle pour la pipeline, voilà l'exemple proposé: 
+
+![image](https://user-images.githubusercontent.com/123748177/234723444-25284409-6191-44da-98d4-f59f73157aa2.png)
+![image](https://user-images.githubusercontent.com/123748177/234723488-eb69e4e1-4fd0-4714-9533-3ce50490f0cc.png)
+
+- Il faut aussi injecter les certificats SSL , on crée un certificat pour tous les noeuds du cluster.
+- La première est la clé publique de la certificat et la deuxième est la clé privée.
+
+![image](https://user-images.githubusercontent.com/123748177/234723596-5859b2f7-7410-4354-b950-d798392b74c5.png)
+
