@@ -11,12 +11,15 @@
 - La version de windows utilisé est windows server 2020
 ## La configuration de l'intégration Custom Logs
 
-On précise le chemin vers le fichier des logs
+Pour configurer le custom logs, on précise le chemin vers le fichier des logs:
+
 ![image](https://user-images.githubusercontent.com/123748177/234714625-9833b979-cbfa-4d1c-ae9a-4268850ab049.png)
 
 Dans Constum configuration, on ajoute une gestion de Multiline vu que un log n'est pas présenté dans une seule ligne mais dans plusieurs lignes. 
+
 ![image](https://user-images.githubusercontent.com/123748177/234717521-1f3abb45-95c4-469c-8443-2dc7803cd9ee.png)
 
 
 Donc, on ajoute une configuration pour reconstruire une seule ligne de log à partir des informations du log trouvé entre `#` et `#end`.
+
 ![image](https://user-images.githubusercontent.com/123748177/234715090-c8580e84-ec14-4dd9-9c10-cee18c26e70a.png)
