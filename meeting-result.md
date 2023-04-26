@@ -23,3 +23,19 @@ Dans Constum configuration, on ajoute une gestion de Multiline vu que un log n'e
 Donc, on ajoute une configuration pour reconstruire une seule ligne de log à partir des informations du log trouvé entre `#` et `#end`.
 
 ![image](https://user-images.githubusercontent.com/123748177/234715090-c8580e84-ec14-4dd9-9c10-cee18c26e70a.png)
+
+## Back to what have been said !
+
+- La configuration de l'intégration se fait dans Kibana et par la suite l'intégration est définit dans une policy.
+- le Fleet server va chercher l'intégration sur le serveur Elastic et la met en disposition des agents qui sont associés à la policy correspondante de l'intégration.
+- Les agents cherchent les policies dans le fleet server.
+- Un agent peut etre associé à une seule policy.
+- Les agents cherchent tous seuls les intégrations configurés dans Elastic pour la policy correspondante.
+- RIEN à FAIRE SUR L'AGENT!!
+- Les données sont envoyés sur l'output configuré pour etre par la suite ingérer dans Elasticsearch.
+- L'output peut etre soit un serveur Elastic soit un serveur Logstash.
+- On peut avoir plusieurs outputs. 
+
+## La configuration de Logstash Output
+
+- On choisit comme type d'output: logstash
