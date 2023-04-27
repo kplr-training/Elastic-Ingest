@@ -80,3 +80,6 @@ Vous pouvez également visualiser les processors:
 
 ## Ajout d'un Custom Windows Event Logs Integration
 
+Pour ajouter une intégration de type `Custom Windows Event Logs`, redirigez vous vers l'interface `Integrations` dans le menu `Management`.
+
+![image](https://user-images.githubusercontent.com/123748177/234854155-b648f4d5-c6a3-4373-ba68-5dc42cb26d0c.png)
