@@ -1,4 +1,4 @@
-## Installation d'Elasticsearch et Kibana sur un noeud unique  
+## Installation d'Elasticsearch et Kibana
 
 Ce workshop a pour objectif de fournir un guide pratique pour l'installation d'Elasticsearch et Kibana sur une machine single, tout en se concentrant sur les aspects fondamentaux de la configuration et de l'utilisation de ces deux outils.  
 
@@ -96,4 +96,20 @@ systemctl status kibana
 ![image](https://user-images.githubusercontent.com/123748177/228309327-a8321452-8bd4-4621-83cd-160b9c670f13.png)
 
 **Félicitations!! Vous pouvez maintenant vous connecter à Kibana à partir de votre navigateur en utilisant l'adresse IP Public de votre machine suivi par le port 5601**
+
+## 3- Installation Logstash:
+
+Vous installez Logstash à l'aide de la commande suivante:
+```
+sudo apt-get update && sudo apt-get install -y logstash
+```
+
+Pour ce faire, exécuter les commandes suivantes: 
+```
+systemctl daemon-reload
+
+systemctl enable logstash
+
+systemctl start logstash
+```
 
