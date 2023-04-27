@@ -73,3 +73,8 @@ PUT _ingest/pipeline/my-pipeline
 Vous pouvez vérifier que votre pipeline est bien créé à partir de l'interface `Ingest Pipelines` dans `Stack Management`.
 
 ![image](https://user-images.githubusercontent.com/123748177/234852105-6477952a-ad99-480f-9a2a-ea04f9912475.png)
+
+Vous pouvez également visualiser les processors: 
+
+![image](https://user-images.githubusercontent.com/123748177/234852262-c483bdca-8f2f-4f62-b3af-6416dfed0bc3.png)
+
