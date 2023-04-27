@@ -12,7 +12,7 @@ Vous aurez toute la liste des canaux de journal d'événements disponibles affic
 ![image](https://user-images.githubusercontent.com/123748177/234847355-b5f3aaa7-2ba5-4401-bdef-79e740381b2b.png)
 
 
-- **Ce qui nous intèresse c'est le canal `Microsoft-Windows-WMI-Activity/Operational`** 
+- **Ce qui nous intèresse c'est le canal `Microsoft-Windows-WMI-Activity/Operational` qu'on va ingérer par la suite** 
 
 ## Création d'un Ingest Pipeline
 
@@ -77,4 +77,6 @@ Vous pouvez vérifier que votre pipeline est bien créé à partir de l'interfac
 Vous pouvez également visualiser les processors: 
 
 ![image](https://user-images.githubusercontent.com/123748177/234852262-c483bdca-8f2f-4f62-b3af-6416dfed0bc3.png)
+
+## Ajout d'un Custom Windows Event Logs Integration
 
