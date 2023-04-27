@@ -34,6 +34,8 @@ Pour créer un pipeline, cliquez sur `Create pipeline` puis sur `New pipeline`.
 
 [Puis, suivez ce tutoriel...](https://www.elastic.co/guide/en/elasticsearch/reference/current/common-log-format-example.html)
 
+[Processor Reference](https://www.elastic.co/guide/en/elasticsearch/reference/current/processors.html)
+
 **Méthode 2**
 
 Vous pouvez également utiliser les API d'ingestion pour créer et gérer des pipelines. 
