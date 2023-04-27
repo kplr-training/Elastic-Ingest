@@ -52,3 +52,28 @@ Donc, on ajoute une configuration pour reconstruire une seule ligne de log à pa
 
 ![image](https://user-images.githubusercontent.com/123748177/234723596-5859b2f7-7410-4354-b950-d798392b74c5.png)
 
+## Les étapes séquentielles à suivre pour la mise en place du projet
+
+- Installez la couche système (VM, Docker, etc...)
+- Installez Elasticsearch ( Single node or cluster)
+- Installez Kibana
+- Installez Logstash
+- Installez et configurez le Fleet server
+- Déployez des Elastic Agents
+- Configurez d'abord les outputs (nécessaires pour créer des intégrations)
+- Créez des policies
+- Créez les pipelines si besoin :
+        * Si vous avez logstash comme output vous ne serez pas besoin de créer un pipeline vu qu'il est déjà configuré dans logstash.
+
+        * Sinon vous créez un pipeline Elastic.
+
+        * il est recommandé d'ajouter le pipeline dans la partie `ingest pipelines` dans la configuration de l'intégration
+        
+- Créez les instances des intégrations et les mettez dans les policies ( peuvent etre personnalisés (custom))
+
+## Remarques
+
+- Logstash sert à minimiser la charge qui peut influencer le serveur Elasticsearch s'il est en communication direct avec les agents.
+- On peut ajouter Kafka entre Logstash et les Elastic agents pour gérer la charge.
+- Elastic agent ne sait pas utilisé Kafka comme output! il nécessite Logstash ou ELastic.
+- Pour ajouter Kafka, on doit ajouter tout d'abord un serveur Logstash qui va etre utiliser seulement pour pointer vers Kafka qui pointe par la suite vers un autre serveur Logstash.
