@@ -92,5 +92,48 @@ Il est possible qu'il y ait plusieurs utilisateurs renvoyés si plusieurs utilis
 
 Dans ce cas, on fixe le `max_matches` en 1 vu que vous voulez renvoyer uniquement un seul document.
 
+**Vous pouvez vérifier que votre ingest pipeline est bien créé en cherchant dans `Stack Management` > `Ingest Pipelines`**
+
+
 ![image](https://user-images.githubusercontent.com/123748177/234878411-02555fa6-36c6-492d-81b3-d72c94542d45.png)
+
+Vous allez insérer maintenant un nouveau document avec uniquement un champ "email". 
+
+Vous allez spécifier explicitement l'utilisation de ce pipeline d'ingestion que vous venez de configurer pour obtenir les données enrichies. 
+
+```
+PUT /my-index-000001/_doc/my_id?pipeline=user_lookup
+{
+  "email": "mardy.brown@asciidocsmith.com"
+}
+```
+
+Pour vérifier si le processeur d'enrichissement a effectué une correspondance et ajouté les données de champ appropriées, utilisez l'API "get" pour afficher le document indexé.
+
+```
+GET /my-index-000001/_doc/my_id
+```
+Vous aurez le résultat suivant :
+
+```
+{
+  "found": true,
+  "_index": "my-index-000001",
+  "_id": "my_id",
+  "_version": 1,
+  "_seq_no": 55,
+  "_primary_term": 1,
+  "_source": {
+    "user": {
+      "email": "mardy.brown@asciidocsmith.com",
+      "first_name": "Mardy",
+      "last_name": "Brown",
+      "zip": 70116,
+      "city": "New Orleans",
+      "state": "LA"
+    },
+    "email": "mardy.brown@asciidocsmith.com"
+  }
+}
+```
 
