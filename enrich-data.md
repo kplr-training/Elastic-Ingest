@@ -92,3 +92,5 @@ Il est possible qu'il y ait plusieurs utilisateurs renvoyés si plusieurs utilis
 
 Dans ce cas, on fixe le `max_matches` en 1 vu que vous voulez renvoyer uniquement un seul document.
 
+![image](https://user-images.githubusercontent.com/123748177/234878411-02555fa6-36c6-492d-81b3-d72c94542d45.png)
+
