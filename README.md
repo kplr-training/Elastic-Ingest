@@ -21,3 +21,4 @@
 - Configuration des outputs : Fleet > settings > outputs
 - By default, each policy enables the system integration, which collects system information and metrics.
 - Each integration class has one common set of assets ( dashboards, viz, etc)
+- Fleet server policy is a special agent policy because fleet server itself is a specific elastic agent. 
