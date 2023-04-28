@@ -73,3 +73,6 @@ unzip elastic-stack-ca.zip
 
 6- Enregistrez le pipeline et redémarrez Logstash afin que les modifications prennent effet.
 
+7- Vous devez précisez l'adresse que les agents vont utiliser pour se connecter à Logstash
+
+![image](https://user-images.githubusercontent.com/123748177/235174010-7e450e63-7c76-482f-9880-0cf9a6a527fc.png)
