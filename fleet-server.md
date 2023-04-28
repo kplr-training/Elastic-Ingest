@@ -16,6 +16,7 @@ Maintenant, donnez un nom à votre Fleet server et puis saisissez l'URL vers la 
 
 ![image (4)](https://user-images.githubusercontent.com/123748177/235185833-4b055fa0-77f6-44ab-8443-b5d8b39573db.png)
 
+Vous cliquez sur le boutton `Generate Fleet Server Policy` pour générer la policy vu qu'un Fleet Server est de base un Elastic Agent donc il nécessite une policy.
 
 ![image (5)](https://user-images.githubusercontent.com/123748177/235185830-6e642b02-2d9b-4369-a662-a2dbcac9fd9a.png)
 
