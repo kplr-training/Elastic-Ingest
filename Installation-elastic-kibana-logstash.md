@@ -39,6 +39,10 @@ network.host: 127.0.0.1
 http.port: 9200
 
 ```
+tips : 
+```
+sed -i 's/#network.host: 192.168.0.1/network.host: 127.0.0.1/g' /etc/elasticsearch/elasticsearch.yml
+```
 
 - Lancez Elasticsearch:
 ```
@@ -104,12 +108,43 @@ Vous installez Logstash à l'aide de la commande suivante:
 sudo apt-get update && sudo apt-get install -y logstash
 ```
 
-Pour ce faire, exécuter les commandes suivantes: 
+Pour tester que Logstash s'exécute correctement, vous allez créer une simple pipeline de test.
+
+Dans le répertoire `etc/logstash`, créez les deux fichiers suivants : 
+
+- `hello.txt` dans lequel vous tapez `hello logstash` 
+
+- `easy-pipeline.conf` dans lequel vous tapez la configuration suivante:
+
 ```
-systemctl daemon-reload
-
-systemctl enable logstash
-
-systemctl start logstash
+input {
+  file {
+    path => "/etc/logstash/hello.txt"
+    start_position => "beginning"
+  }
+}
+output {
+  elasticsearch {
+    hosts => ["http://IP-ADRESS:9200"]
+    index => "hello-logstash-%{+YYYY.MM.dd}"
+    user => "elastic"
+    password => "elastic"
+    ssl => true
+    cacert => "/etc/logstash/config/certs/http_ca.crt"
+  }
+}
 ```
 
+Vous copiez le fichier de certificat d'Elasticsearch dans le répertoire des certificats de Logstash: 
+
+```
+cp /etc/elasticsearch/certs/http_ca.crt  /etc/logstash/config/certs/http_ca.crt 
+```
+
+Vous tapez la commande suivante pour exécuter la pipeline de test: 
+
+```
+/usr/share/logstash/bin/logstash -f /etc/logstash/easy-pipeline.conf
+```
+
+**Vérifiez qu'un index qui porte le nom `hello-logstash` est bien créé**
