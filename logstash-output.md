@@ -27,20 +27,19 @@ input {
   elastic_agent {
     port => 5044
     ssl => true
-    ssl_certificate_authorities => ["<ca_path>"]
-    ssl_certificate => "<server_cert_path>"
-    ssl_key => "<server_cert_key_in_pkcs8>"
-    ssl_verify_mode => "force_peer"
+    #ssl_certificate_authorities => ["<ca_path>"]
+    ssl_certificate => "/etc/logstash/config/certs/ca/ca.crt"
+    ssl_key => "/etc/logstash/config/certs/ca/ca.key"
+    ssl_verify_mode => "none"
   }
 }
-
 output {
   elasticsearch {
-    hosts => "<es_host>"
-    api_key => "<api_key>"
+    hosts => "https://ELASTIC-IP-ADRESS:9200"
+    api_key => "tqRyyIcBjFkAS0G-8u_C:YuxFcNOWQni3iZPUJKSYSw"
     data_stream => true
     ssl => true
-    # cacert => "<elasticsearch_ca_path>"
+    cacert => "/etc/logstash/config/certs/http_ca.crt"
   }
 }
 
