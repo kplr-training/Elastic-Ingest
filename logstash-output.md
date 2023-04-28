@@ -69,3 +69,4 @@ Cette commande crée un fichier zip contenant le certificat CA et la clé que vo
 ```
 unzip 
 ```
+![image](https://user-images.githubusercontent.com/123748177/235146035-6fa22863-c645-42b1-a12f-5653dea6e90e.png)
