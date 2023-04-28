@@ -60,13 +60,16 @@ NB: Remplacez le chemin vers votre fichier.
 
 Pour ce faire, vous devez exécutez la commande suivante: 
 ```
-./bin/elasticsearch-certutil ca --pem
+/usr/share/elasticsearch/bin/elasticsearch-certutil ca --pem
 ```
 Cette commande crée un fichier zip contenant le certificat CA et la clé que vous utiliserez pour signer les certificats. 
 
 5-  Extrayez le fichier zip :
 
 ```
-unzip 
+unzip elastic-stack-ca.zip
 ```
 ![image](https://user-images.githubusercontent.com/123748177/235146035-6fa22863-c645-42b1-a12f-5653dea6e90e.png)
+
+6- Enregistrez le pipeline et redémarrez Logstash afin que les modifications prennent effet.
+
