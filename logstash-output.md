@@ -76,3 +76,6 @@ unzip elastic-stack-ca.zip
 7- Vous devez précisez l'adresse que les agents vont utiliser pour se connecter à Logstash
 
 ![image](https://user-images.githubusercontent.com/123748177/235174010-7e450e63-7c76-482f-9880-0cf9a6a527fc.png)
+
+![image](https://user-images.githubusercontent.com/123748177/235174854-2deeec0a-d29e-4ce1-a2c9-db3aa616089e.png)
+
