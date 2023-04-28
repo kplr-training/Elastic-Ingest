@@ -19,8 +19,53 @@ Ensuite, vous devez suivre les étapes de configuration additionnelle dans Logst
 ![image](https://user-images.githubusercontent.com/123748177/235137339-5e837a48-c540-4de7-bee4-d5d270a56a98.png)
 
 1- Vous générez d'abord l'API key.
-2- Ouvrez la fichier `elastic-agent-pipeline.conf` et ajoutez la configuration suivante: 
+
+2- Ouvrez la fichier `elastic-agent-pipeline.conf` et ajoutez la configuration suivante (REMARQUE! : Vous allez la modifier par la suite):
+
+````
+input {
+  elastic_agent {
+    port => 5044
+    ssl => true
+    ssl_certificate_authorities => ["<ca_path>"]
+    ssl_certificate => "<server_cert_path>"
+    ssl_key => "<server_cert_key_in_pkcs8>"
+    ssl_verify_mode => "force_peer"
+  }
+}
+
+output {
+  elasticsearch {
+    hosts => "<es_host>"
+    api_key => "<api_key>"
+    data_stream => true
+    ssl => true
+    # cacert => "<elasticsearch_ca_path>"
+  }
+}
+
 ````
 
+3- Dans votre répertoire de configuration Logstash, ouvrez le fichier `pipelines.yml` et ajoutez la configuration suivante.
 
-````
+NB: Remplacez le chemin vers votre fichier.
+
+```
+- pipeline.id: elastic-agent-pipeline
+  path.config: "/etc/path/to/elastic-agent-pipeline.conf"
+
+```
+
+4- Maintenant, vous devez créer votre autorité de certificat pour avoir votre certificat et sa clé privée.
+
+Pour ce faire, vous devez exécutez la commande suivante: 
+```
+./bin/elasticsearch-certutil ca --pem
+```
+Cette commande crée un fichier zip contenant le certificat CA et la clé que vous utiliserez pour signer les certificats. 
+
+5-  Extrayez le fichier zip :
+
+```
+unzip 
+```
