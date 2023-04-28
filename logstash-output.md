@@ -6,4 +6,4 @@ Dans ce contexte, l'agent output de type Logstash est utilisé pour acheminer le
 
 **Création d'un Output Logstash** 
 
-Pour créer un nouveau output, redirigez vous vers 
+Pour créer un nouveau output, redirigez vous vers `Management` > `Fleet` > `Settings` > `Outputs` > `Add Output`
