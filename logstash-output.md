@@ -82,3 +82,5 @@ unzip elastic-stack-ca.zip
 ![image](https://user-images.githubusercontent.com/123748177/235174854-2deeec0a-d29e-4ce1-a2c9-db3aa616089e.png)
 
 9- Cliquez `Save and Apply settings`, et Voilà! vous avez créé votre output avec succès.
+
+![image](https://user-images.githubusercontent.com/123748177/235177522-107ad5a2-2c35-4404-aa3f-44d2a6c3744f.png)
