@@ -8,9 +8,14 @@ Il offre également une architecture évolutive. À mesure que la taille de votr
 
 ## Ajout d'un Fleet Server
 
+Pour créer un Fleet Server, redirigez vous vers `Management` > `Fleet` > `Agents` et cliquez `Add Fleet Server`.
+
 ![image (3)](https://user-images.githubusercontent.com/123748177/235185808-f9ab69d5-fcda-4239-b179-b9bdb6e80f24.png)
 
+Maintenant, donnez un nom à votre Fleet server et puis saisissez l'URL vers la machine qui va contenir votre Fleet server:
+
 ![image (4)](https://user-images.githubusercontent.com/123748177/235185833-4b055fa0-77f6-44ab-8443-b5d8b39573db.png)
+
 
 ![image (5)](https://user-images.githubusercontent.com/123748177/235185830-6e642b02-2d9b-4369-a662-a2dbcac9fd9a.png)
 
