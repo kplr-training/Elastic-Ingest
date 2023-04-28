@@ -77,4 +77,8 @@ unzip elastic-stack-ca.zip
 
 ![image](https://user-images.githubusercontent.com/123748177/235174010-7e450e63-7c76-482f-9880-0cf9a6a527fc.png)
 
+8- Vous copiez le contenu de `ca.crt` dans la partie `Client SSL Certificate` et le contenu de `ca.key` dans la partie `Client SSL Certificate key`
+
 ![image](https://user-images.githubusercontent.com/123748177/235174854-2deeec0a-d29e-4ce1-a2c9-db3aa616089e.png)
+
+9- Cliquez `Save and Apply settings`, et Voilà! vous avez créé votre output avec succès.
