@@ -80,14 +80,14 @@ unzip elastic-stack-ca.zip
 Maintenant, vous aurez besoin de créer un certificat de Logstash Server et un certificat de Client.
 
 Le `certificat du serveur Logstash` est utilisé pour sécuriser la connexion entre Logstash et les clients qui s'y connectent.
-
 Ce certificat est utilisé pour vérifier l'identité du serveur Logstash auprès de ses clients et pour chiffrer les données transmises entre eux.
 
 D'autre part, le `certificat client` est utilisé par le serveur Fleet pour s'authentifier auprès de Logstash. 
-
 Ce certificat est généré spécifiquement pour le serveur Fleet et sert à prouver que le serveur Fleet est autorisé à se connecter à Logstash. 
-
 Le certificat client est également utilisé pour chiffrer les données transmises entre le serveur Fleet et Logstash.
+
+
+![SSl certificats drawio](https://user-images.githubusercontent.com/123748177/235360276-4d67a37c-ae94-4d99-9a5f-78e8bd9ab6c5.png)
 
 
 7- Vous copiez le contenu de `ca.crt` dans la partie `Client SSL Certificate` et le contenu de `ca.key` dans la partie `Client SSL Certificate key`
