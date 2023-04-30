@@ -94,6 +94,39 @@ Le certificat client est également utilisé pour chiffrer les données transmis
 
 ![image](https://user-images.githubusercontent.com/123748177/235361006-925922d7-064f-4543-8287-48a284484dfd.png)
 
+8- Vous créez maintenant le certificat Client à l'aide de la commande suivante : 
+
+```
+/usr/share/elasticsearch/bin/elasticsearch-certutil cert \
+  --name client \
+  --ca-cert /etc/elasticsearch/certs/ca/ca.crt \
+  --ca-key /etc/elasticsearch/certs/ca/ca.key \
+  --pem
+```
+Extrayez le fichier zip :
+
+```
+unzip client.zip
+```
+
+9- Vous créez aussi le certificat Logstash Server : 
+
+```
+/usr/share/elasticsearch/bin/elasticsearch-certutil cert \
+  --name logstash \
+  --ca-cert /etc/elasticsearch/certs/ca/ca.crt \
+  --ca-key /etc/elasticsearch/certs/ca/ca.key \
+  --pem
+```
+
+Extrayez le fichier zip :
+
+```
+unzip logstash.zip
+```
+
+
+
 ![image](https://user-images.githubusercontent.com/123748177/235361083-74685b14-09da-48ef-94bd-1c4e303dbfe9.png)
 
 
