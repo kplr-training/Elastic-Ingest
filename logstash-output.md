@@ -36,7 +36,7 @@ input {
 output {
   elasticsearch {
     hosts => "https://ELASTIC-IP-ADRESS:9200"
-    api_key => "tqRyyIcBjFkAS0G-8u_C:YuxFcNOWQni3iZPUJKSYSw"
+    api_key => "GENERATED API KEY"
     data_stream => true
     ssl => true
     cacert => "/etc/logstash/config/certs/http_ca.crt"
@@ -55,7 +55,12 @@ NB: Remplacez le chemin vers votre fichier.
 
 ```
 
-4- Maintenant, vous devez créer votre autorité de certificat pour avoir votre certificat et sa clé privée.
+4- Vous devez précisez l'adresse que les agents vont utiliser pour se connecter à Logstash
+
+![image](https://user-images.githubusercontent.com/123748177/235174010-7e450e63-7c76-482f-9880-0cf9a6a527fc.png)
+
+
+5- Maintenant, vous devez créer votre autorité de certificat pour avoir votre certificat et sa clé privée.
 
 Pour ce faire, vous devez exécutez la commande suivante: 
 ```
@@ -63,20 +68,29 @@ Pour ce faire, vous devez exécutez la commande suivante:
 ```
 Cette commande crée un fichier zip contenant le certificat CA et la clé que vous utiliserez pour signer les certificats. 
 
-5-  Extrayez le fichier zip :
+6-  Extrayez le fichier zip :
 
 ```
 unzip elastic-stack-ca.zip
 ```
 ![image](https://user-images.githubusercontent.com/123748177/235146035-6fa22863-c645-42b1-a12f-5653dea6e90e.png)
 
-6- Enregistrez le pipeline et redémarrez Logstash afin que les modifications prennent effet.
+**NB: à ce moment, vous avez créé l'autorité de certification pour signer vos prochains certificats SSL**
 
-7- Vous devez précisez l'adresse que les agents vont utiliser pour se connecter à Logstash
+Maintenant, vous aurez besoin de créer un certificat de Logstash Server et un certificat de Client.
 
-![image](https://user-images.githubusercontent.com/123748177/235174010-7e450e63-7c76-482f-9880-0cf9a6a527fc.png)
+Le `certificat du serveur Logstash` est utilisé pour sécuriser la connexion entre Logstash et les clients qui s'y connectent.
 
-8- Vous copiez le contenu de `ca.crt` dans la partie `Client SSL Certificate` et le contenu de `ca.key` dans la partie `Client SSL Certificate key`
+Ce certificat est utilisé pour vérifier l'identité du serveur Logstash auprès de ses clients et pour chiffrer les données transmises entre eux.
+
+D'autre part, le `certificat client` est utilisé par le serveur Fleet pour s'authentifier auprès de Logstash. 
+
+Ce certificat est généré spécifiquement pour le serveur Fleet et sert à prouver que le serveur Fleet est autorisé à se connecter à Logstash. 
+
+Le certificat client est également utilisé pour chiffrer les données transmises entre le serveur Fleet et Logstash.
+
+
+7- Vous copiez le contenu de `ca.crt` dans la partie `Client SSL Certificate` et le contenu de `ca.key` dans la partie `Client SSL Certificate key`
 
 ![image](https://user-images.githubusercontent.com/123748177/235174854-2deeec0a-d29e-4ce1-a2c9-db3aa616089e.png)
 
