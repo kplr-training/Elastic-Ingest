@@ -108,6 +108,8 @@ Extrayez le fichier zip :
 ```
 unzip client.zip
 ```
+![image](https://user-images.githubusercontent.com/123748177/235362711-1cbebe38-6c93-4862-8ebe-56c67f39f93f.png)
+
 
 9- Vous créez aussi le certificat Logstash Server : 
 
@@ -125,7 +127,7 @@ Extrayez le fichier zip :
 unzip logstash.zip
 ```
 
-
+![image](https://user-images.githubusercontent.com/123748177/235362724-63f8a7f1-c89a-4077-bef1-8012690d711c.png)
 
 ![image](https://user-images.githubusercontent.com/123748177/235361083-74685b14-09da-48ef-94bd-1c4e303dbfe9.png)
 
