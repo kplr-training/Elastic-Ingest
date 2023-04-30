@@ -90,9 +90,12 @@ Le certificat client est également utilisé pour chiffrer les données transmis
 ![SSl certificats drawio](https://user-images.githubusercontent.com/123748177/235360276-4d67a37c-ae94-4d99-9a5f-78e8bd9ab6c5.png)
 
 
-7- Vous copiez le contenu de `ca.crt` dans la partie `Client SSL Certificate` et le contenu de `ca.key` dans la partie `Client SSL Certificate key`
+7- Vous copiez le contenu de `ca.crt` dans la partie `Server SSL certificate authorities` 
 
-![image](https://user-images.githubusercontent.com/123748177/235174854-2deeec0a-d29e-4ce1-a2c9-db3aa616089e.png)
+![image](https://user-images.githubusercontent.com/123748177/235361006-925922d7-064f-4543-8287-48a284484dfd.png)
+
+![image](https://user-images.githubusercontent.com/123748177/235361083-74685b14-09da-48ef-94bd-1c4e303dbfe9.png)
+
 
 9- Ajoutez la partie de code suivante dans le fichier de configuration de Kibana `kibana.yml`
 
