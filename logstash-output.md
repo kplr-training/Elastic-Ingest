@@ -129,16 +129,50 @@ unzip logstash.zip
 
 ![image](https://user-images.githubusercontent.com/123748177/235362724-63f8a7f1-c89a-4077-bef1-8012690d711c.png)
 
+10- Convertissez la clé Logstash vers pkcs8.
+
+```
+openssl pkcs8 -inform PEM -in logstash.key -topk8 -nocrypt -outform PEM -out logstash.pkcs8.key
+```
+
+11- Vous copiez le contenu de `client.crt` dans la partie `Client SSL certificate` et le contenu de `client.key` dans la partie `Client SSL certificate key`
+
+
 ![image](https://user-images.githubusercontent.com/123748177/235361083-74685b14-09da-48ef-94bd-1c4e303dbfe9.png)
 
 
-9- Ajoutez la partie de code suivante dans le fichier de configuration de Kibana `kibana.yml`
+11- Ajoutez la partie de code suivante dans le fichier de configuration de Kibana `kibana.yml`
 
 ```
 xpack.encryptedSavedObjects:
   encryptionKey: "min-32-byte-long-strong-encryption-key"
 ```
 
-10- Cliquez `Save and Apply settings`, et Voilà! vous avez créé votre output avec succès.
+12- Modifiez le fichier `elastic-agent-pipeline.conf` en remplissant les données manquantes : 
+
+```
+input {
+  elastic_agent {
+    port => 5044
+    ssl => true
+    ssl_certificate_authorities => ["/path/to/ca.crt"]
+    ssl_certificate => "/path/to/logstash.crt"
+    ssl_key => "/path/to/logstash.pkcs8.key"
+    ssl_verify_mode => "force_peer"
+  }
+}
+
+output {
+  elasticsearch {
+    hosts => "https://xxxx:9200"
+    api_key => "xxxx:xxxx"
+    data_stream => true
+    ssl => true
+    cacert => "/path/to/http_ca.crt" 
+  }
+}
+```
+
+13- Cliquez `Save and Apply settings`, et Voilà! vous avez créé votre output avec succès.
 
 ![image](https://user-images.githubusercontent.com/123748177/235177522-107ad5a2-2c35-4404-aa3f-44d2a6c3744f.png)
