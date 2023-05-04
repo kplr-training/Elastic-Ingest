@@ -22,6 +22,7 @@ Vous pouvez créer votre Ingest Pipeline de deux façons:
 - *Méthode 2 :* En utilisant les API d'ingestion.
 
 **Méthode 1**
+
 Dans Kibana, ouvrez le menu principal et cliquez sur `Stack Management`, puis sur `Ingest Pipelines`. 
 
 À partir de la vue de liste, vous pouvez :
