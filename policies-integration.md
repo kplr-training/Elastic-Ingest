@@ -12,8 +12,23 @@ Cliquez `Create Agent policy`, et remplissez les champs nécessaires:
 
 ![image](https://user-images.githubusercontent.com/123748177/236158502-1e4c667c-82f9-47a1-af87-f2b53eeeff2e.png)
 
+**Dans la partie `Advanced Options`, vous pouvez constater que l'Output des intégrations liées à cette policy ne peuvent avoir comme Output que celui de Elasticsearch par défaut.**
+
+Pour le moment, vous choisissez l'Output par défaut et vous cliquez `Create Agent policy` 
 
 ![image (10)](https://user-images.githubusercontent.com/123748177/236152704-645981e8-e949-42e0-b16c-0160e5d13c69.png)
+
+Pour pouvoir utiliser l'Output de type Logstash, vous devez avoir une `licence`. Donc pour ce faire, redirigez vous vers `Dev Tools` et tapez la commande suivante: 
+
+```
+POST /_license/start_trial?acknowledge=true&pretty
+```
+Puis, vous pouvez vérifier que vous avez obtenu la licence avec la commande suivante: 
+
+```
+GET /_license/trial_status?pretty
+```
+Maintenant, si vous modifiez la policy que vous venez de créer, vous constatez que vous pouvez choisir `Logstash Output` comme sortie pour les intégrations liées à cette policy.
 
 ![image (9)](https://user-images.githubusercontent.com/123748177/236152709-2c509ee2-7da1-4395-bfad-53fea46fc0c5.png)
 
