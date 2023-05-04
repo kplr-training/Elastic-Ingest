@@ -4,12 +4,12 @@ Dans Elasticsearch, une `agent policy` fait référence à une fonctionnalité s
 
 Une agent policy définit un ensemble de configurations et de règles pour la collecte de données à partir de sources spécifiques, telles que des fichiers journaux, des métriques système, des événements de base de données, etc. Elle fournit un moyen de déployer ces configurations sur plusieurs agents Elastic installés sur différents hôtes ou machines.
 
+Pour créer une Agent Policy, redirigez vous vers l'interface `Fleet` dans le menu `Management` et cliquez `Agent Policies`: 
 
 
-Pour créer une Agent
 ## Ajout d'un Custom Windows Event Logs Integration
 
-Pour ajouter une intégration de type `Custom Windows Event Logs`, redirigez vous vers l'interface `Integrations` dans le menu `Management`.
+Pour ajouter une intégration de type `Custom Windows Event Logs`, redirigez vous vers l'interface `Integrations` dans le menu `Management`
 
 ![image](https://user-images.githubusercontent.com/123748177/234854155-b648f4d5-c6a3-4373-ba68-5dc42cb26d0c.png)
 
