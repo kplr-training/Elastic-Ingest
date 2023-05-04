@@ -76,6 +76,7 @@ Maintenant, cliquez `Add Custom Windows Event Logs`
 
 - En haut à gauche, choissisez le Data view que vous venez de créer. Vous aurez un résultat comme le suivant: 
 
+![image](https://user-images.githubusercontent.com/123748177/236174290-8f967f62-1a23-4ccc-a2af-5e49b2dd855c.png)
 
 
 
