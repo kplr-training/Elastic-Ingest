@@ -60,7 +60,7 @@ NB: Remplacez le chemin vers votre fichier.
 ![image](https://user-images.githubusercontent.com/123748177/235174010-7e450e63-7c76-482f-9880-0cf9a6a527fc.png)
 
 
-5- Maintenant, vous devez créer votre autorité de certificat pour avoir votre certificat et sa clé privée.
+5- Maintenant, vous devez créer votre autorité de certificat.
 
 Pour ce faire, vous devez exécutez la commande suivante: 
 ```
