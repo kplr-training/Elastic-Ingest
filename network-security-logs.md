@@ -34,3 +34,9 @@ for($i = 1; $i -le 10; $i++)
 }
 
 ```
+
+Vous pouvez l'exécuter en tapant la commande suivante dans le répertoire qui contient le script: 
+
+```
+ .\gen-log.ps1
+```
