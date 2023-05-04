@@ -8,6 +8,12 @@ Pour créer une Agent Policy, redirigez vous vers l'interface `Fleet` dans le me
 
 ![image](https://user-images.githubusercontent.com/123748177/236157607-83af01a3-7715-4f93-8ad6-730051ab9d79.png)
 
+![image](https://user-images.githubusercontent.com/123748177/236158502-1e4c667c-82f9-47a1-af87-f2b53eeeff2e.png)
+
+
+![image (10)](https://user-images.githubusercontent.com/123748177/236152704-645981e8-e949-42e0-b16c-0160e5d13c69.png)
+
+![image (9)](https://user-images.githubusercontent.com/123748177/236152709-2c509ee2-7da1-4395-bfad-53fea46fc0c5.png)
 
 ## Ajout d'un Custom Windows Event Logs Integration
 
@@ -54,8 +60,6 @@ event.dataset: "YOUR-DATASET-NAME"
 
 ![image (12)](https://user-images.githubusercontent.com/123748177/236152697-3af123e8-57c8-44b9-844d-35fe4768ba3e.png)
 ![image (11)](https://user-images.githubusercontent.com/123748177/236152700-3ab0f0e1-c722-4dfa-aad8-f91eed6c31bd.png)
-![image (10)](https://user-images.githubusercontent.com/123748177/236152704-645981e8-e949-42e0-b16c-0160e5d13c69.png)
-![image (9)](https://user-images.githubusercontent.com/123748177/236152709-2c509ee2-7da1-4395-bfad-53fea46fc0c5.png)
 ![image (13)](https://user-images.githubusercontent.com/123748177/236152713-76e39b88-44bd-4b68-b6ab-16c2acc7240f.png)
 
 
