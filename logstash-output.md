@@ -60,13 +60,13 @@ NB: Remplacez le chemin vers votre fichier.
 ![image](https://user-images.githubusercontent.com/123748177/235174010-7e450e63-7c76-482f-9880-0cf9a6a527fc.png)
 
 
-5- Maintenant, vous devez créer votre autorité de certificat.
+5- Maintenant, vous devez créer votre autorité de certificat que vous utiliserez pour signer les certificats.
 
 Pour ce faire, vous devez exécutez la commande suivante: 
 ```
 /usr/share/elasticsearch/bin/elasticsearch-certutil ca --pem
 ```
-Cette commande crée un fichier zip contenant le certificat CA et la clé que vous utiliserez pour signer les certificats. 
+Cette commande crée un fichier zip contenant le certificat CA et la clé. 
 
 6-  Extrayez le fichier zip :
 
