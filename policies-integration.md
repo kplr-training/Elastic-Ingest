@@ -62,7 +62,7 @@ Maintenant, cliquez `Add Custom Windows Event Logs`
 
 ![image](https://user-images.githubusercontent.com/123748177/234856717-a3d395fc-d6c0-4cc9-9fab-aea94bd678a8.png)
 
-- Finalement, vous précisez la policy auquel l'intégration va etre ajoutée.
+- Finalement, vous précisez la policy auquel l'intégration va etre ajoutée. Vous choisissez la policy que vous venez de créer:
 
 ![image](https://user-images.githubusercontent.com/123748177/234857165-e620b570-55f2-41dc-9416-ee203a160ee7.png)
 
