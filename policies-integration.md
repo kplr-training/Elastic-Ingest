@@ -8,6 +8,7 @@ Pour créer une Agent Policy, redirigez vous vers l'interface `Fleet` dans le me
 
 ![image](https://user-images.githubusercontent.com/123748177/236157607-83af01a3-7715-4f93-8ad6-730051ab9d79.png)
 
+Cliquez `Create Agent policy`, et remplissez les champs nécessaires: 
 
 ## Ajout d'un Custom Windows Event Logs Integration
 
