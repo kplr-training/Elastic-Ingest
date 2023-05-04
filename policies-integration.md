@@ -28,6 +28,9 @@ Puis, vous pouvez vérifier que vous avez obtenu la licence avec la commande sui
 ```
 GET /_license/trial_status?pretty
 ```
+
+![image (14)](https://user-images.githubusercontent.com/123748177/236161726-6e45cbdc-5c2b-4eb6-bcb2-f25b5026461b.png)
+
 Maintenant, si vous modifiez la policy que vous venez de créer, vous constatez que vous pouvez choisir `Logstash Output` comme sortie pour les intégrations liées à cette policy.
 
 ![image (9)](https://user-images.githubusercontent.com/123748177/236152709-2c509ee2-7da1-4395-bfad-53fea46fc0c5.png)
