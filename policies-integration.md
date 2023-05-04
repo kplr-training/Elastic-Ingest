@@ -6,6 +6,8 @@ Une agent policy définit un ensemble de configurations et de règles pour la co
 
 Pour créer une Agent Policy, redirigez vous vers l'interface `Fleet` dans le menu `Management` et cliquez `Agent Policies`: 
 
+![image](https://user-images.githubusercontent.com/123748177/236157607-83af01a3-7715-4f93-8ad6-730051ab9d79.png)
+
 
 ## Ajout d'un Custom Windows Event Logs Integration
 
