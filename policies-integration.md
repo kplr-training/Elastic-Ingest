@@ -47,10 +47,12 @@ Maintenant, cliquez `Add Custom Windows Event Logs`
 ![image](https://user-images.githubusercontent.com/123748177/234855195-03e9c3c3-f325-4bb9-b125-8d43e95756a4.png)
 
 - Vous donnez d'abord un nom de votre instance d'intégration :
-![image](https://user-images.githubusercontent.com/123748177/234855430-1f2a7242-d3d2-4331-a872-65582cf38f49.png)
+
+![image (12)](https://user-images.githubusercontent.com/123748177/236152697-3af123e8-57c8-44b9-844d-35fe4768ba3e.png)
 
 - Le nom du canal doit correspondre au canal à partir duquel vous avez l'intention d'extraire des informations.
-- Dans votre cas, on propose que vous choissisez comme nom de canal `Microsoft-Windows-WMI-Activity/Operational` et comme nom de dataset `test-app-1`
+- Dans votre cas, on propose que vous choissisez comme nom de canal `Microsoft-Windows-WMI-Activity/Operational`, on a choisi comme nom de canal `NetworkSecurity`qui pointe vers un cannal personnalisé que nous avons créez et
+- Comme nom de dataset, on a choisi `winlog.network.security`.
 
 ![image](https://user-images.githubusercontent.com/123748177/234856197-fc8808bf-711b-4c77-89bc-e277365b0fcd.png)
 
@@ -75,7 +77,6 @@ event.dataset: "YOUR-DATASET-NAME"
 ![image](https://user-images.githubusercontent.com/123748177/234858963-ef4b9ee9-af6c-4378-8bd7-c9d50d80ad46.png)
 
 
-![image (12)](https://user-images.githubusercontent.com/123748177/236152697-3af123e8-57c8-44b9-844d-35fe4768ba3e.png)
 ![image (11)](https://user-images.githubusercontent.com/123748177/236152700-3ab0f0e1-c722-4dfa-aad8-f91eed6c31bd.png)
 ![image (13)](https://user-images.githubusercontent.com/123748177/236152713-76e39b88-44bd-4b68-b6ab-16c2acc7240f.png)
 
