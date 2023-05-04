@@ -66,22 +66,17 @@ Maintenant, cliquez `Add Custom Windows Event Logs`
 
 ![image](https://user-images.githubusercontent.com/123748177/234857165-e620b570-55f2-41dc-9416-ee203a160ee7.png)
 
-- Pour vérifiez que tout marche bien, redirigez vous vers `Analytics` > `Discover` 
+- Pour vérifiez que tout marche bien, créez un `Data View` pour pouvoir visualiser les logs ingérés. Pour ce faire, redirigez vers `Data Views` dans le menu `Stack Management` puis cliquez `Create data view`. 
+
+![image](https://user-images.githubusercontent.com/123748177/236171478-b709c95e-95e1-44ea-9201-e3e607da8c91.png)
+
+- Maintenant, redirigez vous vers `Analytics` > `Discover` 
 
 ![image](https://user-images.githubusercontent.com/123748177/234858330-ac6a7b8a-e8be-4608-b131-2ce80135741d.png)
 
-- Puis, dans la partie de recherche tapez le code suivant en ajoutant le nom du dataset que vous avez précisez avant :
-```
-event.dataset: "YOUR-DATASET-NAME"
-```
-- Vous aurez un résultat comme le suivant: 
-
-![image](https://user-images.githubusercontent.com/123748177/234858963-ef4b9ee9-af6c-4378-8bd7-c9d50d80ad46.png)
+- En haut à gauche, choissisez le Data view que vous venez de créer. Vous aurez un résultat comme le suivant: 
 
 
-![image (11)](https://user-images.githubusercontent.com/123748177/236152700-3ab0f0e1-c722-4dfa-aad8-f91eed6c31bd.png)
-![image (13)](https://user-images.githubusercontent.com/123748177/236152713-76e39b88-44bd-4b68-b6ab-16c2acc7240f.png)
 
-![image](https://user-images.githubusercontent.com/123748177/236171478-b709c95e-95e1-44ea-9201-e3e607da8c91.png)
 
 
