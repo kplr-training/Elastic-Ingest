@@ -54,9 +54,9 @@ Maintenant, cliquez `Add Custom Windows Event Logs`
 ![image (12)](https://user-images.githubusercontent.com/123748177/236152697-3af123e8-57c8-44b9-844d-35fe4768ba3e.png)
 
 - Le nom du canal doit correspondre au canal à partir duquel vous avez l'intention d'extraire des informations.
-- Dans votre cas, on propose que vous choissisez comme nom de canal `Microsoft-Windows-WMI-Activity/Operational`, on a choisi comme nom de canal `NetworkSecurity`qui pointe vers un cannal personnalisé que nous avons créez.
-- Comme nom de dataset, on a choisi `winlog.network.security`.
+- Dans votre cas, on a choisi comme nom de canal `NetworkSecurity`qui pointe vers un cannal personnalisé que nous avons créez. Pour le créer, suivez les étapes suivantes : [Génération des logs aléatoires](https://github.com/kplr-training/Elastic-Ingest/blob/main/network-security-logs.md)
 
+- Comme nom de dataset, on a choisi `winlog.network.security`.
 
 - Pour utilisez une pipeline que vous avez créé, vous pouvez la définir dans la partie `Advanced options` > `Custom configurations`.
 
