@@ -164,3 +164,6 @@ Dans cette partie, vous allez définir un simple processeur dans l'intégration 
 
 **En utilisant ce processeur d'intégration, chaque document qui passe par le pipeline d'ingestion aura les champs "name" et "id" ajoutés avec les valeurs spécifiées.**
 
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/a6759e92-a32b-4590-a041-f7ac311c3868)
+
+
