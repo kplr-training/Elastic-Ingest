@@ -168,4 +168,10 @@ Dans cette partie, vous allez définir un simple processeur dans l'intégration 
 
 - Enregistrez les modifications de l'intégration, puis ajoutez une nouvelle ligne de log pour vérifier que les processeurs de l'intégration fonctionnent correctement: 
 
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/db5c0715-d6bd-4f45-b7c1-945ba3356084)
 
+- Vérifiez dans `Discover`
+
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/ec811480-e261-4c1c-8ae0-6bf710f6fd7e)
+
+**Les nouveaux champs sont bien ajoutés**
