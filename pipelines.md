@@ -28,7 +28,7 @@ Maintenant, cliquez `Add Custom Logs`
 
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/9468fd4b-0f82-4200-acb6-38e870305541)
 
-- Ensuite, vous allez mentionné le chemin vers le fichier qui contient vos logs. Dans votre cas, vous allez créez un fichier log de test dans lequel vous allez ajouté des logs provisoires. 
+- Ensuite, vous allez mentionné le chemin vers le fichier qui contient vos logs. Dans votre cas, vous allez créez un fichier log de test, dans lequel vous allez ajouté des logs provisoires, dans la machine qui contient votre `Elastic Agent`. 
 
 Pour ce faire, créez le fichier suivant dans le répertoire `/var/log`:
 
@@ -124,6 +124,14 @@ Enfin, dans l'étape de sortie, les événements sont envoyés vers Elasticsearc
 
 - Vérifiez bien que la policy, avec laquelle votre intégration est liée, a comme Output `Logstash Output`
 
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/efa4863c-d4b5-4177-b26d-6359b5e2db87)
+
 - Maintenant, vous allez ajouter une autre ligne de log pour tester que la pipeline logstash fonctionne correctement:
+
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/d491179b-40c0-4b08-afa0-d3d005c29fe5)
+
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/e6806427-fe74-4500-bd63-aa8bf9126c21)
+
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/9106540f-6b1f-49cd-af1f-11e637c3d683)
 
 
