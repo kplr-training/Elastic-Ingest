@@ -58,9 +58,9 @@ Pour ce faire, créez le fichier suivant dans le répertoire `/var/log`:
 - Maintenant, redirigez vous vers `Analytics` > `Discover`. En haut à gauche, choissisez le Data view que vous venez de créer. Vous aurez un résultat comme le suivant: 
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/5cd4b594-1173-4c8f-b551-7262629daed3)
 
+Si vous développez le document inséré, vous pouvez bien voir qu'il contient le message de log que vous avez saisi:
+
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/590ff8e2-dcfa-44e8-975c-42016c999082)
-
-
 
 
 ## Logstash Pipeline
@@ -77,7 +77,7 @@ Pour créer une pipeline logstash, vous créez un fichier de configuration pour 
 
 Ce fichier utilisera le langage de configuration Logstash (LSL). Vous pouvez le nommer comme vous le souhaitez, par exemple "my-pipeline.conf".
 
-Dans votre fichier de configuration, ajoutez le code suivant qui configure une pipeline logstash:
+- Dans votre fichier de configuration, ajoutez le code suivant qui configure une pipeline logstash:
 
 ```
 input {
@@ -113,4 +113,17 @@ Les certificats SSL nécessaires sont spécifiés, y compris l'autorité de cert
 
 Dans l'étape de filtrage, le plugin "mutate" est utilisé pour ajouter un champ supplémentaire appelé "a_logstash_field" avec la valeur "Hello, world!". 
 
-Enfin, dans l'étape de sortie, les événements sont envoyés vers Elasticsearch en utilisant l'URL spécifiée avec une clé API pour l'authentification. Les données sont envoyées en tant que data stream, avec une connexion SSL sécurisée, et un certificat CA est spécifié pour la vérification.
+Enfin, dans l'étape de sortie, les événements sont envoyés vers Elasticsearch en tant que data stream en utilisant l'URL spécifiée avec une clé API pour l'authentification. 
+
+- Pour tester votre pipeline, vous devez tout d'abord l'exécuter en utilisant la commande suivante: 
+```
+/usr/share/logstash/bin/logstash -f /path/to/your/configuration/file
+```
+
+**NB: Vérifiez bien qu'aucune autre pipeline est entrain de s'exécuter**
+
+- Vérifiez bien que la policy, avec laquelle votre intégration est liée, a comme Output `Logstash Output`
+
+- Maintenant, vous allez ajouter une autre ligne de log pour tester que la pipeline logstash fonctionne correctement:
+
+
