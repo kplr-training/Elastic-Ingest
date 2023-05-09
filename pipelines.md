@@ -18,11 +18,11 @@ Pour ajouter cette intégration, redirigez vous vers l'interface `Integrations` 
 
 Puis, vous cherchez `Custom Logs`: 
 
-![image](https://user-images.githubusercontent.com/123748177/234855005-9f8db042-064d-4388-af04-6bfb1ddcf304.png)
+![custom logs](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/4201dd6f-1a1a-4b28-925b-347181284106)
 
-Maintenant, cliquez `Add Custom Windows Event Logs`
+Maintenant, cliquez `Add Custom Logs`
 
-![image](https://user-images.githubusercontent.com/123748177/234855195-03e9c3c3-f325-4bb9-b125-8d43e95756a4.png)
+![add custom log](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/f64f4961-742c-49fb-994a-4310c002c1de)
 
 - Vous donnez d'abord un nom de votre instance d'intégration :
 ![image](https://user-images.githubusercontent.com/123748177/234855430-1f2a7242-d3d2-4331-a872-65582cf38f49.png)
