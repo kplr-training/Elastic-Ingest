@@ -132,6 +132,6 @@ Enfin, dans l'étape de sortie, les événements sont envoyés vers Elasticsearc
 
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/e6806427-fe74-4500-bd63-aa8bf9126c21)
 
-![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/9106540f-6b1f-49cd-af1f-11e637c3d683)
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/4e72a915-80fd-4767-a670-d3bd2c22266f)
 
 
