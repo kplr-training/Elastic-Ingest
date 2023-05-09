@@ -72,7 +72,7 @@ Chaque étape utilise des plugins configurables pour effectuer des opérations s
 
 Les pipelines Logstash offrent une grande flexibilité pour répondre aux besoins spécifiques de collecte, de transformation et de livraison des données.
 
-**Création d'une pipeline logstash**
+**- Création d'une pipeline logstash**
 
 Pour créer une pipeline logstash, vous créez un fichier de configuration pour votre pipeline Logstash. 
 
@@ -145,7 +145,7 @@ Enfin, dans l'étape de sortie, les événements sont envoyés vers Elasticsearc
 
 L'avantage d'utiliser des processeurs d'intégration est qu'ils permettent de traiter les données en amont, directement lors de l'indexation dans Elasticsearch, évitant ainsi les étapes de post-traitement coûteuses. Cela garantit une ingestion plus rapide et une utilisation efficace des ressources.
 
-## Ajout d'un simple processor
+**- Ajout d'un simple processor**
 
 Dans cette partie, vous allez définir un simple processeur dans l'intégration que vous venez de créer.
 
@@ -175,3 +175,9 @@ Dans cette partie, vous allez définir un simple processeur dans l'intégration 
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/ec811480-e261-4c1c-8ae0-6bf710f6fd7e)
 
 **Les nouveaux champs sont bien ajoutés**
+
+## Ingest Pipeline
+
+Les pipelines d'ingestion vous permettent d'effectuer des transformations courantes sur vos données avant leur indexation. Par exemple, vous pouvez utiliser des pipelines pour supprimer des champs, extraire des valeurs à partir de texte et enrichir vos données.
+
+Un pipeline se compose d'une série de tâches configurables appelées processeurs. Chaque processeur s'exécute séquentiellement et apporte des modifications spécifiques aux documents entrants. Une fois que les processeurs ont terminé leur exécution, Elasticsearch ajoute les documents transformés à votre flux de données ou à votre index.
