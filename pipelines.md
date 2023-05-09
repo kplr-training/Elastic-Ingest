@@ -25,32 +25,31 @@ Maintenant, cliquez `Add Custom Logs`
 ![add custom log](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/f64f4961-742c-49fb-994a-4310c002c1de)
 
 - Vous donnez d'abord un nom de votre instance d'intégration :
-![image](https://user-images.githubusercontent.com/123748177/234855430-1f2a7242-d3d2-4331-a872-65582cf38f49.png)
 
-- Le nom du canal doit correspondre au canal à partir duquel vous avez l'intention d'extraire des informations.
-- Dans votre cas, on propose que vous choissisez comme nom de canal `Microsoft-Windows-WMI-Activity/Operational` et comme nom de dataset `test-app-1`
 
-![image](https://user-images.githubusercontent.com/123748177/234856197-fc8808bf-711b-4c77-89bc-e277365b0fcd.png)
+- Ensuite, vous allez mentionné le chemin vers le fichier qui contient vos logs. Dans votre cas, vous allez créez un fichier log de test dans lequel vous allez ajouté des logs provisoires. 
 
-- Pour utilisez la pipeline que vous avez créé, vous devez la définir dans la partie `Advanced options` > `Custom configurations`.
+Pour ce faire, créez le fichier suivant dans le répertoire `/var/log`:
 
-![image](https://user-images.githubusercontent.com/123748177/234856717-a3d395fc-d6c0-4cc9-9fab-aea94bd678a8.png)
+ ```
+ vi test.log
+ ```
+ - Puis, copiez le chemin vers le fichier dans le champ `Log file path`: 
 
-- Finalement, vous précisez la policy auquel l'intégration va etre ajoutée.
+- Dans la partie `Advanced options`, ajoutez le nom de votre dataset: 
 
-![image](https://user-images.githubusercontent.com/123748177/234857165-e620b570-55f2-41dc-9416-ee203a160ee7.png)
+- Finalement, vous précisez la policy auquel l'intégration va etre ajoutée. 
 
-- Pour vérifiez que tout marche bien, redirigez vous vers `Analytics` > `Discover` 
 
-![image](https://user-images.githubusercontent.com/123748177/234858330-ac6a7b8a-e8be-4608-b131-2ce80135741d.png)
+- Pour vérifiez que tout marche bien, créez un `Data View` pour pouvoir visualiser les logs ingérés. Pour ce faire, redirigez vers `Data Views` dans le menu `Stack Management` puis cliquez `Create data view`. 
 
-- Puis, dans la partie de recherche tapez le code suivant en ajoutant le nom du dataset que vous avez précisez avant :
-```
-event.dataset: "YOUR-DATASET-NAME"
-```
-- Vous aurez un résultat comme le suivant: 
 
-![image](https://user-images.githubusercontent.com/123748177/234858963-ef4b9ee9-af6c-4378-8bd7-c9d50d80ad46.png)
+- Maintenant, redirigez vous vers `Analytics` > `Discover` 
+
+
+
+- En haut à gauche, choissisez le Data view que vous venez de créer. Vous aurez un résultat comme le suivant: 
+
 
 
 
@@ -62,8 +61,46 @@ Chaque étape utilise des plugins configurables pour effectuer des opérations s
 
 Les pipelines Logstash offrent une grande flexibilité pour répondre aux besoins spécifiques de collecte, de transformation et de livraison des données.
 
+**Création d'une pipeline logstash**
 
-- Créez un fichier, dans la machine où vous avez installé l'Elastic Agent, dans lequel vous allez stocker vos logs de test :
- ```
- vi test.log
- ```
+Pour créer une pipeline logstash, vous créez un fichier de configuration pour votre pipeline Logstash. 
+
+Ce fichier utilisera le langage de configuration Logstash (LSL). Vous pouvez le nommer comme vous le souhaitez, par exemple "my-pipeline.conf".
+
+Dans votre fichier de configuration, ajoutez le code suivant qui configure une pipeline logstash:
+
+```
+input {
+  elastic_agent {
+    port => 5044
+    ssl => true
+    ssl_certificate_authorities => ["/etc/logstash/config/certs/ca/ca.crt"]
+    ssl_certificate => "/etc/logstash/config/certs/logstash/logstash.crt"
+    ssl_key => "/etc/logstash/config/certs/logstash/logstash.pkcs8.key"
+    ssl_verify_mode => "force_peer"
+  }
+}
+
+filter {
+  mutate {
+    add_field => { "a_logstash_field" => "Hello, world!" }
+  }
+}
+
+output {
+  elasticsearch {
+    hosts => "https://X.X.X.X:9200"
+    api_key => "XXXXXXXXXXXXXXXXXXXXXXX"
+    data_stream => true
+    ssl => true
+    cacert => "/etc/logstash/config/certs/http_ca.crt"
+  }
+}
+```
+Cette pipeline utilise l'entrée Elastic Agent pour recevoir des événements via le port 5044 avec une connexion SSL sécurisée. 
+
+Les certificats SSL nécessaires sont spécifiés, y compris l'autorité de certification (CA) pour vérifier le certificat du client. 
+
+Dans l'étape de filtrage, le plugin "mutate" est utilisé pour ajouter un champ supplémentaire appelé "a_logstash_field" avec la valeur "Hello, world!". 
+
+Enfin, dans l'étape de sortie, les événements sont envoyés vers Elasticsearch en utilisant l'URL spécifiée avec une clé API pour l'authentification. Les données sont envoyées en tant que data stream, avec une connexion SSL sécurisée, et un certificat CA est spécifié pour la vérification.
