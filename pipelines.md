@@ -56,6 +56,7 @@ Pour ce faire, créez le fichier suivant dans le répertoire `/var/log`:
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/c52c957c-7ff6-4641-8e97-59eff456deac)
 
 - Maintenant, redirigez vous vers `Analytics` > `Discover`. En haut à gauche, choissisez le Data view que vous venez de créer. Vous aurez un résultat comme le suivant: 
+
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/5cd4b594-1173-4c8f-b551-7262629daed3)
 
 Si vous développez le document inséré, vous pouvez bien voir qu'il contient le message de log que vous avez saisi:
@@ -116,6 +117,7 @@ Dans l'étape de filtrage, le plugin "mutate" est utilisé pour ajouter un champ
 Enfin, dans l'étape de sortie, les événements sont envoyés vers Elasticsearch en tant que data stream en utilisant l'URL spécifiée avec une clé API pour l'authentification. 
 
 - Pour tester votre pipeline, vous devez tout d'abord l'exécuter en utilisant la commande suivante: 
+
 ```
 /usr/share/logstash/bin/logstash -f /path/to/your/configuration/file
 ```
@@ -130,8 +132,35 @@ Enfin, dans l'étape de sortie, les événements sont envoyés vers Elasticsearc
 
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/d491179b-40c0-4b08-afa0-d3d005c29fe5)
 
+- Vérifiez votre Data view maintenant, vous constatez bien que vous avez un nouveau document inséré: 
+
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/e6806427-fe74-4500-bd63-aa8bf9126c21)
+
+- Développez le document et vérifiez que le champ `a_logstash_field` existe dans le document: 
 
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/4e72a915-80fd-4767-a670-d3bd2c22266f)
 
+
+## Integration Processors
+
+L'avantage d'utiliser des processeurs d'intégration est qu'ils permettent de traiter les données en amont, directement lors de l'indexation dans Elasticsearch, évitant ainsi les étapes de post-traitement coûteuses. Cela garantit une ingestion plus rapide et une utilisation efficace des ressources.
+
+## Ajout d'un simple processor
+
+Dans cette partie, vous allez définir un simple processeur dans l'intégration que vous venez de créer.
+
+- Redirigez vous vers l'intégration que vous venez de créer et puis la modifiez.
+
+- Vous trouvez la partie `Advanced Options`, le champ `Processors` dans lequel vous allez dénifir vos processeurs. Ajoutez le code suivant: 
+
+```
+- add_fields:
+    target: a.integration.processor
+    fields:
+      name: asana
+      id: '574734885120952459'
+
+```
+
+**En utilisant ce processeur d'intégration, chaque document qui passe par le pipeline d'ingestion aura les champs "name" et "id" ajoutés avec les valeurs spécifiées.**
 
