@@ -26,6 +26,7 @@ Maintenant, cliquez `Add Custom Logs`
 
 - Vous donnez d'abord un nom de votre instance d'intégration :
 
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/9468fd4b-0f82-4200-acb6-38e870305541)
 
 - Ensuite, vous allez mentionné le chemin vers le fichier qui contient vos logs. Dans votre cas, vous allez créez un fichier log de test dans lequel vous allez ajouté des logs provisoires. 
 
@@ -36,19 +37,28 @@ Pour ce faire, créez le fichier suivant dans le répertoire `/var/log`:
  ```
  - Puis, copiez le chemin vers le fichier dans le champ `Log file path`: 
 
+![configure integration 1](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/e402153f-3d69-40fd-91ce-31004ff4132f)
+
 - Dans la partie `Advanced options`, ajoutez le nom de votre dataset: 
+
+![configure log file](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/fe8a592b-acfc-4092-882a-2a361b131d06)
 
 - Finalement, vous précisez la policy auquel l'intégration va etre ajoutée. 
 
+![policy](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/d63c43bd-862f-4999-b941-54a99ec8e5f1)
 
 - Pour vérifiez que tout marche bien, créez un `Data View` pour pouvoir visualiser les logs ingérés. Pour ce faire, redirigez vers `Data Views` dans le menu `Stack Management` puis cliquez `Create data view`. 
 
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/c54e621c-767b-48bf-a2c0-36ef5bad1dc6)
 
-- Maintenant, redirigez vous vers `Analytics` > `Discover` 
+- Pour pouvoir visualiser ce Data view, vous devez avoir des données dans votre fichier de logs. Insérez une ligne de log dans le fichier `test.log`
 
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/c52c957c-7ff6-4641-8e97-59eff456deac)
 
+- Maintenant, redirigez vous vers `Analytics` > `Discover`. En haut à gauche, choissisez le Data view que vous venez de créer. Vous aurez un résultat comme le suivant: 
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/5cd4b594-1173-4c8f-b551-7262629daed3)
 
-- En haut à gauche, choissisez le Data view que vous venez de créer. Vous aurez un résultat comme le suivant: 
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/590ff8e2-dcfa-44e8-975c-42016c999082)
 
 
 
