@@ -166,4 +166,6 @@ Dans cette partie, vous allez définir un simple processeur dans l'intégration 
 
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/a6759e92-a32b-4590-a041-f7ac311c3868)
 
+- Enregistrez les modifications de l'intégration, puis ajoutez une nouvelle ligne de log pour vérifier que les processeurs de l'intégration fonctionnent correctement: 
+
 
