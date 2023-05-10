@@ -177,10 +177,6 @@ output {
 
 - Ce fichier va représenter une configuration de base de Logstash pour consommer des messages à partir d'un topic Kafka spécifique, ajouter un champ supplémentaire à chaque message à l'aide du filtre mutate, et publier les données traitées dans Elasticsearch. 
 
-- Les données peuvent etre publier dans un `index` ou bien un `data stream` dans Elasticsearch.
-
-#### Cas 1 : Publication dans un data stream
-
 - Le fichier contient le code suivant:
 ```
 input {
@@ -198,9 +194,10 @@ filter {
 
 output {
   elasticsearch {
-    hosts => "https://ELASTIC-IP-ADRESS:9200"
-    api_key => "XXXXXXXXXXX"
-    data_stream => true
+    hosts => "https://IP-ADRESS:9200"
+    user=>"elastic"
+    password=>"elastic"
+    index => "kafka_test"
     ssl => true
     cacert => "/etc/logstash/config/certs/http_ca.crt"
   }
@@ -211,4 +208,6 @@ output {
 ```
 /usr/share/logstash/bin/logstash -f /etc/logstash/elastic-agent-pipeline-kafka-input.conf 
 ```
-- Insérez un nouveau message dans votre fichier de log et vérifiez qu'il a bien arrivé à votre `Data Stream`.
+**NB: Si la pipeline ne s'exécute pas, ajoutez `--path.data /tmp` à la fin de la commande**
+
+- Insérez un nouveau message dans votre fichier de log et vérifiez qu'il a bien arrivé à votre topic ainsi que le `Data Stream`.
