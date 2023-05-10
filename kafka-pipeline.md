@@ -10,3 +10,4 @@ Les logs stockés dans Kafka sont durables, assurant leur persistance en cas de 
 
 Vous allez créer un pipeline qui s'organise comme suit:
 
+![image (15)](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/1bc03880-aa41-4c1c-a582-8ba3eb475ea6)
