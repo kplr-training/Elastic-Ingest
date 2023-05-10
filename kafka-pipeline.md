@@ -208,6 +208,11 @@ output {
 ```
 /usr/share/logstash/bin/logstash -f /etc/logstash/elastic-agent-pipeline-kafka-input.conf 
 ```
+
 **NB: Si la pipeline ne s'exécute pas, ajoutez `--path.data /tmp` à la fin de la commande**
 
 - Insérez un nouveau message dans votre fichier de log et vérifiez qu'il a bien arrivé à votre topic ainsi que le `Data Stream`.
+
+
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/f9b4fa3b-3192-483a-8efc-7fd30af0a2ad)
+
