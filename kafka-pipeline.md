@@ -1,4 +1,4 @@
-## Ajout du Kafka dans le setup
+# Ajout du Kafka dans le setup
 
 Kafka est un système de messagerie distribué qui permet de gérer efficacement les flux de données en temps réel. 
 
@@ -12,7 +12,7 @@ Vous allez créer un pipeline qui s'organise comme suit:
 
 ![image (15)](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/1bc03880-aa41-4c1c-a582-8ba3eb475ea6)
 
-## Installation Kafka et exécution du Consumer et Producer
+## Installation Kafka
 
 - Afin d'installer Kafka, téléchargez la version binaire de Kafka en utilisant la commande suivante: 
 
@@ -28,7 +28,7 @@ wget https://archive.apache.org/dist/kafka/2.8.2/kafka_2.12-2.8.2.tgz
 tar -xzf kafka_2.12-2.8.2.tgz
 ```
 
-- Déplacez le bin vers le répertoie `/opt/kafka`
+- Déplacez le bin vers le répertoire `/opt/kafka`
 
 ```
 sudo mv kafka_2.12-2.8.2 /opt/kafka
@@ -46,3 +46,64 @@ java --version
 ```
 
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/dd4d128c-5f07-4916-8c5d-3494c0062422)
+
+## Exécution du Consumer et Producer
+
+Selon le schéma de ce setup, le Producer qui permet de produire et de publier les données dans Kafka sera dans votre  l'Elastic Agent qui récupére les données à partir des logs et les envoie vers Kafka.
+
+Le Consumer, qui lit et traite les messages à partir d'un ou plusieurs topics dans un cluster Kafka, sera la machine qui contient Fleet server qui lit les données depuis le topic de Kafka, les traite, et les envoie vers Elasticsearch.
+
+### 1- Consumer
+
+#### - Lancement du serveur
+
+- Dans la machine où vous avez le Fleet server, vous allez démarrer le serveur ZooKeeper dans un environnement Kafka. Pour ce faire, tapez la commande suivante: 
+
+```
+bin/zookeeper-server-start.sh config/zookeeper.properties > zk.log &
+```
+
+cette commande lance le serveur ZooKeeper en utilisant la configuration spécifiée dans config/zookeeper.properties, redirige la sortie vers le fichier zk.log et exécute le processus en arrière-plan pour assurer le bon fonctionnement de ZooKeeper dans l'environnement Kafka.
+
+- Maintenant, vous démarrez Kafka:
+
+```
+bin/kafka-server-start.sh config/server.properties > ks.log &
+```
+
+#### - Création du topic
+
+Un topic dans Apache Kafka est une catégorie ou un flux de messages qui peut être publié et consommé. C'est une unité logique de regroupement de données dans un cluster Kafka. 
+
+Un topic peut être considéré comme un canal de communication où les producteurs envoient des messages et les consommateurs les lisent.
+
+- Pour créer un topic, vous tapez la commande suivant dans le répertoire `/opt/kafka`:
+```
+bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic test-topic
+```
+
+- Pour vérifier que le topic est bien créé, listez les topics existants:
+```
+bin/kafka-topics.sh --list --bootstrap-server localhost:9092
+```
+
+#### - Lancement du Consumer
+
+- Maintenant, vous lancez votre `Consumer` pour consommer les messages à partir du topic que vous avez créé dans Apache Kafka en utilisant la console.
+```
+bin/kafka-console-consumer.sh --topic test-topic --from-beginning --bootstrap-server localhost:9092
+```
+
+**Lorsque des nouvelles données sont stocké dans le topic, vous allez les visualiser dans la console qui exécute cette commande**
+
+### 2- Producer
+
+#### Lancement du producer
+
+- Maintenant, vous allez produire des données à l'aide du producer pour vérifier que Kafka fonctionne correctement. Pour ce faire, tapez cette commande:  
+
+```
+bin/kafka-console-producer.sh --broker-list 172.30.2.238:9092 --topic test-topic
+```
+
+- Ensuite saisissez des messages aléatoires pour tester et visualisez le résultat dans le consumer:
