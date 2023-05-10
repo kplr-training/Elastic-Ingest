@@ -230,3 +230,6 @@ output {
 **Et Voilà! vous pouvez bien vérifiez que le message est bien stocké dans l'index et vous avez ainsi le champ `a_logstash_field` qui est ajouté** 
 
 #### Cas 2 : Publication dans un datastream
+
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/b1159824-7512-468d-998f-befb9f07ca4f)
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/fd1f3831-571b-455b-b462-5bac90ee359b)
