@@ -149,6 +149,10 @@ Chaque étape utilise des plugins configurables pour effectuer des opérations s
 
 Les pipelines Logstash offrent une grande flexibilité pour répondre aux besoins spécifiques de collecte, de transformation et de livraison des données.
 
+Voici un schéma qui explique l'architecture du setup que vous allez créer pour ingérer et traiter les logs existants dans la machine qui contient l'Elastic Agent:
+
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/3e6b69e4-1f2a-40cd-ad7c-85e9fe285553)
+
 **- Création d'une pipeline logstash**
 
 Pour créer une pipeline logstash, vous créez un fichier de configuration pour votre pipeline Logstash. 
