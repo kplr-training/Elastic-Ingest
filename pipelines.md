@@ -64,6 +64,33 @@ Si vous développez le document inséré, vous pouvez bien voir qu'il contient l
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/590ff8e2-dcfa-44e8-975c-42016c999082)
 
 
+## Ingest Pipeline
+
+Les pipelines d'ingestion vous permettent d'effectuer des transformations courantes sur vos données avant leur indexation. Par exemple, vous pouvez utiliser des pipelines pour supprimer des champs, extraire des valeurs à partir de texte et enrichir vos données.
+
+Un pipeline se compose d'une série de processeurs. Chaque processeur s'exécute séquentiellement et apporte des modifications spécifiques aux documents entrants. Une fois que les processeurs ont terminé leur exécution, Elasticsearch ajoute les documents transformés à votre flux de données ou à votre index.
+
+**Création d'une Ingest Pipeline**
+
+Pour créer votre Ingest Pipeline, redirigez vous vers le menu `Stack management` et cliquez sur `Ingest Pipelines`:
+
+- Vous aurez la page suivante, cliquez sur `Create pipeline`:
+
+- Saissisez un nom pour votre pipeline!
+- Ajoutez votre premier processeur en cliquant sur `Add a processor`.
+
+Vous allez utilisez comme processeur, le processeur Grok qui est utilisé pour extraire des informations structurées à partir de données non structurées ou semi-structurées. Il s'appuie sur des expressions régulières prédéfinies ou personnalisées, appelées patterns, pour analyser et découper les données en champs plus significatifs.
+
+Votre processeur Grok sera utilisé pour extraire: l'adresse IP, le nom de la ville, et le nom de pays à partir des logs qui se structure comme cet exemple: `154.326.23.24#RABAT#MOROCCO`.
+
+- Ajoutez la configuration suivante:
+
+`Processor` : `Grok`
+
+`Field` : `message`
+
+`Patterns` : `%{IPORHOST:a_source_ip}#%{USER:a_city}#%{USER:a_country}`
+
 ## Logstash Pipeline
 
 Une pipeline Logstash se compose de trois étapes principales : l'étape d'entrée, qui récupère les données, l'étape de filtrage, où les données sont transformées et enrichies, et l'étape de sortie, qui détermine où les données traitées seront envoyées. 
@@ -176,11 +203,4 @@ Dans cette partie, vous allez définir un simple processeur dans l'intégration 
 
 **Les nouveaux champs sont bien ajoutés**
 
-## Ingest Pipeline
-
-Les pipelines d'ingestion vous permettent d'effectuer des transformations courantes sur vos données avant leur indexation. Par exemple, vous pouvez utiliser des pipelines pour supprimer des champs, extraire des valeurs à partir de texte et enrichir vos données.
-
-Un pipeline se compose d'une série de processeurs. Chaque processeur s'exécute séquentiellement et apporte des modifications spécifiques aux documents entrants. Une fois que les processeurs ont terminé leur exécution, Elasticsearch ajoute les documents transformés à votre flux de données ou à votre index.
-
-**Création d'une Ingest Pipeline**
 
