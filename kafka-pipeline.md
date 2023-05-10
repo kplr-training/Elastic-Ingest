@@ -107,3 +107,13 @@ bin/kafka-console-producer.sh --broker-list 172.30.2.238:9092 --topic test-topic
 ```
 
 - Ensuite saisissez des messages aléatoires pour tester et visualisez le résultat dans le consumer:
+
+**Producer**
+
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/be6a42d9-f088-4fed-98ea-4d1022ceb33f)
+
+**Consumer**
+
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/087373f0-37bb-41b2-a6e8-7a6868b05b98)
+
+
