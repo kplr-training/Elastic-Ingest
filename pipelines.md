@@ -74,12 +74,18 @@ Un pipeline se compose d'une série de processeurs. Chaque processeur s'exécute
 
 Pour créer votre Ingest Pipeline, redirigez vous vers le menu `Stack management` et cliquez sur `Ingest Pipelines`:
 
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/a5e64dc3-6701-4f03-bc9d-8a493975cb60)
+
 - Vous aurez la page suivante, cliquez sur `Create pipeline`:
+
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/891cc2c8-e0e9-4822-90c5-8bb96e74ee2f)
 
 - Saissisez un nom pour votre pipeline!
 - Ajoutez votre premier processeur en cliquant sur `Add a processor`.
 
-Vous allez utilisez comme processeur, le processeur Grok qui est utilisé pour extraire des informations structurées à partir de données non structurées ou semi-structurées. Il s'appuie sur des expressions régulières prédéfinies ou personnalisées, appelées patterns, pour analyser et découper les données en champs plus significatifs.
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/0bf7e381-d4ee-4253-a6ea-f9d336816981)
+
+Vous allez utilisez comme processeur, le processeur Grok qui est utilisé pour extraire des informations structurées à partir des données non structurées ou semi-structurées. Il s'appuie sur des expressions régulières prédéfinies ou personnalisées, appelées patterns, pour analyser et découper les données en champs plus significatifs.
 
 Votre processeur Grok sera utilisé pour extraire: l'adresse IP, le nom de la ville, et le nom de pays à partir des logs qui se structure comme cet exemple: `154.326.23.24#RABAT#MOROCCO`.
 
@@ -93,6 +99,29 @@ Votre processeur Grok sera utilisé pour extraire: l'adresse IP, le nom de la vi
 `Patterns` : `%{IPORHOST:a_source_ip}#%{USER:a_city}#%{USER:a_country}`
 
 ```
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/d26b94f3-b921-4388-be4d-ee86a990888d)
+
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/2f510698-7ed1-45cd-a770-e3638bb5783f)
+
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/f2079e11-abc8-4216-9743-e74d6d58d9f4)
+
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/807c1bc8-0843-4e5a-abaa-812a7855c5bf)
+
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/da121af9-9895-434b-9596-f213abd028ce)
+
+```
+[
+  {
+    "_source": {
+      "@timestamp": "2023-05-10T09:16:31.908Z",
+      "message": "MEHDI#CASABLANCA#MOROCCO"
+    }
+  }
+]
+```
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/411ccb10-d684-46ce-a226-6e5db290a8fa)
+
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/cf30d470-bf87-4c1e-91cc-a86d23fa0aec)
 
 ## Logstash Pipeline
 
