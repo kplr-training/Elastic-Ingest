@@ -177,6 +177,10 @@ output {
 
 - Ce fichier va représenter une configuration de base de Logstash pour consommer des messages à partir d'un topic Kafka spécifique, ajouter un champ supplémentaire à chaque message à l'aide du filtre mutate, et publier les données traitées dans Elasticsearch. 
 
+- Les données peuvent etre publiées dans un `index` ou bien un `data stream`.
+
+#### Cas 1 : Publication dans un index
+
 - Le fichier contient le code suivant:
 ```
 input {
@@ -224,3 +228,5 @@ output {
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/9af23705-447c-4e46-8a38-101c360684ff)
 
 **Et Voilà! vous pouvez bien vérifiez que le message est bien stocké dans l'index et vous avez ainsi le champ `a_logstash_field` qui est ajouté** 
+
+#### Cas 2 : Publication dans un datastream
