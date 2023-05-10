@@ -101,13 +101,11 @@ Votre processeur Grok sera utilisé pour extraire: l'adresse IP, le nom de la vi
 ```
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/d26b94f3-b921-4388-be4d-ee86a990888d)
 
+- Lorsque vous créez votre processeur avec succès, il vous reste seulement de le tester. Pour ce faire, Cliquez `Add documents`.
+
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/2f510698-7ed1-45cd-a770-e3638bb5783f)
 
-![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/f2079e11-abc8-4216-9743-e74d6d58d9f4)
-
-![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/807c1bc8-0843-4e5a-abaa-812a7855c5bf)
-
-![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/da121af9-9895-434b-9596-f213abd028ce)
+- Puis, ajoutez le document suivant pour vérifier si la pipeline fonctionne correctement:
 
 ```
 [
@@ -119,9 +117,22 @@ Votre processeur Grok sera utilisé pour extraire: l'adresse IP, le nom de la vi
   }
 ]
 ```
+- Cliquez sur `Run the pipeline`, et vérifiez que vous avez bien les nouveaux champs: `a_source_ip`, `a_city`, `a_country` :
+
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/411ccb10-d684-46ce-a226-6e5db290a8fa)
 
+
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/cf30d470-bf87-4c1e-91cc-a86d23fa0aec)
+
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/f2079e11-abc8-4216-9743-e74d6d58d9f4)
+
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/807c1bc8-0843-4e5a-abaa-812a7855c5bf)
+
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/da121af9-9895-434b-9596-f213abd028ce)
+
+
+
+
 
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/d1d63e76-7649-4b43-bdb9-65c18c3b634e)
 
