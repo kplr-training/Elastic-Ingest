@@ -169,3 +169,46 @@ output {
 
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/ea8ba260-a295-4c65-b313-97e38932a122)
 
+**Maintenant, on peut bien dire que les logs sont bien récupérés à partir du fichier de log et bien envoyés vers le topic de Kafka**
+
+### Pipeline  Kafka --> ElasticSearch
+
+- Pour configurer cette pipeline, créez un fichier de configuration `elastic-agent-pipeline-kafka-input.conf`.
+
+- Ce fichier va représenter une configuration de base de Logstash pour consommer des messages à partir d'un topic Kafka spécifique, ajouter un champ supplémentaire à chaque message à l'aide du filtre mutate, et publier les données traitées dans Elasticsearch. 
+
+- Les données peuvent etre publier dans un `index` ou bien un `data stream` dans Elasticsearch.
+
+#### Cas 1 : Publication dans un data stream
+
+- Le fichier contient le code suivant:
+```
+input {
+  kafka {
+    bootstrap_servers => "localhost:9092"
+    topics => ["test-topic"]
+  }
+}
+
+filter {
+  mutate {
+    add_field => { "a_logstash_field" => "Hello, world!" }
+  }
+}
+
+output {
+  elasticsearch {
+    hosts => "https://ELASTIC-IP-ADRESS:9200"
+    api_key => "XXXXXXXXXXX"
+    data_stream => true
+    ssl => true
+    cacert => "/etc/logstash/config/certs/http_ca.crt"
+  }
+}
+```
+- Maintenant, lancez la pipeline:
+
+```
+/usr/share/logstash/bin/logstash -f /etc/logstash/elastic-agent-pipeline-kafka-input.conf 
+```
+- Insérez un nouveau message dans votre fichier de log et vérifiez qu'il a bien arrivé à votre `Data Stream`.
