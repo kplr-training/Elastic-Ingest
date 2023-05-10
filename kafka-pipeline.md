@@ -44,3 +44,5 @@ apt install openjdk-11-jre-headless
 ```
 java --version
 ```
+
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/dd4d128c-5f07-4916-8c5d-3494c0062422)
