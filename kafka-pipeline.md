@@ -11,3 +11,36 @@ Les logs stockés dans Kafka sont durables, assurant leur persistance en cas de 
 Vous allez créer un pipeline qui s'organise comme suit:
 
 ![image (15)](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/1bc03880-aa41-4c1c-a582-8ba3eb475ea6)
+
+## Installation Kafka et exécution du Consumer et Producer
+
+- Afin d'installer Kafka, téléchargez la version binaire de Kafka en utilisant la commande suivante: 
+
+```
+wget https://archive.apache.org/dist/kafka/2.8.2/kafka_2.12-2.8.2.tgz
+```
+
+**NB: l'installation de Kafka se fait dans les deux machines: Fleet server, et Elastic agent**
+
+- Vous aurez comme résultat un fichier .tgz qui contient la version binaire de Kafka, utilisez la commande suivante pour l'extraire:
+
+```
+tar -xzf kafka_2.12-2.8.2.tgz
+```
+
+- Déplacez le bin vers le répertoie `/opt/kafka`
+
+```
+sudo mv kafka_2.12-2.8.2 /opt/kafka
+```
+
+- Installez Java maintenant:
+
+```
+apt install openjdk-11-jre-headless
+```
+
+- Vérifiez avec la commande suivante que Java est bien installé:
+```
+java --version
+```
