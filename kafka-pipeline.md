@@ -223,3 +223,4 @@ output {
 
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/9af23705-447c-4e46-8a38-101c360684ff)
 
+**Et Voilà! vous pouvez bien vérifiez que le message est bien stocké dans l'index et vous avez ainsi le champ `a_logstash_field` qui est ajouté** 
