@@ -162,3 +162,10 @@ output {
 - **Gardez le Consumer lancé pour visualiser les données qui arrivent au Topic.**
 
 - Ajoutez des logs de test dans le fichier `test.log` que vous avez créé préalablement:
+
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/07cd4fdb-7cb7-41ac-bd4a-046e03b788d8)
+
+- Vérifiez que le message existe bien dans le topic maintenant:
+
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/ea8ba260-a295-4c65-b313-97e38932a122)
+
