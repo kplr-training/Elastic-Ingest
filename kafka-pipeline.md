@@ -211,8 +211,15 @@ output {
 
 **NB: Si la pipeline ne s'exécute pas, ajoutez `--path.data /tmp` à la fin de la commande**
 
-- Insérez un nouveau message dans votre fichier de log et vérifiez qu'il a bien arrivé à votre topic ainsi que le `Data Stream`.
-
+- Insérez un nouveau message dans votre fichier de log et vérifiez tout d'abord qu'il a bien arrivé à votre topic:
 
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/f9b4fa3b-3192-483a-8efc-7fd30af0a2ad)
+
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/65cbcad7-6c45-464f-83e9-50f7e69a90fd)
+
+- Les logs sont publiés dans l'index `kafka-test`, créez un data view pour visualiser son contenu:
+
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/e04cbbef-f9cf-43a9-9845-ef7fa69ec640)
+
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/9af23705-447c-4e46-8a38-101c360684ff)
 
