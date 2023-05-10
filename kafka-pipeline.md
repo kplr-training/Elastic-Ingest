@@ -212,3 +212,6 @@ output {
 /usr/share/logstash/bin/logstash -f /etc/logstash/elastic-agent-pipeline-kafka-input.conf 
 ```
 - Insérez un nouveau message dans votre fichier de log et vérifiez qu'il a bien arrivé à votre `Data Stream`.
+
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/f9b4fa3b-3192-483a-8efc-7fd30af0a2ad)
+
