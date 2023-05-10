@@ -221,6 +221,10 @@ output {
 
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/65cbcad7-6c45-464f-83e9-50f7e69a90fd)
 
+- Vérifiez que l'index `kafka-test` existe parmi la liste des indices existants:
+
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/b1159824-7512-468d-998f-befb9f07ca4f)
+
 - Les logs sont publiés dans l'index `kafka-test`, créez un data view pour visualiser son contenu:
 
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/e04cbbef-f9cf-43a9-9845-ef7fa69ec640)
@@ -231,5 +235,41 @@ output {
 
 #### Cas 2 : Publication dans un datastream
 
-![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/b1159824-7512-468d-998f-befb9f07ca4f)
+- Le fichier contient le code suivant:
+```
+input {
+  kafka {
+    bootstrap_servers => "localhost:9092"
+    topics => ["test-topic"]
+  }
+}
+
+filter {
+  mutate {
+    add_field => { "a_logstash_field" => "Hello, world!" }
+  }
+}
+
+output {
+  elasticsearch {
+    hosts => "https://IP-ADRESS:9200"
+    api_key => "XXXXXXXXXX"
+    data_stream => true
+    data_stream_dataset => "kafka_output"
+    ssl => true
+    cacert => "/etc/logstash/config/certs/http_ca.crt"
+  }
+}
+```
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/fd1f3831-571b-455b-b462-5bac90ee359b)
+
+- Maintenant, lancez la pipeline:
+
+```
+/usr/share/logstash/bin/logstash -f /etc/logstash/elastic-agent-pipeline-kafka-input.conf 
+```
+
+**NB: Si la pipeline ne s'exécute pas, ajoutez `--path.data /tmp` à la fin de la commande**
+
+
+- Insérez un nouveau message dans votre fichier de log et vérifiez tout d'abord qu'il a bien arrivé à votre topic:
