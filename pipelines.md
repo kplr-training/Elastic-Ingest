@@ -85,11 +85,14 @@ Votre processeur Grok sera utilisé pour extraire: l'adresse IP, le nom de la vi
 
 - Ajoutez la configuration suivante:
 
+```
 `Processor` : `Grok`
 
 `Field` : `message`
 
 `Patterns` : `%{IPORHOST:a_source_ip}#%{USER:a_city}#%{USER:a_country}`
+
+```
 
 ## Logstash Pipeline
 
