@@ -123,6 +123,9 @@ Votre processeur Grok sera utilisé pour extraire: l'adresse IP, le nom de la vi
 
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/cf30d470-bf87-4c1e-91cc-a86d23fa0aec)
 
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/d1d63e76-7649-4b43-bdb9-65c18c3b634e)
+
+
 ## Logstash Pipeline
 
 Une pipeline Logstash se compose de trois étapes principales : l'étape d'entrée, qui récupère les données, l'étape de filtrage, où les données sont transformées et enrichies, et l'étape de sortie, qui détermine où les données traitées seront envoyées. 
