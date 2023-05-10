@@ -117,25 +117,29 @@ Votre processeur Grok sera utilisé pour extraire: l'adresse IP, le nom de la vi
   }
 ]
 ```
-- Cliquez sur `Run the pipeline`, et vérifiez que vous avez bien les nouveaux champs: `a_source_ip`, `a_city`, `a_country` :
 
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/411ccb10-d684-46ce-a226-6e5db290a8fa)
 
 
+- Cliquez sur `Run the pipeline`, et vérifiez que vous avez bien les nouveaux champs: `a_source_ip`, `a_city`, `a_country` :
+
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/cf30d470-bf87-4c1e-91cc-a86d23fa0aec)
 
-![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/f2079e11-abc8-4216-9743-e74d6d58d9f4)
+- Si votre pipeline fonctionne correctement, sauvegardez la pipeline.
+
+- Pour utiliser la pipeline et l'appliquer sur les données reçus depuis l'agent Elastic, redirigez vers l'intégration que vous avez créé préalablement puis ajoutez le nom de la pipeline dans le champ `Custom configurations` dans `Advanced options`:
 
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/807c1bc8-0843-4e5a-abaa-812a7855c5bf)
 
+- Maintenant, ajoutez une ligne de log dans votre fichier pour tester la pipeline: 
+
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/da121af9-9895-434b-9596-f213abd028ce)
 
-
-
-
+- Vérifiez le document dans votre data view dans `Discover`: 
 
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/d1d63e76-7649-4b43-bdb9-65c18c3b634e)
 
+**Félicitations! vous avez créé et exécuté votre première pipeline**
 
 ## Logstash Pipeline
 
