@@ -197,13 +197,25 @@ Dans l'étape de filtrage, le plugin "mutate" est utilisé pour ajouter un champ
 
 Enfin, dans l'étape de sortie, les événements sont envoyés vers Elasticsearch en tant que data stream en utilisant l'URL spécifiée avec une clé API pour l'authentification. 
 
+
+
+**NB: Avant d'exécuter la pipeline, vérifiez bien qu'aucune autre pipeline est entrain de s'exécuter. Pour ce faire, vous vérifiez s'il y a un service qui utilise le port de Logstash '5044' à l'aide de la commande suivante:**
+
+```
+sudo lsof -i :5044
+```
+
+S'il existe un processus qui s'excécute, récupérez sans `PID` et tapez la commande suivante pour le terminer:
+
+```
+kill -9 YOUR-PID
+```
+
 - Pour tester votre pipeline, vous devez tout d'abord l'exécuter en utilisant la commande suivante: 
 
 ```
 /usr/share/logstash/bin/logstash -f /path/to/your/configuration/file
 ```
-
-**NB: Vérifiez bien qu'aucune autre pipeline est entrain de s'exécuter**
 
 - Vérifiez bien que la policy, avec laquelle votre intégration est liée, a comme Output `Logstash Output`
 
