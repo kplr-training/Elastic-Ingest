@@ -271,9 +271,11 @@ output {
 **NB: Si la pipeline ne s'exécute pas, ajoutez `--path.data /tmp` à la fin de la commande**
 
 
-- Insérez un nouveau message dans votre fichier de log:
+- Insérez un nouveau message dans votre fichier de log et vérifiez qu'il est publié dans le topic:
 
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/9ba53801-2655-45a1-a0da-c4bed29dfd59)
+
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/30a6b6ac-f5ab-4a90-a27d-e71c0808b9a2)
 
 - Vérifiez que le data stream `kafka_output` est bien créé: 
 
