@@ -261,7 +261,6 @@ output {
   }
 }
 ```
-![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/fd1f3831-571b-455b-b462-5bac90ee359b)
 
 - Maintenant, lancez la pipeline:
 
@@ -272,4 +271,20 @@ output {
 **NB: Si la pipeline ne s'exécute pas, ajoutez `--path.data /tmp` à la fin de la commande**
 
 
-- Insérez un nouveau message dans votre fichier de log et vérifiez tout d'abord qu'il a bien arrivé à votre topic:
+- Insérez un nouveau message dans votre fichier de log:
+
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/9ba53801-2655-45a1-a0da-c4bed29dfd59)
+
+- Vérifiez que le data stream `kafka_output` est bien créé: 
+
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/fd1f3831-571b-455b-b462-5bac90ee359b)
+
+- Créez un data view pour visualiser le contenu du data stream :
+
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/38c93420-6d34-4f59-86d1-cd12709dab52)
+
+- Vérifiez que votre message existe bien dans le data stream et que  le champ `a_logstash_field` est ajouté:
+
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/e6a74035-0816-4627-ae81-fdb2bf8d133e)
+
+**Et Voilà! vous pouvez bien vérifiez que le message est bien stocké dans le datastream et vous avez ainsi le champ `a_logstash_field` qui est ajouté** 
