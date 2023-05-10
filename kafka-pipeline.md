@@ -100,10 +100,10 @@ bin/kafka-console-consumer.sh --topic test-topic --from-beginning --bootstrap-se
 
 #### Lancement du producer
 
-- Maintenant, vous allez produire des données à l'aide du producer pour vérifier que Kafka fonctionne correctement. Pour ce faire, tapez cette commande:  
+- Maintenant, vous allez produire des données à l'aide du producer pour vérifier que Kafka fonctionne correctement. Pour ce faire, tapez cette commande en ajoutant votre adresse IP interne:  
 
 ```
-bin/kafka-console-producer.sh --broker-list 172.30.2.238:9092 --topic test-topic
+bin/kafka-console-producer.sh --broker-list YOUR-PRIVATE-IP-ADRESS:9092 --topic test-topic
 ```
 
 - Ensuite saisissez des messages aléatoires pour tester et visualisez le résultat dans le consumer:
@@ -117,3 +117,48 @@ bin/kafka-console-producer.sh --broker-list 172.30.2.238:9092 --topic test-topic
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/087373f0-37bb-41b2-a6e8-7a6868b05b98)
 
 
+**Si vous voyez comme ces résultats, donc félicitations! Kafka fonctionne correctement!**
+
+## Ajout du Kafka au setup 
+
+Dans cette partie, vous allez changer la configuration de votre pipeline pour que vous aurez un résultat qui peut etre schématisé comme suit: 
+
+![image (15)](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/1bc03880-aa41-4c1c-a582-8ba3eb475ea6)
+
+Donc vous devez d'abord configuré une pipeline qui permet d'ingérer les données à partir de l'`Elastic Agent` et puis les transmettre vers le `Producer` qui va publier les données dans Kafka.
+
+Ensuite, vous configurez une pipeline qui permet d'ingérer les données à partir du `Topic` et les envoyer vers ElasticSearch.
+
+### Pipeline Elastic Agent --> Kafka
+
+- Pour configurer cette pipeline, créez un fichier de configuration `elastic-agent-pipeline-kafka-output.conf`.
+- Ce fichier va représenter une configuration basique de Logstash pour recevoir des données à partir d'Elastic Agent via le protocole Elastic Agent Input et les envoyer vers un topic Kafka spécifique. 
+
+- Le fichier contient le code suivant:
+```
+input {
+  elastic_agent {
+    port => 5044
+    ssl => true
+    ssl_certificate_authorities => ["/etc/logstash/config/certs/ca/ca.crt"]
+    ssl_certificate => "/etc/logstash/config/certs/logstash/logstash.crt"
+    ssl_key => "/etc/logstash/config/certs/logstash/logstash.pkcs8.key"
+    ssl_verify_mode => "force_peer"
+  }
+}
+
+output {
+    kafka {
+        bootstrap_servers => "localhost:9092"
+        topic_id => ["test-topic"]
+    }
+}
+```
+- Maintenant, lancez la pipeline (Avant de la lancer, arretez tout processus qui utilise le port 5044):
+
+```
+/usr/share/logstash/bin/logstash -f /etc/logstash/elastic-agent-pipeline-kafka-output.conf
+```
+- **Gardez le Consumer lancé pour visualiser les données qui arrivent au Topic.**
+
+- Ajoutez des logs de test dans le fichier `test.log` que vous avez créé préalablement:
