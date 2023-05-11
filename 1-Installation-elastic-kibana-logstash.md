@@ -21,7 +21,7 @@ wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo gpg --dearm
 ```
 
 ```
-sudo apt-get install apt-transport-https
+sudo apt-get install -y apt-transport-https
 ```
 
 ```
@@ -29,7 +29,7 @@ echo "deb [signed-by=/usr/share/keyrings/elasticsearch-keyring.gpg] https://arti
 ```
 
 ```
-sudo apt-get update && sudo apt-get install elasticsearch
+sudo apt-get update && sudo apt-get install -y elasticsearch
 ```
 
 - Vous devez apporter des modifications au fichier principal de configuration à l'aide de la commande suivante:
@@ -71,7 +71,14 @@ systemctl status elasticsearch
 
 ![image](https://user-images.githubusercontent.com/123748177/227985805-e2755adf-9942-4f90-8f14-c8b6bfa7ec5b.png)
 
+- Changer le mot de passe par défaut du user elastic et mettre un mdp simple (elastic/elastic)
+
+```
+/usr/share/elasticsearch/bin/elasticsearch-reset-password -u elastic -i
+```
+
 -Maintenant, vous allez pinguer l'API elastic pour vérifier l'état du noeud:
+(>A titre d'information seulement, car dans notre cas xpack est activé donc cela ne marchera pas sans rentrer la commande https et les crédentiels)
 
 ```
 curl http://127.0.0.1:9200/
@@ -82,7 +89,7 @@ curl http://127.0.0.1:9200/
 Vous installez Kibana à l'aide de la commande suivante:
 
 ```
-sudo apt-get update && sudo apt-get install kibana
+sudo apt-get update && sudo apt-get install -y kibana
 ```
 
 Vous accédez par la suite au fichier de configuration pour modifier les parties nécessaires:
@@ -99,6 +106,12 @@ server.port: 5601
 server.host: "0.0.0.0"
 
 elasticsearch.hosts: ["http://localhost:9200"]
+```
+
+Tips:
+
+```
+sed -i 's/#server\.host: "localhost"/server\.host: "0.0.0.0"/' /etc/kibana/kibana.yml
 ```
 
 **Il ne vous reste qu'à démarrer Kibana :)**
