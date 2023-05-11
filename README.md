@@ -1,5 +1,100 @@
 # Elastic-Ingest
 
+## Description du conteu des fichiers
+
+### Installation-elastic-kibana-logstash.md
+
+- Installation et configuration Elasticsearch
+- Installation et configuration Kibana
+- Installation et configuration Logstash
+
+### Configure Kibana from UI.md
+
+- Configuration et enrollement d'Elasticsearch dans Kibana
+
+### custom-logs-ingestion-pipeline.md
+
+Ce fichier contient la documentation d'un test de création d'un pipeline d'ingestion suivant le tutoriel de John Lai : [Voici le lien du tutoriel](https://www.youtube.com/watch?v=0_X45R1mVnI)
+
+- Création d'un Ingest Pipeline
+- Création d'une intégration de type `Custom Windows Event Logs`
+- Liaison de la pipeline avec l'intégration
+- Visualisation du contenu du dataset créé
+
+### enrich-data.md
+
+Ce fichier contient la documentation d'un test d'enrichissement des données suivant le tutoriel de Evermight : [Enrich Data with Elasticsearch 8.x - Part 1: Basic Examples](https://www.youtube.com/watch?v=VCSgTtU4ddI)
+
+### fleet-server.md
+
+- Ajout et configuration d'un Fleet server
+
+### kafka-pipeline.md
+
+- Installation Kafka
+- Exécution du Consumer et Producer
+- Ajout du Kafka au pipeline existant
+- Publication des données dans un index et un datastream
+
+### logstash-output.md
+
+- Configuration d'un output logstash
+- Création d'autorité de certification et signature des certificats SSL de Client et de Logstash server
+
+### meeting-result.md
+
+- Notes qui résument les points essentielles dans la réunion avec le client
+
+### network-security-logs.md
+
+- code de génération des logs aléatoires (NtworkSecurity)
+
+### pipelines.md
+
+- Création d'une nouvelle intégration de type `Custom logs`
+- Création et test d'un Ingest Pipeline
+- Création et test d'un pipeline Logstash
+- Ajout et test des Filebeat processors
+
+### policies-integration.md
+
+- Procédure de création d'une Agent Policy
+- Activation de license
+- Ajout d'un Custom Windows Event Logs Integration
+- Création d'un data view
+- Visualisation du data view
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+########################################################################
+
 - Presentation Intégrations
 - Faire des graphes d'intégration (serveurs, composants, etc.)
 - Screenshots + Menu Guide (A>B>C)
