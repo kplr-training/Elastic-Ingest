@@ -22,3 +22,6 @@
 
 
 ![Kibana UI Setup 4](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/d8303515-e330-4a23-ae6b-92ad022a9078)
+
+
+- Selectionner "Explore on my own" (ne pas sélectionner Add Integrations)
