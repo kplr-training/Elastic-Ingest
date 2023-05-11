@@ -131,9 +131,11 @@ systemctl start kibana
 systemctl status kibana
 ```
 
+Attention : Il faut attendre quelques minutes le temps que Kibana soit Up & Ready !
+
 ![image](https://user-images.githubusercontent.com/123748177/228309327-a8321452-8bd4-4621-83cd-160b9c670f13.png)
 
-**Félicitations!! Vous pouvez maintenant vous connecter à Kibana à partir de votre navigateur en utilisant l'adresse IP Public de votre machine suivi par le port 5601**
+**Félicitations!! Vous pouvez maintenant vous connecter à Kibana à partir de votre navigateur en utilisant l'adresse IP Publique de votre machine suivie par le port 5601**
 
 ## 3- Installation Logstash:
 
