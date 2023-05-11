@@ -64,35 +64,6 @@ Ce fichier contient la documentation d'un test d'enrichissement des données sui
 - Création d'un data view
 - Visualisation du data view
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ########################################################################
 
 - Presentation Intégrations
