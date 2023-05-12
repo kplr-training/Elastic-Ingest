@@ -145,6 +145,8 @@ Vous installez Logstash à l'aide de la commande suivante:
 sudo apt-get update && sudo apt-get install -y logstash
 ```
 
+⚠️durant le processus d'installation, si vous avez des fenêtres système linux qui s'affichent, appuyez simplement sur entree⚠️
+
 Pour tester que Logstash s'exécute correctement, vous allez créer une simple pipeline de test.
 
 Dans le répertoire `etc/logstash`, créez les deux fichiers suivants :
