@@ -120,6 +120,7 @@ Extrayez le fichier zip :
 ```
 unzip /etc/logstash/config/certs/logstash.zip
 ```
+![image](https://user-images.githubusercontent.com/123748177/235362724-63f8a7f1-c89a-4077-bef1-8012690d711c.png)
 
 En somme, vous avez créé 3 archives, contenant respectivement : 
 - la paire clé/certificat de l'autorité de certification (ca)
@@ -127,9 +128,8 @@ En somme, vous avez créé 3 archives, contenant respectivement :
 - la paire clé/certificat de fleet (client)
 puis vous avez extrait les archives en question. 
 
-![image](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/1beb099f-4867-4044-bc24-910f8205ccd1)
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/00c58830-edc2-4c07-8d12-fa5571b61af8)
 
-![image](https://user-images.githubusercontent.com/123748177/235362724-63f8a7f1-c89a-4077-bef1-8012690d711c.png)
 
 ---
 
