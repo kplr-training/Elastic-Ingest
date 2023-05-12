@@ -136,6 +136,7 @@ puis vous avez extrait les archives en question.
 ### 9- Convertissez la clé Logstash vers pkcs8.
 
 ```
+cd /etc/logstash/config/certs/logstash
 openssl pkcs8 -inform PEM -in logstash.key -topk8 -nocrypt -outform PEM -out logstash.pkcs8.key
 ```
 
