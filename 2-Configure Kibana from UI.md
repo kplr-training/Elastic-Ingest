@@ -25,3 +25,11 @@
 
 
 - Selectionner "Explore on my own" (ne pas sélectionner Add Integrations)
+
+- Allez faire un tour dans `kibana.yml`:
+
+⚠️ Remarquez que la configuration de Kibana a été effectuée automatiquement en dessous de la section: 
+`# This section was automatically generated during setup.`
+cette configuration a eu lieu lors de la phase de setup des token de sécurité elasticsearch juste après le login dans l'UI de Kibana. 
+
+![Screenshot 2023-05-12 at 16 08 35](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/8d686f56-0910-49c7-9e28-f7125adfc4be)
