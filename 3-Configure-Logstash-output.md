@@ -71,14 +71,15 @@ NB: Remplacez le chemin vers votre fichier.
 
 Pour ce faire, vous devez exécutez la commande suivante: 
 ```
-/usr/share/elasticsearch/bin/elasticsearch-certutil ca --pem
+/usr/share/elasticsearch/bin/elasticsearch-certutil ca --pem --out /etc/logstash/config/certs/ca.zip
 ```
 Cette commande crée un fichier zip contenant le certificat CA et la clé. 
 
 6-  Extrayez le fichier zip :
 
 ```
-unzip elastic-stack-ca.zip
+apt-get install unzip
+unzip /etc/logstash/config/certs/ca.zip
 ```
 ![image](https://user-images.githubusercontent.com/123748177/235146035-6fa22863-c645-42b1-a12f-5653dea6e90e.png)
 
