@@ -18,10 +18,10 @@ Ensuite, vous devez suivre les étapes de configuration additionnelle dans Logst
 
 ![image](https://user-images.githubusercontent.com/123748177/235137339-5e837a48-c540-4de7-bee4-d5d270a56a98.png)
 
-1- Vous générez d'abord l'API key.
+### 1- Vous générez d'abord l'API key.
 
 
-2- Dans votre répertoire de configuration Logstash, ouvrez le fichier `pipelines.yml` et ajoutez la configuration suivante.
+### 2- Dans votre répertoire de configuration Logstash, ouvrez le fichier `pipelines.yml` et ajoutez la configuration suivante.
 
 NB: Remplacez le chemin vers votre fichier.
 
@@ -31,14 +31,14 @@ NB: Remplacez le chemin vers votre fichier.
 
 ```
 
-3- Vous devez préciser l'adresse que les agents vont utiliser pour se connecter à Logstash.<br> 
+### 3- Vous devez préciser l'adresse que les agents vont utiliser pour se connecter à Logstash.<br> 
    :warning: Spécifiez votre **adresse IP privée** et le **port 5044** :warning:
 
 ![image](https://user-images.githubusercontent.com/123748177/235174010-7e450e63-7c76-482f-9880-0cf9a6a527fc.png)
 
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/2ac736b6-3a72-4a61-91ca-d6111e3100e4)
 
-4- Maintenant, vous devez créer votre autorité de certificat que vous utiliserez pour signer les certificats.
+### 4- Maintenant, vous devez créer votre autorité de certificat que vous utiliserez pour signer les certificats.
 
 Pour ce faire, vous devez exécutez la commande suivante: 
 ```
@@ -46,7 +46,7 @@ Pour ce faire, vous devez exécutez la commande suivante:
 ```
 Cette commande crée un fichier zip contenant le certificat CA et la clé. 
 
-5-  Extrayez le fichier zip :
+### 5-  Extrayez le fichier zip :
 
 ```
 apt-get install unzip
@@ -69,7 +69,7 @@ Le certificat client est également utilisé pour chiffrer les données transmis
 ![SSl certificats drawio](https://user-images.githubusercontent.com/123748177/235360276-4d67a37c-ae94-4d99-9a5f-78e8bd9ab6c5.png)
 
 
-6- Vous copiez le contenu de `ca.crt` dans la partie `Server SSL certificate authorities` 
+### 6- Vous copiez le contenu de `ca.crt` dans la partie `Server SSL certificate authorities` 
 
 ![image](https://user-images.githubusercontent.com/123748177/235361006-925922d7-064f-4543-8287-48a284484dfd.png)
 
@@ -90,7 +90,7 @@ unzip client.zip
 ![image](https://user-images.githubusercontent.com/123748177/235362711-1cbebe38-6c93-4862-8ebe-56c67f39f93f.png)
 
 
-8- Vous créez aussi le certificat Logstash Server : 
+### 8- Vous créez aussi le certificat Logstash Server : 
 
 ```
 /usr/share/elasticsearch/bin/elasticsearch-certutil cert \
@@ -116,13 +116,13 @@ puis vous avez extrait les archives en question.
 
 ![image](https://user-images.githubusercontent.com/123748177/235362724-63f8a7f1-c89a-4077-bef1-8012690d711c.png)
 
-9- Convertissez la clé Logstash vers pkcs8.
+### 9- Convertissez la clé Logstash vers pkcs8.
 
 ```
 openssl pkcs8 -inform PEM -in logstash.key -topk8 -nocrypt -outform PEM -out logstash.pkcs8.key
 ```
 
-10- Vous copiez le contenu de `client.crt` dans la partie `Client SSL certificate` et le contenu de `client.key` dans la partie `Client SSL certificate key`
+### 10- Vous copiez le contenu de `client.crt` dans la partie `Client SSL certificate` et le contenu de `client.key` dans la partie `Client SSL certificate key`
 
 
 ![image](https://user-images.githubusercontent.com/123748177/235361083-74685b14-09da-48ef-94bd-1c4e303dbfe9.png)
@@ -156,7 +156,7 @@ output {
 }
 
 ````
-11- Renseigner une clé d'encription Kibana (étape nécessaire pour le bon fonctionnement de la chaîne)
+### 11- Renseigner une clé d'encription Kibana (étape nécessaire pour le bon fonctionnement de la chaîne)
 
 - Commencez par générer une clé d'encryption Kibana : 
 ```
@@ -175,8 +175,8 @@ xpack.encryptedSavedObjects:
   encryptionKey: "1aba07240f83231ecf23d9a52de867f2"
 ```
 
-12- Cliquez `Save and Apply settings`, et Voilà! vous avez créé votre output avec succès.
+### 12- Cliquez `Save and Apply settings`, et Voilà! vous avez créé votre output avec succès.
 
 ![image](https://user-images.githubusercontent.com/123748177/235177522-107ad5a2-2c35-4404-aa3f-44d2a6c3744f.png)
 
-13- Il faut à présent démarrer le service logstash ou directement lancer la pipeline de façon individuelle
+### 13- Il faut à présent démarrer le service logstash ou directement lancer la pipeline de façon individuelle
