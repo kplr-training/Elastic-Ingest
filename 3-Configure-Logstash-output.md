@@ -21,9 +21,9 @@ Ensuite, vous devez suivre les étapes de configuration additionnelle dans Logst
 1- Vous générez d'abord l'API key.
 
 2- Créez le fichier `vi /etc/logstash/elastic-agent-pipeline.conf` et ajoutez la configuration suivante <br>
-⚠️1 - vous devez faire super attention à ce que les chemins des certificats soient corrects⚠️<br>
-⚠️2 - les chemins des certificats doivent être accessibles  pour éviter les soucis (chmod au besoin)⚠️<br>
-⚠️3 - renseignez correctement l'adresse IP privée du host suivie du port 9200 et la clé API générée précédemment⚠️<br>
+⚠️1 - vous devez faire super attention à ce que les chemins des certificats soient corrects<br>
+⚠️2 - les chemins des certificats doivent être accessibles  pour éviter les soucis (chmod au besoin)<br>
+⚠️3 - renseignez correctement l'adresse IP privée du host suivie du port 9200 et la clé API générée précédemment<br>
 
 
 ````
