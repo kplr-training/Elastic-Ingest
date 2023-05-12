@@ -209,7 +209,7 @@ cette configuration a eu lieu lors de la phase de setup des token de sécurité 
 
 ### 12- Cliquez `Save and Apply settings`, et Voilà! vous avez créé votre output avec succès.
 
-![image](https://user-images.githubusercontent.com/123748177/235177522-107ad5a2-2c35-4404-aa3f-44d2a6c3744f.png)
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/12cb7e0b-bf08-4b3c-a683-c68f213dc2e1)
 
 ---
 
