@@ -20,23 +20,28 @@ Ensuite, vous devez suivre les étapes de configuration additionnelle dans Logst
 
 1- Vous générez d'abord l'API key.
 
-2- Ouvrez la fichier `elastic-agent-pipeline.conf` et ajoutez la configuration suivante (REMARQUE! : Vous allez la modifier par la suite):
+2- Créez le fichier `vi /etc/logstash/elastic-agent-pipeline.conf` et ajoutez la configuration suivante 
+⚠️1 - vous devez faire super attention à ce que les chemins des certificats soient corrects⚠️
+⚠️2 - les chemins des certificats doivent être accessibles  pour éviter les soucis (chmod au besoin)⚠️
+⚠️3 - renseignez correctement l'adresse IP privée du host suivie du port 9200 et la clé API générée précédemment⚠️
+
 
 ````
 input {
   elastic_agent {
     port => 5044
     ssl => true
-    #ssl_certificate_authorities => ["<ca_path>"]
-    ssl_certificate => "/etc/logstash/config/certs/ca/ca.crt"
-    ssl_key => "/etc/logstash/config/certs/ca/ca.key"
-    ssl_verify_mode => "none"
+    ssl_certificate_authorities => ["/etc/logstash/config/certs/ca/ca.crt"]
+    ssl_certificate => "/etc/logstash/config/certs/logstash/logstash.crt"
+    ssl_key => "/etc/logstash/config/certs/logstash/logstash.pkcs8.key"
+    ssl_verify_mode => "force_peer"
   }
 }
+
 output {
   elasticsearch {
-    hosts => "https://ELASTIC-IP-ADRESS:9200"
-    api_key => "GENERATED API KEY"
+    hosts => "https://*****__VOTRE___ADRESSE_IP_PRIVEE__*******:9200"
+    api_key => "*****__VOTRE_API_KEY*******"
     data_stream => true
     ssl => true
     cacert => "/etc/logstash/config/certs/http_ca.crt"
