@@ -22,6 +22,8 @@ Ensuite, vous devez suivre les étapes de configuration additionnelle dans Logst
 
 ### 1- Générez d'abord l'API key.
 
+⚠️ notez et conservez cette clé, elle vous sera demandée plus tard lors de la configuration du fichier pipeline ⚠️ 
+
 ---
 
 ### 2- Dans votre répertoire de configuration Logstash, ouvrez le fichier `pipelines.yml` et ajoutez la configuration suivante.
