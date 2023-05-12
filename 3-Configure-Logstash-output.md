@@ -56,6 +56,7 @@ NB: Remplacez le chemin vers votre fichier.
 ```
 
 4- Vous devez préciser l'adresse que les agents vont utiliser pour se connecter à Logstash
+   :warning: Spécifiez votre **adresse IP privée** et le **port 5044** :warning:
 
 ![image](https://user-images.githubusercontent.com/123748177/235174010-7e450e63-7c76-482f-9880-0cf9a6a527fc.png)
 
