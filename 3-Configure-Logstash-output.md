@@ -8,6 +8,10 @@ Dans ce contexte, l'agent output de type Logstash est utilisé pour acheminer le
 
 ### Création d'un Output Logstash
 
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/4dd4f691-5669-48cb-a8bf-9d917aadf65f)
+
+### Création d'un Output Logstash
+
 Pour créer un nouveau output, redirigez vous vers `Management` > `Fleet` > `Settings` > `Outputs` > `Add Output`
 
 ![Fleet Add OUtput](https://user-images.githubusercontent.com/123748177/235136317-474b64aa-2111-4e2c-87ac-20cf69427eea.png)
@@ -80,6 +84,10 @@ Le certificat client est également utilisé pour chiffrer les données transmis
 
 ### 6- Vous copiez le contenu de `ca.crt` dans la partie `Server SSL certificate authorities` 
 
+```
+cat /etc/logstash/config/certs/ca/ca.crt
+```
+
 ![image](https://user-images.githubusercontent.com/123748177/235361006-925922d7-064f-4543-8287-48a284484dfd.png)
 
 ---
@@ -142,8 +150,20 @@ openssl pkcs8 -inform PEM -in logstash.key -topk8 -nocrypt -outform PEM -out log
 
 ---
 
-### 10- Vous copiez le contenu de `client.crt` dans la partie `Client SSL certificate` et le contenu de `client.key` dans la partie `Client SSL certificate key`
+### 10- Configuration des certificats clients : 
 
+- Copiez le contenu de `client.crt` dans la partie `Client SSL certificate` 
+
+
+```
+cat /etc/logstash/config/certs/client/client.crt
+```
+
+- Copiez le contenu de `client.key` dans la partie `Client SSL certificate key`
+
+```
+cat /etc/logstash/config/certs/client/client.key
+```
 
 ![image](https://user-images.githubusercontent.com/123748177/235361083-74685b14-09da-48ef-94bd-1c4e303dbfe9.png)
 
