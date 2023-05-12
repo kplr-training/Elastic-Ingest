@@ -193,7 +193,7 @@ xpack.encryptedSavedObjects.encryptionKey: 1aba07240f83231ecf23d9a52de867f2
 xpack.reporting.encryptionKey: 3f54c2f69c2b9e52a120a1cd4c1aab15
 xpack.security.encryptionKey: 0f20abe0bf4377f3ff81b7763d7e7a40
 ```
-Ajoutez la partie de code suivante tout en bas dans le fichier de configuration de Kibana `kibana.yml`
+Notez la valeur de la clé d'encryption xpack.encryptedSavedObjects.encryptionKey, puis reportez la dans la propriété suivante que vous rajoutez tout en bas dans le fichier de configuration de Kibana `kibana.yml`
 ```
 xpack.encryptedSavedObjects:
   encryptionKey: "1aba07240f83231ecf23d9a52de867f2"
