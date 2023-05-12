@@ -4,7 +4,9 @@ Un agent output de type Logstash fait référence à une instance de Logstash co
 
 Dans ce contexte, l'agent output de type Logstash est utilisé pour acheminer les données des agents vers Logstash pour etre collectées et traitées. 
 
-**Création d'un Output Logstash** 
+---
+
+### Création d'un Output Logstash
 
 Pour créer un nouveau output, redirigez vous vers `Management` > `Fleet` > `Settings` > `Outputs` > `Add Output`
 
@@ -18,8 +20,9 @@ Ensuite, vous devez suivre les étapes de configuration additionnelle dans Logst
 
 ![image](https://user-images.githubusercontent.com/123748177/235137339-5e837a48-c540-4de7-bee4-d5d270a56a98.png)
 
-### 1- Vous générez d'abord l'API key.
+### 1- Générez d'abord l'API key.
 
+---
 
 ### 2- Dans votre répertoire de configuration Logstash, ouvrez le fichier `pipelines.yml` et ajoutez la configuration suivante.
 
@@ -30,6 +33,7 @@ NB: Remplacez le chemin vers votre fichier.
   path.config: "/etc/path/to/elastic-agent-pipeline.conf"
 
 ```
+---
 
 ### 3- Vous devez préciser l'adresse que les agents vont utiliser pour se connecter à Logstash.<br> 
    :warning: Spécifiez votre **adresse IP privée** et le **port 5044** :warning:
@@ -45,6 +49,8 @@ Pour ce faire, vous devez exécutez la commande suivante:
 /usr/share/elasticsearch/bin/elasticsearch-certutil ca --pem --out /etc/logstash/config/certs/ca.zip
 ```
 Cette commande crée un fichier zip contenant le certificat CA et la clé. 
+
+---
 
 ### 5-  Extrayez le fichier zip :
 
@@ -68,6 +74,7 @@ Le certificat client est également utilisé pour chiffrer les données transmis
 
 ![SSl certificats drawio](https://user-images.githubusercontent.com/123748177/235360276-4d67a37c-ae94-4d99-9a5f-78e8bd9ab6c5.png)
 
+---
 
 ### 6- Vous copiez le contenu de `ca.crt` dans la partie `Server SSL certificate authorities` 
 
@@ -89,6 +96,7 @@ unzip client.zip
 ```
 ![image](https://user-images.githubusercontent.com/123748177/235362711-1cbebe38-6c93-4862-8ebe-56c67f39f93f.png)
 
+---
 
 ### 8- Vous créez aussi le certificat Logstash Server : 
 
@@ -116,11 +124,15 @@ puis vous avez extrait les archives en question.
 
 ![image](https://user-images.githubusercontent.com/123748177/235362724-63f8a7f1-c89a-4077-bef1-8012690d711c.png)
 
+---
+
 ### 9- Convertissez la clé Logstash vers pkcs8.
 
 ```
 openssl pkcs8 -inform PEM -in logstash.key -topk8 -nocrypt -outform PEM -out logstash.pkcs8.key
 ```
+
+---
 
 ### 10- Vous copiez le contenu de `client.crt` dans la partie `Client SSL certificate` et le contenu de `client.key` dans la partie `Client SSL certificate key`
 
@@ -156,6 +168,9 @@ output {
 }
 
 ````
+
+---
+
 ### 11- Renseigner une clé d'encription Kibana (étape nécessaire pour le bon fonctionnement de la chaîne)
 
 - Commencez par générer une clé d'encryption Kibana : 
@@ -175,8 +190,12 @@ xpack.encryptedSavedObjects:
   encryptionKey: "1aba07240f83231ecf23d9a52de867f2"
 ```
 
+---
+
 ### 12- Cliquez `Save and Apply settings`, et Voilà! vous avez créé votre output avec succès.
 
 ![image](https://user-images.githubusercontent.com/123748177/235177522-107ad5a2-2c35-4404-aa3f-44d2a6c3744f.png)
+
+---
 
 ### 13- Il faut à présent démarrer le service logstash ou directement lancer la pipeline de façon individuelle
