@@ -55,10 +55,11 @@ NB: Remplacez le chemin vers votre fichier.
 
 ```
 
-4- Vous devez précisez l'adresse que les agents vont utiliser pour se connecter à Logstash
+4- Vous devez préciser l'adresse que les agents vont utiliser pour se connecter à Logstash
 
 ![image](https://user-images.githubusercontent.com/123748177/235174010-7e450e63-7c76-482f-9880-0cf9a6a527fc.png)
 
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/2ac736b6-3a72-4a61-91ca-d6111e3100e4)
 
 5- Maintenant, vous devez créer votre autorité de certificat que vous utiliserez pour signer les certificats.
 
