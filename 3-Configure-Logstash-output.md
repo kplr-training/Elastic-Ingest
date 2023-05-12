@@ -180,6 +180,8 @@ output {
 
 ### 11- Renseigner une clé d'encription Kibana (étape nécessaire pour le bon fonctionnement de la chaîne)
 
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/074fe243-ad9d-4c57-87a0-afaf6e2b8539)
+
 - Commencez par générer une clé d'encryption Kibana : 
 ```
 /usr/share/kibana/bin/kibana-encryption-keys generate
@@ -191,11 +193,17 @@ xpack.encryptedSavedObjects.encryptionKey: 1aba07240f83231ecf23d9a52de867f2
 xpack.reporting.encryptionKey: 3f54c2f69c2b9e52a120a1cd4c1aab15
 xpack.security.encryptionKey: 0f20abe0bf4377f3ff81b7763d7e7a40
 ```
-Ajoutez la partie de code suivante dans le fichier de configuration de Kibana `kibana.yml`
+Ajoutez la partie de code suivante tout en bas dans le fichier de configuration de Kibana `kibana.yml`
 ```
 xpack.encryptedSavedObjects:
   encryptionKey: "1aba07240f83231ecf23d9a52de867f2"
 ```
+
+⚠️ Remarquez que la configuration de Kibana a été effectuée automatiquement en dessous de la section: 
+`# This section was automatically generated during setup.`
+cette configuration a eu lieu lors de la phase de setup des token de sécurité elasticsearch juste après le login dans l'UI de Kibana. 
+
+![Screenshot 2023-05-12 at 16 08 35](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/8d686f56-0910-49c7-9e28-f7125adfc4be)
 
 ---
 
