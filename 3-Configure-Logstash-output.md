@@ -32,7 +32,7 @@ NB: Remplacez le chemin vers votre fichier.
 
 ```
 - pipeline.id: elastic-agent-pipeline
-  path.config: "/etc/path/to/elastic-agent-pipeline.conf"
+  path.config: "/etc/logstash/elastic-agent-pipeline.conf"
 
 ```
 ---
