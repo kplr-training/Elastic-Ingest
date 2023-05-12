@@ -52,7 +52,7 @@ Cette commande crée un fichier zip contenant le certificat CA et la clé.
 
 ---
 
-### 5-  Extrayez le fichier zip :
+### 5-  Extrayez le fichier zip de l'autorité de certification:
 
 ```
 apt-get install unzip
@@ -90,11 +90,12 @@ Le certificat client est également utilisé pour chiffrer les données transmis
   --ca-cert /etc/elasticsearch/certs/ca/ca.crt \
   --ca-key /etc/elasticsearch/certs/ca/ca.key \
   --pem
+  --out /etc/logstash/config/certs/client.zip
 ```
 Extrayez le fichier zip :
 
 ```
-unzip client.zip
+unzip /etc/logstash/config/certs/client.zip
 ```
 ![image](https://user-images.githubusercontent.com/123748177/235362711-1cbebe38-6c93-4862-8ebe-56c67f39f93f.png)
 
@@ -108,12 +109,14 @@ unzip client.zip
   --ca-cert /etc/elasticsearch/certs/ca/ca.crt \
   --ca-key /etc/elasticsearch/certs/ca/ca.key \
   --pem
+   --out /etc/logstash/config/certs/logstash.zip
+
 ```
 
 Extrayez le fichier zip :
 
 ```
-unzip logstash.zip
+unzip /etc/logstash/config/certs/logstash.zip
 ```
 
 En somme, vous avez créé 3 archives, contenant respectivement : 
