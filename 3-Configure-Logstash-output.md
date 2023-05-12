@@ -10,6 +10,7 @@ Dans ce contexte, l'agent output de type Logstash est utilisé pour acheminer le
 
 Si ce n'est pas le cas, vous devrez la configurer et redémarrer Kibana (se référer au Markdown d'install). 
 Si ce n'est pas fait vous aurez le message suivant et vous ne pourrez pas sauvegarder votre configuration d'ouput :
+
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/4dd4f691-5669-48cb-a8bf-9d917aadf65f)
 
 ### Création d'un Output Logstash
