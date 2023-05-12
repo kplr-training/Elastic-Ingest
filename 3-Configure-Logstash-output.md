@@ -156,12 +156,25 @@ output {
 }
 
 ````
-11- Ajoutez la partie de code suivante dans le fichier de configuration de Kibana `kibana.yml`
+11- Renseigner une clé d'encription Kibana (étape nécessaire pour le bon fonctionnement de la chaîne)
 
+- Commencez par générer une clé d'encryption Kibana : 
+```
+/usr/share/kibana/bin/kibana-encryption-keys generate
+```
+Cela donnera l'ouput suivant : 
+```
+Settings:
+xpack.encryptedSavedObjects.encryptionKey: 1aba07240f83231ecf23d9a52de867f2
+xpack.reporting.encryptionKey: 3f54c2f69c2b9e52a120a1cd4c1aab15
+xpack.security.encryptionKey: 0f20abe0bf4377f3ff81b7763d7e7a40
+```
+Ajoutez la partie de code suivante dans le fichier de configuration de Kibana `kibana.yml`
 ```
 xpack.encryptedSavedObjects:
-  encryptionKey: "min-32-byte-long-strong-encryption-key"
+  encryptionKey: "1aba07240f83231ecf23d9a52de867f2"
 ```
+
 
 12- Modifiez le fichier `elastic-agent-pipeline.conf` en remplissant les données manquantes : 
 
