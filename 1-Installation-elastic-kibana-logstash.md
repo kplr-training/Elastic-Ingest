@@ -117,6 +117,30 @@ Tips:
 sed -i 's/#server\.host: "localhost"/server\.host: "0.0.0.0"/' /etc/kibana/kibana.yml
 ```
 
+
+### Renseignez une clé d'encription Kibana (étape nécessaire pour la configuration de l'output logstash par la suite)
+
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/074fe243-ad9d-4c57-87a0-afaf6e2b8539)
+
+- Commencez par générer une clé d'encryption Kibana : 
+```
+/usr/share/kibana/bin/kibana-encryption-keys generate
+```
+Cela donnera l'ouput suivant : 
+```
+Settings:
+xpack.encryptedSavedObjects.encryptionKey: 1aba07240f83231ecf23d9a52de867f2
+xpack.reporting.encryptionKey: 3f54c2f69c2b9e52a120a1cd4c1aab15
+xpack.security.encryptionKey: 0f20abe0bf4377f3ff81b7763d7e7a40
+```
+Notez la valeur de la clé d'encryption xpack.encryptedSavedObjects.encryptionKey, puis reportez la dans la propriété suivante que vous rajoutez tout en bas dans le fichier de configuration de Kibana `kibana.yml`
+```
+xpack.encryptedSavedObjects:
+  encryptionKey: "1aba07240f83231ecf23d9a52de867f2"
+```
+
+---
+
 **Il ne vous reste qu'à démarrer Kibana :)**
 Pour ce faire, exécuter les commandes suivantes:
 
@@ -139,6 +163,8 @@ Attention : Il faut attendre quelques minutes le temps que Kibana soit Up & Read
 ![image](https://user-images.githubusercontent.com/123748177/228309327-a8321452-8bd4-4621-83cd-160b9c670f13.png)
 
 **Félicitations!! Vous pouvez maintenant vous connecter à Kibana à partir de votre navigateur en utilisant l'adresse IP Publique de votre machine suivie par le port 5601**
+
+##SE REFERER AU MARKDOWN DE L'INSTALLATION DE LOGSTASH via L'UI pour finaliser
 
 ## 3- Installation Logstash:
 
