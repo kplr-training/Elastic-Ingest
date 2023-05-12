@@ -175,32 +175,8 @@ xpack.encryptedSavedObjects:
   encryptionKey: "1aba07240f83231ecf23d9a52de867f2"
 ```
 
-
-12- Modifiez le fichier `elastic-agent-pipeline.conf` en remplissant les données manquantes : 
-
-```
-input {
-  elastic_agent {
-    port => 5044
-    ssl => true
-    ssl_certificate_authorities => ["/path/to/ca.crt"]
-    ssl_certificate => "/path/to/logstash.crt"
-    ssl_key => "/path/to/logstash.pkcs8.key"
-    ssl_verify_mode => "force_peer"
-  }
-}
-
-output {
-  elasticsearch {
-    hosts => "https://xxxx:9200"
-    api_key => "xxxx:xxxx"
-    data_stream => true
-    ssl => true
-    cacert => "/path/to/http_ca.crt" 
-  }
-}
-```
-
-13- Cliquez `Save and Apply settings`, et Voilà! vous avez créé votre output avec succès.
+12- Cliquez `Save and Apply settings`, et Voilà! vous avez créé votre output avec succès.
 
 ![image](https://user-images.githubusercontent.com/123748177/235177522-107ad5a2-2c35-4404-aa3f-44d2a6c3744f.png)
+
+13- Il faut à présent démarrer le service logstash ou directement lancer la pipeline de façon individuelle
