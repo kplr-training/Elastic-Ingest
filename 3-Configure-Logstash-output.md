@@ -134,6 +134,12 @@ Extrayez le fichier zip :
 ```
 unzip logstash.zip
 ```
+En somme, vous avez créé 3 archives Zip, contenant respectivement : 
+- la paire clé/certificat de l'autorité de certification
+- la paire clé/certificat de logstash
+- la paire clé/certificat du client (agent)
+
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/0db1244a-efa3-4c1d-9385-baa4aafee805)
 
 ![image](https://user-images.githubusercontent.com/123748177/235362724-63f8a7f1-c89a-4077-bef1-8012690d711c.png)
 
