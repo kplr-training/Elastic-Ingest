@@ -127,7 +127,7 @@ En somme, vous avez créé 3 archives, contenant respectivement :
 - la paire clé/certificat de fleet (client)
 puis vous avez extrait les archives en question. 
 
-![image](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/0db1244a-efa3-4c1d-9385-baa4aafee805)
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/1beb099f-4867-4044-bc24-910f8205ccd1)
 
 ![image](https://user-images.githubusercontent.com/123748177/235362724-63f8a7f1-c89a-4077-bef1-8012690d711c.png)
 
