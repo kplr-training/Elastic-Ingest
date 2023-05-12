@@ -80,7 +80,9 @@ Le certificat client est également utilisé pour chiffrer les données transmis
 
 ![image](https://user-images.githubusercontent.com/123748177/235361006-925922d7-064f-4543-8287-48a284484dfd.png)
 
-7- Vous créez maintenant le certificat Client à l'aide de la commande suivante : 
+---
+
+### 7- Vous créez maintenant le certificat Client à l'aide de la commande suivante : 
 
 ```
 /usr/share/elasticsearch/bin/elasticsearch-certutil cert \
