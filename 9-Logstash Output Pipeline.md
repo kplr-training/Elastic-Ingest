@@ -92,17 +92,56 @@ Selectionnez l'onglet settings
 ![Image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/efa4863c-d4b5-4177-b26d-6359b5e2db87)
 
 - Pour pouvoir utiliser l'Output de type Logstash, vous devez avoir une licence.
-- Autrement, logstash est disponible mais grisée : 
+- Autrement, l'option logstash est disponible mais grisée : 
 
 ![grayedout](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/ebaaf97b-3a9a-411d-a272-007967679068)
 
-Donc pour ce faire, redirigez vous vers Dev Tools et tapez la commande suivante:
+- Pour ce faire, redirigez vous vers Dev Tools et tapez la commande suivante:
+
+```GET /_license/trial_status?pretty```
+
+- Cela vous renvoie le retour suivant : 
+
+```
+{
+  "eligible_to_start_trial": true
+}
+```
+
+- Activez la license : 
 
 ```POST /_license/start_trial?acknowledge=true&pretty```
 
-Puis, vous pouvez vérifier que vous avez obtenu la licence avec la commande suivante:
+- Cela vous renvoie le retour suivant : 
+
+```
+{
+  "acknowledged": true,
+  "trial_was_started": true,
+  "type": "trial"
+}
+```
+
+
+- Puis, vous pouvez vérifier que vous avez obtenu la licence avec la commande suivante:
 
 ```GET /_license/trial_status?pretty```
+
+- Cela vous renvoie le retour suivant : 
+
+```
+{
+  "eligible_to_start_trial": false
+}
+```
+
+- A présent vous pouvez retourner sur le setting de la policy et selectionner l'output logstash.
+
+- Si vous avez bien configuré le fichier `pipelines.yml` de logstash comme il se doit, il suffit de lancer le service logstash
+
+`service logstash start`
+
+### => A présent, toutes les intégrations rattachées à l'agent policy en question seront redirigées automatiquement en bout de chaîne vers l'output logstash.
 
 - Maintenant, vous allez ajouter une autre ligne de log pour tester que la pipeline logstash fonctionne correctement:
 
