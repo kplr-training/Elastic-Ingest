@@ -54,13 +54,26 @@ Pour ce faire, créez le fichier suivant dans le répertoire `/var/log`:
 
 ![policy](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/d63c43bd-862f-4999-b941-54a99ec8e5f1)
 
-- Pour vérifiez que tout marche bien, créez un `Data View` pour pouvoir visualiser les logs ingérés. Pour ce faire, redirigez vers `Data Views` dans le menu `Stack Management` puis cliquez `Create data view`. 
+
+
+- Pour vérifiez que tout marche bien, créez un `Data View` pour pouvoir visualiser les logs ingérés. 
+- Dans un premier temps, vous devez aller insecpter les Data Streams crées : 
+
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/6c37bb49-de7e-4b2e-9da2-e7ea87f1d542)
+
+![Screenshot 2023-05-13 at 13 34 09](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/8b1d88f3-3e77-499f-ab45-cf9ea1ed1b63)
+
+- Pour pouvoir visualiser ce Data Stream vous devez avoir des données dans votre fichier de logs. Insérez une ligne de log dans le fichier `test.log`
+
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/c52c957c-7ff6-4641-8e97-59eff456deac)
+
+- Allez ensuite dans le menu `Data Views` dans le menu `Stack Management` puis cliquez `Create data view`. 
+
+- Entrez un wilcard de manière a faire pointer votre data view vers le data stream nouvellement créé
 
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/c54e621c-767b-48bf-a2c0-36ef5bad1dc6)
 
-- Pour pouvoir visualiser ce Data view, vous devez avoir des données dans votre fichier de logs. Insérez une ligne de log dans le fichier `test.log`
 
-![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/c52c957c-7ff6-4641-8e97-59eff456deac)
 
 - Maintenant, redirigez vous vers `Analytics` > `Discover`. En haut à gauche, choissisez le Data view que vous venez de créer. Vous aurez un résultat comme le suivant: 
 
