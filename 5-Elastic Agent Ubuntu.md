@@ -11,13 +11,13 @@ l'agent policy va syndiquer toutes les intégrations configurées à l'agent auq
 
 ![Policy](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/fa4e8938-106e-4594-9201-45490e7e14b1)
 
-- Entrez ensuite les commandes qui sont affichées dans l'interface :
-⚠️ IMPORTANT : Il est important de rajouter le flag `--insecure`
-autrement vous aurez le message d'erreur `x509: certificate signed by unknown authority` 
-en effet, l'autorité de certification est inconnue par l'agent et l'on doit la déclarer car on utilise un certificat self-signed. 
-Pour faciliter les choses en contexte de dev/test, on passe outre cette vérification.
-Il est toutefois important de noter que le traffic est effectivement crypté, juste que l'autorité de certification n'est pas validée. 
-(_Autrement dit l'agent n'as pas la certitude que le fleet est bien "celui qu'il prétend être"_)
+- Entrez ensuite les commandes qui sont affichées dans l'interface :<br>
+⚠️ IMPORTANT : Il est important de rajouter le flag `--insecure`<br>
+autrement vous aurez le message d'erreur `x509: certificate signed by unknown authority` <br>
+en effet, l'autorité de certification est inconnue par l'agent et l'on doit la déclarer car on utilise un certificat self-signed. <br>
+Pour faciliter les choses en contexte de dev/test, on passe outre cette vérification.<br>
+Il est toutefois important de noter que le traffic est effectivement crypté, juste que l'autorité de certification n'est pas validée. <br>
+(_Autrement dit l'agent n'as pas la certitude que le fleet est bien "celui qu'il prétend être"_)<br>
 
 ```
 curl -L -O https://artifacts.elastic.co/downloads/beats/elastic-agent/elastic-agent-8.7.1-linux-x86_64.tar.gz
