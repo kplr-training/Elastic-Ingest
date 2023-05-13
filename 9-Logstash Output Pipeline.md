@@ -12,6 +12,8 @@ Voici un schéma qui explique l'architecture du setup que vous allez créer pour
 
 **- Création d'une pipeline logstash**
 
+⚠️ vous pouvez passer cette étape si vous avez déja configuré un output logstash précédemment ⚠️
+
 Pour créer une pipeline logstash, vous créez un fichier de configuration pour votre pipeline Logstash. 
 
 Ce fichier utilisera le langage de configuration Logstash (LSL). Vous pouvez le nommer comme vous le souhaitez, par exemple "my-pipeline.conf".
@@ -74,10 +76,22 @@ kill -9 YOUR-PID
 /usr/share/logstash/bin/logstash -f /path/to/your/configuration/file
 ```
 
+### Configuration de l'output de la policy vers Logstash
+
+Selectionnez votre policy
+
+![image](https://github.com/kplr![Screenshot 2023-05-13 at 13 14 08](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/4465fc4d-f1a5-46d7-a7d0-71d821e7b00f)
+
+Selectionnez l'onglet settings
+
+![Screenshot 2023-05-13 at 15 05 24](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/f0a041c6-c1e0-40bd-b7b2-8803ffdfe542)
+
+
 - Vérifiez bien que la policy, avec laquelle votre intégration est liée, a comme Output `Logstash Output`
 (surligné en jaune)
 
-![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/efa4863c-d4b5-4177-b26d-6359b5e2db87)
+
+-training/Elastic-Ingest/assets/123748177/efa4863c-d4b5-4177-b26d-6359b5e2db87)
 
 Pour pouvoir utiliser l'Output de type Logstash, vous devez avoir une licence. Donc pour ce faire, redirigez vous vers Dev Tools et tapez la commande suivante:
 
