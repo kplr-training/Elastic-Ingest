@@ -32,3 +32,13 @@ Dans cette partie, vous allez définir un simple processeur dans l'intégration 
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/ec811480-e261-4c1c-8ae0-6bf710f6fd7e)
 
 **Les nouveaux champs sont bien ajoutés**
+
+- Bravo. A vous de jouter maintenant. Allez faire un tour sur la doc et voir les autre processeurs possibles. 
+- Choisissez-en quelques-un et implémentez-en certains. 
+- Vous pouvez alimenter les logs de la façon dont vous souhaitez, en concordance avec les processeurs choisis. 
+
+### Documentation des processeurs : 
+
+- Nota : Les processeurs d'intégrations intégrés sont ceux de FileBeat.
+
+https://www.elastic.co/guide/en/beats/filebeat/current/filtering-and-enhancing-data.html
