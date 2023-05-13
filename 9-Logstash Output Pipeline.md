@@ -162,7 +162,7 @@ et lancez la commande suivante :
 
 - **Félicitation, votre output logstash fonctionne avec succès !**
 
-:warning: **Attention Toutefois !** :warning:
+:warning: **Attention Toutefois !** :warning:<br>
 => Il s'avère que l'activation de l'output logstash desactive les pipelines d'ingestion ajoutées dans la partie custom configuration de l'intégration. Nous navons pas trouvé de source officielle qui explique la raison de ce comportement. <br>
 En effet, vous remarquez que la partie précédemment traitée par le filtre Grok de la pipeline d'ingestion est désormais cassée et ne fonctionne plus (Vérifiez par vous mêmes). <br>
 Toujours est-il qu'en l'état actuel des chose, entre la pipeline d'ingestion et l'output logstash, il faut choisir. <br>
