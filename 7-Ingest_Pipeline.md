@@ -74,7 +74,7 @@ Votre processeur Grok sera utilisé pour extraire: l'adresse IP, le nom de la vi
 
 - Cliquez sur `Run the pipeline`, et vérifiez que vous avez bien les nouveaux champs: `a_source_ip`, `a_city`, `a_country` :
 
-![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/cf30d470-bf87-4c1e-91cc-a86d23fa0aec)
+![Screenshot 2023-05-13 at 14 13 34](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/3ce70dce-713c-4a83-af06-3c9bbed9052a)
 
 - Si votre pipeline fonctionne correctement, sauvegardez la pipeline.
 
