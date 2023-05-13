@@ -14,6 +14,9 @@ Pour créer un Fleet Server, redirigez vous vers `Management` > `Fleet` > `Agent
 
 Maintenant, donnez un nom à votre Fleet server et puis saisissez l'URL vers la machine qui va contenir votre Fleet server:
 
+⚠️ Faites attention à bien renseigner le protocole sécurisé HTTPS ains que votre Adresse IP Publique et le port 8220 ⚠️ <br>
+(dans le cas présent l'adresse IP publique est celle par laquelle vous accédez à kibana)
+
 ![image (4)](https://user-images.githubusercontent.com/123748177/235185833-4b055fa0-77f6-44ab-8443-b5d8b39573db.png)
 
 Vous cliquez sur le boutton `Generate Fleet Server Policy` pour générer la policy vu qu'un Fleet Server est de base un Elastic Agent donc il nécessite une policy.
