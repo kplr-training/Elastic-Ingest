@@ -70,27 +70,26 @@ Pour ce faire, créez le fichier suivant dans le répertoire `/var/log`:
 
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/5cd4b594-1173-4c8f-b551-7262629daed3)
 
-Si vous développez le document inséré, vous pouvez bien voir qu'il contient le message de log que vous avez saisi:
-
-![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/590ff8e2-dcfa-44e8-975c-42016c999082)
+Si vous développez le document inséré, vous pouvez bien voir qu'il contient le message de log que vous avez saisi (tout en bas):
 
 ![Screenshot 2023-05-13 at 13 25 21](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/99c53a63-b831-4496-8a2e-44054e50c5dc)
 
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/590ff8e2-dcfa-44e8-975c-42016c999082)
+
+
 Vous pouvez épingler les champs de votre choix dans la vue colonne :
 
-![Screenshot 2023-05-13 at 13 14 08](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/1ab2342b-72d6-42ec-991e-cb09ad6ea1c2)
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/e0ccd701-7630-4f22-90f2-6adc9aea00d8)
 
 Et également dans la vue détaillée :
 
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/ee938531-de1c-41ee-9e31-bccaa570e4f7)
 
-![Screenshot 2023-05-13 at 13 17 10](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/14bf2030-fdbf-47a1-8101-ce006b5ed807)
 
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/6350291d-fab4-436f-8588-75d6fd20dcb6)
 
 
-![image](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/e0ccd701-7630-4f22-90f2-6adc9aea00d8)
 
-![image](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/ee938531-de1c-41ee-9e31-bccaa570e4f7)
 
 
 
