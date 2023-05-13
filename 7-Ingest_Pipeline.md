@@ -33,6 +33,7 @@ Vous allez utiliser comme processeur, le processeur Grok qui est utilisé pour e
 
 Votre processeur Grok sera utilisé pour extraire: l'adresse IP, le nom de la ville, et le nom de pays à partir des logs qui se structure comme cet exemple: `154.326.23.24#RABAT#MOROCCO`.
 
+
 - Ajoutez la configuration suivante:
 
 
@@ -44,6 +45,12 @@ Votre processeur Grok sera utilisé pour extraire: l'adresse IP, le nom de la vi
 
 
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/d26b94f3-b921-4388-be4d-ee86a990888d)
+
+
+- N'oubliez pas de valider !
+
+- ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/d5ea5d8f-1272-4edf-8663-2cc9e5c4a191)
+
 
 - Lorsque vous créez votre processeur avec succès, il vous reste seulement de le tester. Pour ce faire, Cliquez `Add documents`.
 
