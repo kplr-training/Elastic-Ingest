@@ -43,7 +43,7 @@ Ce fichier contient la documentation d'un test d'enrichissement des données sui
 
 ### meeting-result.md
 
-- Notes qui résument les points essentielles dans la réunion avec le client
+- Notes qui résument les points essentiels dans la réunion avec le client
 
 ### network-security-logs.md
 
