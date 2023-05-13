@@ -80,7 +80,7 @@ kill -9 YOUR-PID
 
 Selectionnez votre policy
 
-![image](https://github.com/kplr![Screenshot 2023-05-13 at 13 14 08](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/4465fc4d-f1a5-46d7-a7d0-71d821e7b00f)
+![Screenshot 2023-05-13 at 13 14 08](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/4465fc4d-f1a5-46d7-a7d0-71d821e7b00f)
 
 Selectionnez l'onglet settings
 
