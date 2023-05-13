@@ -141,6 +141,11 @@ Selectionnez l'onglet settings
 
 `service logstash start`
 
+- si vous avez un doute, faites un kill de tous les PID logstash actifs, 
+et lancez la commande suivante :
+
+`/usr/share/logstash/bin/logstash -f /etc/logstash/elastic-agent-pipeline.conf`
+
 ### => A présent, toutes les intégrations rattachées à l'agent policy en question seront redirigées automatiquement en bout de chaîne vers l'output logstash.
 
 - Maintenant, vous allez ajouter une autre ligne de log pour tester que la pipeline logstash fonctionne correctement:
