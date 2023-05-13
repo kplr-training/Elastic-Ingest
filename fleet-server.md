@@ -23,6 +23,9 @@ Vous cliquez sur le boutton `Generate Fleet Server Policy` pour générer la pol
 
 Ensuite, vous tapez les commandes mentionnées pour commencer l'installation de votre Fleet Server dans votre machine.
 
+⚠️ Pourquoi je dois installer un Elastic Agent ? 🤔  ⚠️ <br>
+=> Fleet Server est lui-même un type spécial d'elastic agent dédié à la gestion de le flotille d'agents Elastic
+
 ```
 curl -L -O https://artifacts.elastic.co/downloads/beats/elastic-agent/elastic-agent-8.7.0-linux-x86_64.tar.gz
 ```
