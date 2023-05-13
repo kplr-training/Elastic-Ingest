@@ -85,6 +85,7 @@ Et également dans la vue détaillée :
 
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/ee938531-de1c-41ee-9e31-bccaa570e4f7)
 
+La vision filtrée sur votre message est ainsi plus claire : 
 
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/6350291d-fab4-436f-8588-75d6fd20dcb6)
 
