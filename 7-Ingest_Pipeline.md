@@ -56,7 +56,7 @@ Votre processeur Grok sera utilisé pour extraire: l'adresse IP, le nom de la vi
   {
     "_source": {
       "@timestamp": "2023-05-10T09:16:31.908Z",
-      "message": "MEHDI#CASABLANCA#MOROCCO"
+      "message": "154.23.25.116#CASABLANCA#MOROCCO"
     }
   }
 ]
