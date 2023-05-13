@@ -16,6 +16,13 @@ Pour ajouter cette intégration, redirigez vous vers l'interface `Integrations` 
 
 ![image](https://user-images.githubusercontent.com/123748177/234854155-b648f4d5-c6a3-4373-ba68-5dc42cb26d0c.png)
 
+Vous pouvez également accéder aux intégrations depuis la policy de l'agent auquel vous souhaitez rajouter l'intégration
+
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/a7b382f7-071a-4791-9b2d-4f7b70b7e322)
+
+![Add Integration](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/e05d4cbc-787a-4677-ae89-7050ac0ab6e6)
+
+
 Puis, vous cherchez `Custom Logs`: 
 
 ![custom logs](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/4201dd6f-1a1a-4b28-925b-347181284106)
@@ -62,6 +69,22 @@ Pour ce faire, créez le fichier suivant dans le répertoire `/var/log`:
 Si vous développez le document inséré, vous pouvez bien voir qu'il contient le message de log que vous avez saisi:
 
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/590ff8e2-dcfa-44e8-975c-42016c999082)
+
+![Screenshot 2023-05-13 at 13 25 21](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/99c53a63-b831-4496-8a2e-44054e50c5dc)
+
+Vous pouvez épingler les champs de votre choix dans la vue colonne :
+
+![Screenshot 2023-05-13 at 13 14 08](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/1ab2342b-72d6-42ec-991e-cb09ad6ea1c2)
+
+Et également dans la vue détaillée :
+
+
+![Screenshot 2023-05-13 at 13 17 10](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/14bf2030-fdbf-47a1-8101-ce006b5ed807)
+
+
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/e0ccd701-7630-4f22-90f2-6adc9aea00d8)
+
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/ee938531-de1c-41ee-9e31-bccaa570e4f7)
 
 
 ## Ingest Pipeline
