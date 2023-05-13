@@ -80,6 +80,10 @@ Votre processeur Grok sera utilisé pour extraire: l'adresse IP, le nom de la vi
 
 - Pour utiliser la pipeline et l'appliquer sur les données reçus depuis l'agent Elastic, redirigez vers l'intégration que vous avez créé préalablement puis ajoutez le nom de la pipeline dans le champ `Custom configurations` dans `Advanced options`:
 
+![Screenshot 2023-05-13 at 14 23 11](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/ca84071c-7f9e-410b-9f15-f70b020e0ae0)
+
+- Scrollez vers le bas :
+
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/807c1bc8-0843-4e5a-abaa-812a7855c5bf)
 
 - Maintenant, ajoutez une ligne de log dans votre fichier pour tester la pipeline: 
