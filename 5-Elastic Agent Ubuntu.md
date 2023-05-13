@@ -28,7 +28,7 @@ sudo ./elastic-agent install --url=https://44.208.194.116:8220 --enrollment-toke
 
 On confirme que l'agent est bien enrollé dans le Fleet Server et que l'on reçoit bien du flux : 
 
-![image](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/e00b50de-5439-458c-8606-1f04fea229f4
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/e00b50de-5439-458c-8606-1f04fea229f4)
 
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/1cbbe8ff-041a-4735-b32d-3de50c504c69)
 
