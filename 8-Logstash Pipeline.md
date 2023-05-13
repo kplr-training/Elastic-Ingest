@@ -1,4 +1,4 @@
-## Logstash Pipeline
+## Utilisation de Logstash Output 
 
 Une pipeline Logstash se compose de trois étapes principales : l'étape d'entrée, qui récupère les données, l'étape de filtrage, où les données sont transformées et enrichies, et l'étape de sortie, qui détermine où les données traitées seront envoyées. 
 
