@@ -64,3 +64,6 @@ output {
 7- Redirigez vous vers `Stack Management` > `Index Management`.
 
 8- Vérifiez que vous avez bien les différents indices créés qui correspondent aux messages de logs que vous avez ajouté.
+
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/a8b22afb-1841-44f3-a2d9-9ef679c56134)
+
