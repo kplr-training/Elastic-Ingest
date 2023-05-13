@@ -1,13 +1,3 @@
-## Les pipelines et les processeurs
-
-Les pipelines sont une fonctionnalité clé d'Elastic Stack qui permet de transformer et d'enrichir les données avant leur indexation dans Elasticsearch.
-
-Les pipelines sont souvent utilisés pour normaliser les données provenant de sources différentes et pour s'assurer que les données sont prêtes à être analysées. Les pipelines peuvent également être utilisés pour filtrer les données ou appliquer des règles métier spécifiques avant leur indexation.
-
-Elastic Stack fournit plusieurs types de processeurs, tels que le Grok Processor, le Dissect Processor, le CSV Processor, le Rename Processor, le Lowercase Processor, etc. Les processeurs peuvent être utilisés dans différentes combinaisons pour créer des pipelines personnalisés pour répondre aux besoins spécifiques de chaque application.
-
-Les pipelines peuvent être configurés au niveau de l'index ou au niveau du cluster Elasticsearch. Les pipelines configurés au niveau de l'index s'appliquent uniquement à cet index, tandis que les pipelines configurés au niveau du cluster s'appliquent à tous les index.
-
 ## Création d'une nouvelle intégration
 
 Dans cette partie, vous allez créé une intégration de type `Custom logs`:
@@ -18,7 +8,8 @@ Pour ajouter cette intégration, redirigez vous vers l'interface `Integrations` 
 
 Vous pouvez également accéder aux intégrations depuis la policy de l'agent auquel vous souhaitez rajouter l'intégration
 
-![image](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/a7b382f7-071a-4791-9b2d-4f7b70b7e322)
+![policy](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/28ea8ab9-c6ea-434f-811e-c9c896fa4763)
+
 
 ![Add Integration](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/e05d4cbc-787a-4677-ae89-7050ac0ab6e6)
 
