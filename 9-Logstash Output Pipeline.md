@@ -104,7 +104,6 @@ Puis, vous pouvez vérifier que vous avez obtenu la licence avec la commande sui
 
 ```GET /_license/trial_status?pretty```
 
-
 - Maintenant, vous allez ajouter une autre ligne de log pour tester que la pipeline logstash fonctionne correctement:
 
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/d491179b-40c0-4b08-afa0-d3d005c29fe5)
