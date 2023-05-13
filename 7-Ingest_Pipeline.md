@@ -95,7 +95,7 @@ Votre processeur Grok sera utilisé pour extraire: l'adresse IP, le nom de la vi
 
 - Scrollez vers le bas :
 
-![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/807c1bc8-0843-4e5a-abaa-812a7855c5bf)
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/807c1bc8-0843-4e5a-abaa-812a7855c5bf | width=100)
 
 - Maintenant, ajoutez une ligne de log dans votre fichier pour tester la pipeline: 
 
