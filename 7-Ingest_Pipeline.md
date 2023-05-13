@@ -29,14 +29,18 @@ Pour créer votre Ingest Pipeline, redirigez vous vers le menu `Stack management
 
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/0bf7e381-d4ee-4253-a6ea-f9d336816981)
 
--choisissez un nom de pipeline explicite : 
+- choisissez un nom de pipeline explicite : 
+
+normalement la convention de nommage est : `log-nom_de_votre_datastream-default`
 
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/f25d1341-4837-4461-b3dc-7f6bc8844f66)
 
+- Ajout du processeur : 
 
-![image](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/b75add58-78e2-49db-a0e6-0977898b3bdd)
+Il existe tout un tas de processeurs possibles parmi lesquels choisir, chacun ayant son utilité en fonction de ce que vous souhaitez faire. 
 
-Vous allez utiliser comme processeur, le processeur Grok qui est utilisé pour extraire des informations structurées à partir des données non structurées ou semi-structurées. Il s'appuie sur des expressions régulières prédéfinies ou personnalisées, appelées patterns, pour analyser et découper les données en champs plus significatifs.
+Dans cet exemple, Nous allons implémenter le processeur Grok qui est utilisé pour extraire des informations structurées à partir des données non structurées ou semi-structurées. <br>
+Il s'appuie sur des expressions régulières prédéfinies ou personnalisées, appelées patterns, pour analyser et découper les données en champs plus significatifs.
 
 Votre processeur Grok sera utilisé pour extraire: l'adresse IP, le nom de la ville, et le nom de pays à partir des logs qui se structure comme cet exemple: `154.326.23.24#RABAT#MOROCCO`.
 
