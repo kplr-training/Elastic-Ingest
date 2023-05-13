@@ -1,5 +1,5 @@
 
-# Creation d'un Elastic Agent Ubuntu.md
+# Creation d'un Elastic Agent Ubuntu
 
 - Aller dans Fleet et ajouter un agent
 
