@@ -12,13 +12,12 @@ Voici un schéma qui explique l'architecture du setup que vous allez créer pour
 
 **- Création d'une pipeline logstash**
 
-⚠️ vous pouvez passer cette étape si vous avez déja configuré un output logstash précédemment ⚠️
+Pour créer une pipeline logstash, vous avez précédemment créé un fichier de configuration pour votre pipeline Logstash. 
 
-Pour créer une pipeline logstash, vous créez un fichier de configuration pour votre pipeline Logstash. 
+Ce fichier utilisera le langage de configuration Logstash (LSL). 
+(Vous pouvez le nommer comme vous le souhaitez, par exemple "my-pipeline.conf".)
 
-Ce fichier utilisera le langage de configuration Logstash (LSL). Vous pouvez le nommer comme vous le souhaitez, par exemple "my-pipeline.conf".
-
-- Dans votre fichier de configuration, ajoutez le code suivant qui configure une pipeline logstash:
+- Dans votre fichier de configuration, ajoutez le code le partie `FILTER` entre l'input et l'output déjà configurés précédemment:
 
 ```
 input {
@@ -48,6 +47,7 @@ output {
   }
 }
 ```
+
 Cette pipeline utilise l'entrée Elastic Agent pour recevoir des événements via le port 5044 avec une connexion SSL sécurisée. 
 
 Les certificats SSL nécessaires sont spécifiés, y compris l'autorité de certification (CA) pour vérifier le certificat du client. 
@@ -92,17 +92,61 @@ Selectionnez l'onglet settings
 ![Image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/efa4863c-d4b5-4177-b26d-6359b5e2db87)
 
 - Pour pouvoir utiliser l'Output de type Logstash, vous devez avoir une licence.
-- Autrement, logstash est disponible mais grisée : 
+- Autrement, l'option logstash est disponible mais grisée : 
 
 ![grayedout](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/ebaaf97b-3a9a-411d-a272-007967679068)
 
-Donc pour ce faire, redirigez vous vers Dev Tools et tapez la commande suivante:
+- Pour ce faire, redirigez vous vers Dev Tools et tapez la commande suivante:
+
+```GET /_license/trial_status?pretty```
+
+- Cela vous renvoie le retour suivant : 
+
+```
+{
+  "eligible_to_start_trial": true
+}
+```
+
+- Activez la license : 
 
 ```POST /_license/start_trial?acknowledge=true&pretty```
 
-Puis, vous pouvez vérifier que vous avez obtenu la licence avec la commande suivante:
+- Cela vous renvoie le retour suivant : 
+
+```
+{
+  "acknowledged": true,
+  "trial_was_started": true,
+  "type": "trial"
+}
+```
+
+
+- Puis, vous pouvez vérifier que vous avez obtenu la licence avec la commande suivante:
 
 ```GET /_license/trial_status?pretty```
+
+- Cela vous renvoie le retour suivant : 
+
+```
+{
+  "eligible_to_start_trial": false
+}
+```
+
+- A présent vous pouvez retourner sur le setting de la policy et selectionner l'output logstash.
+
+- Si vous avez bien configuré le fichier `pipelines.yml` de logstash comme il se doit, il suffit de lancer le service logstash
+
+`service logstash start`
+
+- si vous avez un doute, faites un kill de tous les PID logstash actifs, 
+et lancez la commande suivante :
+
+`/usr/share/logstash/bin/logstash -f /etc/logstash/elastic-agent-pipeline.conf`
+
+### => A présent, toutes les intégrations rattachées à l'agent policy en question seront redirigées automatiquement en bout de chaîne vers l'output logstash.
 
 - Maintenant, vous allez ajouter une autre ligne de log pour tester que la pipeline logstash fonctionne correctement:
 
@@ -115,3 +159,11 @@ Puis, vous pouvez vérifier que vous avez obtenu la licence avec la commande sui
 - Développez le document et vérifiez que le champ `a_logstash_field` existe dans le document: 
 
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/4e72a915-80fd-4767-a670-d3bd2c22266f)
+
+- **Félicitation, votre output logstash fonctionne avec succès !**
+
+:warning: **Attention Toutefois !** :warning:<br>
+=> Il s'avère que l'activation de l'output logstash desactive les pipelines d'ingestion ajoutées dans la partie custom configuration de l'intégration. Nous navons pas trouvé de source officielle qui explique la raison de ce comportement. <br>
+En effet, vous remarquez que la partie précédemment traitée par le filtre Grok de la pipeline d'ingestion est désormais cassée et ne fonctionne plus (Vérifiez par vous mêmes). <br>
+Toujours est-il qu'en l'état actuel des chose, entre la pipeline d'ingestion et l'output logstash, il faut choisir. <br>
+
