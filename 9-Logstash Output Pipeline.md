@@ -84,21 +84,26 @@ Selectionnez votre policy
 
 Selectionnez l'onglet settings
 
-![Screenshot 2023-05-13 at 15 05 24](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/f0a041c6-c1e0-40bd-b7b2-8803ffdfe542)
-
+![Settings](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/f0a041c6-c1e0-40bd-b7b2-8803ffdfe542)
 
 - Vérifiez bien que la policy, avec laquelle votre intégration est liée, a comme Output `Logstash Output`
 (surligné en jaune)
 
+![Image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/efa4863c-d4b5-4177-b26d-6359b5e2db87)
 
--training/Elastic-Ingest/assets/123748177/efa4863c-d4b5-4177-b26d-6359b5e2db87)
+- Pour pouvoir utiliser l'Output de type Logstash, vous devez avoir une licence.
+- Autrement, logstash est disponible mais grisée : 
 
-Pour pouvoir utiliser l'Output de type Logstash, vous devez avoir une licence. Donc pour ce faire, redirigez vous vers Dev Tools et tapez la commande suivante:
+![grayedout](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/ebaaf97b-3a9a-411d-a272-007967679068)
 
-POST /_license/start_trial?acknowledge=true&pretty
+Donc pour ce faire, redirigez vous vers Dev Tools et tapez la commande suivante:
+
+```POST /_license/start_trial?acknowledge=true&pretty```
+
 Puis, vous pouvez vérifier que vous avez obtenu la licence avec la commande suivante:
 
-GET /_license/trial_status?pretty
+```GET /_license/trial_status?pretty```
+
 
 - Maintenant, vous allez ajouter une autre ligne de log pour tester que la pipeline logstash fonctionne correctement:
 
