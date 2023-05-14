@@ -9,7 +9,7 @@ Donc vous devez d'abord configurer une pipeline qui permet d'ingérer les donné
 Ensuite, vous configurez une pipeline qui permet d'ingérer les données à partir du `Topic` et les envoyer vers ElasticSearch.
 
 :warning: **AVANT TOUT** pour éviter tout souci ou conflit, assurez-vous qu'aucune pipelin logstash ne tourne
-En pratique, cela est tout à fait possible. Mais pour ce faire, il faudrait qu'il n'y ait pas de conflits, ni au niveau des ports ni au niveau des repertoires de données et métadonnées. Pour faciliter les choses, on va donc se contenter de s'assurer que seules les pipelines logstash que nous allons configurer actuellement tournent.
+En pratique, cela est tout à fait possible. Mais pour ce faire, il faudrait qu'il n'y ait pas de conflits, ni au niveau des ports ni au niveau des repertoires de données et métadonnées. Pour faciliter les choses, on va donc se contenter de s'assurer que seules les pipelines logstash que nous allons configurer actuellement tournent (par exemple via `ps aux | grep logstash`)
 
 ### Pipeline Elastic Agent => Kafka
 
