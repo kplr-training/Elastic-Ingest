@@ -1,4 +1,4 @@
-# Ajout de Kafka dans le setup
+# Ajout de Kafka dans le setup : Installation
 
 Kafka est un système de messagerie distribué qui permet de gérer efficacement les flux de données en temps réel. 
 
