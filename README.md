@@ -41,7 +41,7 @@ Ce fichier contient la documentation d'un test d'enrichissement des données sui
 - Configuration d'un output logstash
 - Création d'autorité de certification et signature des certificats SSL de Client et de Logstash server
 
-### meeting-result.md
+### meeting-Summary.md
 
 - Notes qui résument les points essentiels dans la réunion avec le client
 
