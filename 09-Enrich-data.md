@@ -2,13 +2,15 @@
 
 Les politiques d'enrichissement de correspondance associent les données d'enrichissement aux documents entrants en fonction d'une valeur exacte, telle qu'une adresse e-mail ou un identifiant, à l'aide d'une requête de terme.
 
-**Objectif**
+#### Objectif
 
 L'exemple suivant crée une politique d'enrichissement de correspondance qui ajoute le nom d'utilisateur et les informations de contact aux documents entrants en fonction d'une adresse e-mail.
 
 Ensuite, il ajoute la politique d'enrichissement de correspondance à un processeur dans un pipeline d'ingestion.
 
 Vous allez utilisez l'API de création d'index ou l'API d'indexation pour créer un index source.
+
+#### Enrich data
 
 La requête API d'indexation suivante crée un index source et indexe un nouveau document dans cet index: 
 
