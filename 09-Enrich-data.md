@@ -2,7 +2,7 @@
 
 Les politiques d'enrichissement de correspondance associent les données d'enrichissement aux documents entrants en fonction d'une valeur exacte, telle qu'une adresse e-mail ou un identifiant, à l'aide d'une requête de terme.
 
-#### Objectif
+### Objectif
 
 L'exemple suivant crée une politique d'enrichissement de correspondance qui ajoute le nom d'utilisateur et les informations de contact aux documents entrants en fonction d'une adresse e-mail.
 
@@ -10,7 +10,13 @@ Ensuite, il ajoute la politique d'enrichissement de correspondance à un process
 
 Vous allez utilisez l'API de création d'index ou l'API d'indexation pour créer un index source.
 
-#### Enrich data
+Finalement, vous liez le pipeline d'ingestion à votre index cible, vous ajoutez un email de test et vous vérifiez que vos données sont bien enrichis.
+
+Vous aurez un setup qui peut etre schématisé de la manière suivante: 
+
+![enrich](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/0afff4de-4d9e-4c17-a67b-78ac79a0d93b)
+
+### Enrich data
 
 La requête API d'indexation suivante crée un index source et indexe un nouveau document dans cet index: 
 
