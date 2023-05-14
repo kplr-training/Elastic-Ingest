@@ -20,7 +20,7 @@ Vous allez créer un pipeline qui s'organise comme suit:
 - Installez Java maintenant:
 
 ```
-apt install openjdk-11-jre-headless
+apt install -y openjdk-11-jre-headless
 ```
 
 - Vérifiez avec la commande suivante que Java est bien installé:
