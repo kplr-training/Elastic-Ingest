@@ -47,3 +47,7 @@ cd elastic-agent-8.7.1-windows-x86_64
 
 
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/dcc5db88-c2b9-48f0-bbf7-298686087cec)
+
+- Cliquez `close` et vérifiez que vous avez bien l'agent ajouté dans la liste des agents :
+
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/bb16d554-595e-4266-b379-df7cd29e881a)
