@@ -36,7 +36,10 @@ java --version
 curl -O https://packages.confluent.io/archive/7.4/confluent-7.4.0.tar.gz
 ```
 
-- Vous pouvez sinon télécharger directement la version binaire de Kafka en utilisant la commande suivante: 
+<details><summary>
+  installation manuelle</summary> 
+  
+ - Vous pouvez sinon télécharger directement la version binaire de Kafka en utilisant la commande suivante: 
 
 ```
 wget https://archive.apache.org/dist/kafka/2.8.2/kafka_2.12-2.8.2.tgz
@@ -53,6 +56,9 @@ tar -xzf kafka_2.12-2.8.2.tgz
 ```
 sudo mv kafka_2.12-2.8.2 /opt/kafka
 ```
+</details>
+
+
 
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/dd4d128c-5f07-4916-8c5d-3494c0062422)
 
