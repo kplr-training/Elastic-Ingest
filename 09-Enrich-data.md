@@ -29,7 +29,7 @@ PUT /users/_doc/1?refresh=wait_for
 
 Cette commande va insérer ce document dans un index appelé "users", mais comme l'index "users" n'est pas encore configuré dans Elasticsearch, il le créera automatiquement dès que vous exécutez la commande. 
 
-Elasticsearch effectuera le mappage automatique pour chaque champ de ce document. 
+Elasticsearch effectuera le mapping automatique pour chaque champ de ce document. 
 
 - **Vous pouvez vérifier que l'index `users` est bien créé dans la partie `Index Management`**
 
