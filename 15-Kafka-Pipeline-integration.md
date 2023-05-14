@@ -43,6 +43,19 @@ output {
 ```
 - **Gardez le Consumer lancé pour visualiser les données qui arrivent au Topic.**
 
+⚠️ Lorsque vous avez créé votre agent policy, une intégration système a automatiquement été créée. 
+Si c'est le cas, votre consumer doit afficher en continu les logs provenant de votre système ubuntu agent.
+
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/3918a15f-0a36-4047-b067-0d65e354070b)
+
+````
+2023-05-14T13:25:56.523Z {hostname=ip-172-30-2-214, os={kernel=5.15.0-1031-aws, codename=jammy, name=Ubuntu, type=linux, family=debian, version=22.04.2 LTS (Jammy Jellyfish), platform=ubuntu}, containerized=false, ip=[172.30.2.214, fe80::c5e:43ff:feda:6ee5], name=ip-172-30-2-214, id=f84cf21a72db4a088d1f52a60c9fcb4f, mac=[0E-5E-43-DA-6E-E5], architecture=x86_64} %{message}
+2023-05-14T13:25:56.523Z {hostname=ip-172-30-2-214, os={kernel=5.15.0-1031-aws, codename=jammy, name=Ubuntu, type=linux, family=debian, version=22.04.2 LTS (Jammy Jellyfish), platform=ubuntu}, containerized=false, ip=[172.30.2.214, fe80::c5e:43ff:feda:6ee5], name=ip-172-30-2-214, id=f84cf21a72db4a088d1f52a60c9fcb4f, mac=[0E-5E-43-DA-6E-E5], architecture=x86_64} %{message}
+2023-05-14T13:25:56.523Z {hostname=ip-172-30-2-214, os={kernel=5.15.0-1031-aws, codename=jammy, name=Ubuntu, type=linux, family=debian, version=22.04.2 LTS (Jammy Jellyfish), platform=ubuntu}, containerized=false, ip=[172.30.2.214, fe80::c5e:43ff:feda:6ee5], name=ip-172-30-2-214, id=f84cf21a72db4a088d1f52a60c9fcb4f, mac=[0E-5E-43-DA-6E-E5], architecture=x86_64} %{message}
+2023-05-14T13:25:56.523Z {hostname=ip-172-30-2-214, os={kernel=5.15.0-1031-aws, codename=jammy, name=Ubuntu, type=linux, family=debian, version=22.04.2 LTS (Jammy Jellyfish), platform=ubuntu}, containerized=false, ip=[172.30.2.214, fe80::c5e:43ff:feda:6ee5], name=ip-172-30-2-214, id=f84cf21a72db4a088d1f52a60c9fcb4f, mac=[0E-5E-43-DA-6E-E5], architecture=x86_64} %{message}
+2023-05-14T13:25:56.523Z {hostname=ip-172-30-2-214, os={kernel=5.15.0-1031-aws, codename=jammy, name=Ubuntu, type=linux, family=debian, version=22.04.2 LTS (Jammy Jellyfish), platform=ubuntu}, ip=[172.30.2.214, fe80::c5e:43ff:feda:6ee5], containerized=false, name=ip-172-30-2-214, id=f84cf21a72db4a088d1f52a60c9fcb4f, mac=[0E-5E-43-DA-6E-E5], architecture=x86_64, network={ingress={packets=35, bytes=6352}, egress={packets=39, bytes=27534}}} %{message}
+````
+
 - Ajoutez des logs de test dans le fichier `test.log` que vous avez créé préalablement:
 
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/07cd4fdb-7cb7-41ac-bd4a-046e03b788d8)
