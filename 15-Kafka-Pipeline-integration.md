@@ -105,10 +105,11 @@ output {
 - Maintenant, lancez la pipeline:
 
 ```
-/usr/share/logstash/bin/logstash -f /etc/logstash/elastic-agent-pipeline-kafka-input.conf 
+/usr/share/logstash/bin/logstash -f /etc/logstash/elastic-agent-pipeline-kafka-input.conf --path.data /tmp
 ```
 
-**NB: Si la pipeline ne s'exécute pas, ajoutez `--path.data /tmp` à la fin de la commande**
+**NB: Notez l'ajout de `--path.data /tmp` à la fin de la commande. **
+- Cela a pour objet de fournir un repertoire de travail spécifique à la pipeline pour ne pas entrer en conflit avec l'autre pipeline précédemment lancée
 
 - Insérez un nouveau message dans votre fichier de log et vérifiez tout d'abord qu'il a bien arrivé à votre topic:
 
