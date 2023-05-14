@@ -108,8 +108,8 @@ output {
 /usr/share/logstash/bin/logstash -f /etc/logstash/elastic-agent-pipeline-kafka-input.conf --path.data /tmp
 ```
 
-**NB: Notez l'ajout de `--path.data /tmp` à la fin de la commande. **
-- Cela a pour objet de fournir un repertoire de travail spécifique à la pipeline pour ne pas entrer en conflit avec l'autre pipeline précédemment lancée
+**NB: Notez l'ajout de `--path.data /tmp` à la fin de la commande.**
+Cela a pour objet de fournir un repertoire de travail spécifique à la pipeline pour ne pas entrer en conflit avec l'autre pipeline précédemment lancée
 
 - Insérez un nouveau message dans votre fichier de log et vérifiez tout d'abord qu'il a bien arrivé à votre topic:
 
@@ -117,11 +117,11 @@ output {
 
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/65cbcad7-6c45-464f-83e9-50f7e69a90fd)
 
-- Vérifiez que l'index `kafka-test` existe parmi la liste des indices existants:
+- Vérifiez que l'index `kafka-data` existe parmi la liste des indices existants:
 
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/b1159824-7512-468d-998f-befb9f07ca4f)
 
-- Les logs sont publiés dans l'index `kafka-test`, créez un data view pour visualiser son contenu:
+- Les logs sont publiés dans l'index `kafka-data`, créez un data view pour visualiser son contenu:
 
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/e04cbbef-f9cf-43a9-9845-ef7fa69ec640)
 
