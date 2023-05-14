@@ -11,7 +11,7 @@ Ensuite, vous configurez une pipeline qui permet d'ingérer les données à part
 :warning: **AVANT TOUT** pour éviter tout souci ou conflit, assurez-vous qu'aucune pipelin logstash ne tourne
 En pratique, cela est tout à fait possible. Mais pour ce faire, il faudrait qu'il n'y ait pas de conflits, ni au niveau des ports ni au niveau des repertoires de données et métadonnées. Pour faciliter les choses, on va donc se contenter de s'assurer que seules les pipelines logstash que nous allons configurer actuellement tournent (par exemple via `ps aux | grep logstash`)
 
-### Pipeline Elastic Agent => Kafka
+## PARTIE 1: Pipeline Elastic Agent => Kafka
 
 - Pour configurer cette pipeline, créez un fichier de configuration `elastic-agent-pipeline-kafka-output.conf`.
 - Ce fichier va représenter une configuration basique de Logstash pour recevoir des données à partir d'Elastic Agent via le protocole Elastic Agent Input et les envoyer vers un topic Kafka spécifique. 
@@ -66,7 +66,7 @@ Si c'est le cas, votre consumer doit afficher en continu les logs provenant de v
 
 **Maintenant, on peut bien dire que les logs sont bien récupérés à partir du fichier de log et bien envoyés vers le topic de Kafka**
 
-### Pipeline  Kafka => ElasticSearch
+## PARTIE 2: Pipeline  Kafka => ElasticSearch
 
 - Pour configurer cette pipeline, créez un fichier de configuration `elastic-agent-pipeline-kafka-input.conf`.
 
