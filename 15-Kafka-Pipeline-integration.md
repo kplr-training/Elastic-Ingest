@@ -4,7 +4,7 @@ Dans cette partie, vous allez changer la configuration de votre pipeline pour qu
 
 ![image (15)](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/1bc03880-aa41-4c1c-a582-8ba3eb475ea6)
 
-Donc vous devez d'abord configuré une pipeline qui permet d'ingérer les données à partir de l'`Elastic Agent` et puis les transmettre vers le `Producer` qui va publier les données dans Kafka.
+Donc vous devez d'abord configurer une pipeline qui permet d'ingérer les données à partir de l'`Elastic Agent` et puis les transmettre vers le `Producer` qui va publier les données dans Kafka.
 
 Ensuite, vous configurez une pipeline qui permet d'ingérer les données à partir du `Topic` et les envoyer vers ElasticSearch.
 
