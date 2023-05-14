@@ -128,7 +128,7 @@ kafka-topics --list --bootstrap-server localhost:9092
 
 - Maintenant, vous lancez votre `Consumer` pour consommer les messages à partir du topic que vous avez créé dans Apache Kafka en utilisant la console.
 ```
-bin/kafka-console-consumer --topic test-topic --from-beginning --bootstrap-server localhost:9092
+kafka-console-consumer --topic test-topic --from-beginning --bootstrap-server localhost:9092
 ```
 
 **Lorsque des nouvelles données sont stocké dans le topic, vous allez les visualiser dans la console qui exécute cette commande**
