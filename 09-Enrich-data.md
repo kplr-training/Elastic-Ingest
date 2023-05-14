@@ -14,7 +14,7 @@ Finalement, vous liez le pipeline d'ingestion à votre index cible, vous ajoutez
 
 Vous aurez un setup qui peut etre schématisé de la manière suivante: 
 
-![enrich](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/82764e03-d275-4d92-b4ae-855eeb833487)
+![enrich](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/1e9e60fe-8b90-44f4-a675-00afaf0aa919)
 
 ### Enrich data
 
