@@ -28,6 +28,7 @@ apt-get update && apt install -y openjdk-11-jre-headless
 java --version
 ```
 
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/dd4d128c-5f07-4916-8c5d-3494c0062422)
 
 
 - Afin d'installer Kafka, téléchargez le package confluent 
@@ -36,10 +37,17 @@ java --version
 curl -O https://packages.confluent.io/archive/7.4/confluent-7.4.0.tar.gz
 ```
 
+- configurez le path (rajouter au bashrc et sourcer)
+
+```
+export CONFLUENT_HOME=/root/confluent-7.4.0
+export PATH=$PATH:$CONFLUENT_HOME/bin
+```
+
 <details><summary>
-  installation manuelle</summary> 
+  <sub>installation manuelle _(non nécessaire)_</sub></summary> 
   
- - Vous pouvez sinon télécharger directement la version binaire de Kafka en utilisant la commande suivante: 
+ - Plutôt que d'utiliser le package confluent, Vous pouvez sinon télécharger directement la version binaire de Kafka en utilisant la commande suivante: 
 
 ```
 wget https://archive.apache.org/dist/kafka/2.8.2/kafka_2.12-2.8.2.tgz
@@ -58,9 +66,6 @@ sudo mv kafka_2.12-2.8.2 /opt/kafka
 ```
 </details>
 
-
-
-![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/dd4d128c-5f07-4916-8c5d-3494c0062422)
 
 ## Exécution du Consumer et Producer
 
