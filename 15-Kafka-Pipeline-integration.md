@@ -96,7 +96,7 @@ output {
     hosts => "https://PRIVATE_IP_ADDRESS:9200"
     user=>"elastic"
     password=>"elastic"
-    index => "kafka_test"
+    index => "kafka_data"
     ssl => true
     cacert => "/etc/logstash/config/certs/http_ca.crt"
   }
