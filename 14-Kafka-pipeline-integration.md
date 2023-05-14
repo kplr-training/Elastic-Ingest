@@ -37,6 +37,12 @@ java --version
 curl -O https://packages.confluent.io/archive/7.4/confluent-7.4.0.tar.gz
 ```
 
+- Décompressez l'archive : 
+
+```
+tar xzf confluent-7.4.0.tar.gz
+```
+
 - configurez le path (rajouter au bashrc et sourcer)
 
 ```
@@ -77,8 +83,15 @@ Le Consumer, qui lit et traite les messages à partir d'un ou plusieurs topics d
 
 #### - Lancement du serveur
 
+
 - Dans la machine où vous avez le Fleet server, vous allez démarrer le serveur ZooKeeper dans un environnement Kafka. Pour ce faire, tapez la commande suivante: 
 
+```
+confluent local services kafka start
+```
+
+<details><summary>
+  <sub>lacement manuel _(non nécessaire)_</sub></summary> 
 ```
 bin/zookeeper-server-start.sh config/zookeeper.properties > zk.log &
 ```
@@ -88,8 +101,9 @@ cette commande lance le serveur ZooKeeper en utilisant la configuration spécifi
 - Maintenant, vous démarrez Kafka:
 
 ```
-bin/kafka-server-start.sh config/server.properties > ks.log &
+kafka-server-start config/server.properties > ks.log &
 ```
+ </details>
 
 #### - Création du topic
 
@@ -97,21 +111,24 @@ Un topic dans Apache Kafka est une catégorie ou un flux de messages qui peut ê
 
 Un topic peut être considéré comme un canal de communication où les producteurs envoient des messages et les consommateurs les lisent.
 
-- Pour créer un topic, vous tapez la commande suivant dans le répertoire `/opt/kafka`:
+- Pour créer un topic, vous tapez la commande suivante :
 ```
-bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic test-topic
+kafka-topics --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic test-topic
 ```
+
+Nota : Par défaut, la création d'un topic est automatique lors de l'écriture dans un topic via le console producer. 
+Cette étape est donc facultative.
 
 - Pour vérifier que le topic est bien créé, listez les topics existants:
 ```
-bin/kafka-topics.sh --list --bootstrap-server localhost:9092
+kafka-topics --list --bootstrap-server localhost:9092
 ```
 
 #### - Lancement du Consumer
 
 - Maintenant, vous lancez votre `Consumer` pour consommer les messages à partir du topic que vous avez créé dans Apache Kafka en utilisant la console.
 ```
-bin/kafka-console-consumer.sh --topic test-topic --from-beginning --bootstrap-server localhost:9092
+bin/kafka-console-consumer --topic test-topic --from-beginning --bootstrap-server localhost:9092
 ```
 
 **Lorsque des nouvelles données sont stocké dans le topic, vous allez les visualiser dans la console qui exécute cette commande**
@@ -123,7 +140,7 @@ bin/kafka-console-consumer.sh --topic test-topic --from-beginning --bootstrap-se
 - Maintenant, vous allez produire des données à l'aide du producer pour vérifier que Kafka fonctionne correctement. Pour ce faire, tapez cette commande en ajoutant votre adresse IP interne:  
 
 ```
-bin/kafka-console-producer.sh --broker-list YOUR-PRIVATE-IP-ADRESS:9092 --topic test-topic
+bin/kafka-console-producer --broker-list YOUR-PRIVATE-IP-ADRESS:9092 --topic test-topic
 ```
 
 - Ensuite saisissez des messages aléatoires pour tester et visualisez le résultat dans le consumer:
