@@ -80,7 +80,7 @@ filter {
 
 output {
   elasticsearch {
-    hosts => "https://IP-ADRESS:9200"
+    hosts => "https://PRIVATE_IP_ADDRESS:9200"
     user=>"elastic"
     password=>"elastic"
     index => "kafka_test"
