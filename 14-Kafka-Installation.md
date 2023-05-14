@@ -81,7 +81,7 @@ Le Consumer, qui lit et traite les messages à partir d'un ou plusieurs topics d
 
 ### 1- Consumer
 
-#### - Lancement du serveur
+#### Lancement du Serveur Kafka
 
 
 - Dans la machine où vous avez le Fleet server, vous allez démarrer le serveur ZooKeeper dans un environnement Kafka. Pour ce faire, tapez la commande suivante: 
@@ -105,7 +105,7 @@ kafka-server-start config/server.properties > ks.log &
 ```
  </details>
 
-#### - Création du topic
+### Création du topic
 
 Un topic dans Apache Kafka est une catégorie ou un flux de messages qui peut être publié et consommé. C'est une unité logique de regroupement de données dans un cluster Kafka. 
 
@@ -124,7 +124,7 @@ Cette étape est donc facultative.
 kafka-topics --list --bootstrap-server localhost:9092
 ```
 
-#### - Lancement du Consumer
+### Lancement du Consumer
 
 - Maintenant, vous lancez votre `Consumer` pour consommer les messages à partir du topic que vous avez créé dans Apache Kafka en utilisant la console.
 ```
@@ -135,7 +135,7 @@ bin/kafka-console-consumer --topic test-topic --from-beginning --bootstrap-serve
 
 ### 2- Producer
 
-#### Lancement du producer
+#### Lancement du Producer
 
 - Maintenant, vous allez produire des données à l'aide du producer pour vérifier que Kafka fonctionne correctement. Pour ce faire, tapez cette commande en ajoutant votre adresse IP interne:  
 
