@@ -51,7 +51,7 @@ export PATH=$PATH:$CONFLUENT_HOME/bin
 ```
 
 <details><summary>
-  <sub>installation manuelle _(non nécessaire)_</sub></summary> 
+  <sub>installation manuelle (non nécessaire)</sub></summary> 
   
  - Plutôt que d'utiliser le package confluent, Vous pouvez sinon télécharger directement la version binaire de Kafka en utilisant la commande suivante: 
 
@@ -91,7 +91,7 @@ confluent local services kafka start
 ```
 
 <details><summary>
-  <sub>lacement manuel _(non nécessaire)_</sub></summary> 
+  <sub>lacement manuel (non nécessaire)</sub></summary> 
 ```
 bin/zookeeper-server-start.sh config/zookeeper.properties > zk.log &
 ```
