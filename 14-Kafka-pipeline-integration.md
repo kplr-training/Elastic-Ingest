@@ -28,7 +28,15 @@ apt-get update && apt install -y openjdk-11-jre-headless
 java --version
 ```
 
-- Afin d'installer Kafka, téléchargez la version binaire de Kafka en utilisant la commande suivante: 
+
+
+- Afin d'installer Kafka, téléchargez le package confluent 
+
+```
+curl -O https://packages.confluent.io/archive/7.4/confluent-7.4.0.tar.gz
+```
+
+- Vous pouvez sinon télécharger directement la version binaire de Kafka en utilisant la commande suivante: 
 
 ```
 wget https://archive.apache.org/dist/kafka/2.8.2/kafka_2.12-2.8.2.tgz
