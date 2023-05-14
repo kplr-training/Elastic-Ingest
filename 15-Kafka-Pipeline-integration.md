@@ -43,6 +43,8 @@ output {
 ```
 - **Gardez le Consumer lancé pour visualiser les données qui arrivent au Topic.**
 
+`kafka-console-consumer --topic test-topic --from-beginning --bootstrap-server localhost:9092`
+
 ⚠️ Lorsque vous avez créé votre agent policy, une intégration système a automatiquement été créée. 
 Si c'est le cas, votre consumer doit afficher en continu les logs provenant de votre système ubuntu agent.
 
