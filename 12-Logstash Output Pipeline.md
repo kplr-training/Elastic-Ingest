@@ -39,8 +39,8 @@ filter {
 
 output {
   elasticsearch {
-    hosts => "https://X.X.X.X:9200"
-    api_key => "XXXXXXXXXXXXXXXXXXXXXXX"
+    hosts => "https://FILL_IP_ADDRESS:9200"
+    api_key => "FILL_API_KEY"
     data_stream => true
     ssl => true
     cacert => "/etc/logstash/config/certs/http_ca.crt"
