@@ -8,7 +8,7 @@ Donc vous devez d'abord configurer une pipeline qui permet d'ingérer les donné
 
 Ensuite, vous configurez une pipeline qui permet d'ingérer les données à partir du `Topic` et les envoyer vers ElasticSearch.
 
-### Pipeline Elastic Agent --> Kafka
+### Pipeline Elastic Agent => Kafka
 
 - Pour configurer cette pipeline, créez un fichier de configuration `elastic-agent-pipeline-kafka-output.conf`.
 - Ce fichier va représenter une configuration basique de Logstash pour recevoir des données à partir d'Elastic Agent via le protocole Elastic Agent Input et les envoyer vers un topic Kafka spécifique. 
@@ -50,7 +50,7 @@ output {
 
 **Maintenant, on peut bien dire que les logs sont bien récupérés à partir du fichier de log et bien envoyés vers le topic de Kafka**
 
-### Pipeline  Kafka --> ElasticSearch
+### Pipeline  Kafka => ElasticSearch
 
 - Pour configurer cette pipeline, créez un fichier de configuration `elastic-agent-pipeline-kafka-input.conf`.
 
