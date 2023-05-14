@@ -39,7 +39,7 @@ filter {
 
 output {
   elasticsearch {
-    hosts => "https://FILL_IP_ADDRESS:9200"
+    hosts => "https://PRIVATE_IP_ADDRESS:9200"
     api_key => "FILL_API_KEY"
     data_stream => true
     ssl => true
