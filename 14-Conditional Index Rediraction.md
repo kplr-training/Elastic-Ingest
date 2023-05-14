@@ -1,4 +1,4 @@
-## Elasticsearch output vers différentss indices
+## Redirection Conditionnelle d'Elasticsearch output vers différents indiex
 
 Si vous envoyez des événements vers le même cluster Elasticsearch, mais que vous ciblez des index différents, vous pouvez: 
 
