@@ -192,7 +192,7 @@ input {
 }
 output {
   elasticsearch {
-    hosts => ["http://IP-ADRESS:9200"]
+    hosts => ["https://IP-ADRESS:9200"]
     index => "hello-logstash-%{+YYYY.MM.dd}"
     user => "elastic"
     password => "elastic"
