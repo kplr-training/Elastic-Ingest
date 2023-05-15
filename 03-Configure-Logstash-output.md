@@ -170,7 +170,7 @@ cat /etc/logstash/config/certs/client/client.key
 
 ![image](https://user-images.githubusercontent.com/123748177/235361083-74685b14-09da-48ef-94bd-1c4e303dbfe9.png)
 
-11- Créez le fichier `vi /etc/logstash/elastic-agent-pipeline.conf` et ajoutez la configuration suivante <br>
+### 11- Créez le fichier `vi /etc/logstash/elastic-agent-pipeline.conf` et ajoutez la configuration suivante <br>
 **IMPORTANT:**
 ⚠️ 1 - vous devez faire super attention à ce que les chemins des certificats soient corrects<br>
 ⚠️ 2 - les chemins des certificats doivent être accessibles  pour éviter les soucis (chmod au besoin)<br>
