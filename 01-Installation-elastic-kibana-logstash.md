@@ -205,6 +205,7 @@ output {
 Vous copiez le fichier de certificat d'Elasticsearch dans le répertoire des certificats de Logstash:
 
 ```
+mkdir /etc/logstash/config/certs/
 cp /etc/elasticsearch/certs/http_ca.crt  /etc/logstash/config/certs/http_ca.crt
 ```
 
