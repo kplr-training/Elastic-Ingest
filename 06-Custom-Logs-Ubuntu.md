@@ -1,6 +1,6 @@
 ## Création d'une nouvelle intégration
 
-Dans cette partie, vous allez créé une intégration de type `Custom logs`:
+Dans cette partie, vous allez créer une intégration de type `Custom logs`:
 
 Pour ajouter cette intégration, redirigez vous vers l'interface `Integrations` dans le menu `Management`.
 
