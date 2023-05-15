@@ -100,8 +100,8 @@ cat /etc/logstash/config/certs/ca/ca.crt
 ```
 /usr/share/elasticsearch/bin/elasticsearch-certutil cert \
   --name client \
-  --ca-cert /etc/elasticsearch/certs/ca/ca.crt \
-  --ca-key /etc/elasticsearch/certs/ca/ca.key \
+  --ca-cert /etc/logstash/config/certs/ca/ca.crt \
+  --ca-key /etc/logstash/config/certs/ca/ca.key \
   --pem
   --out /etc/logstash/config/certs/client.zip
 ```
@@ -119,8 +119,8 @@ unzip /etc/logstash/config/certs/client.zip
 ```
 /usr/share/elasticsearch/bin/elasticsearch-certutil cert \
   --name logstash \
-  --ca-cert /etc/elasticsearch/certs/ca/ca.crt \
-  --ca-key /etc/elasticsearch/certs/ca/ca.key \
+  --ca-cert /etc/logstash/config/certs/ca/ca.crt \
+  --ca-key /etc/logstash/config/certs/ca/ca.key \
   --pem
    --out /etc/logstash/config/certs/logstash.zip
 
