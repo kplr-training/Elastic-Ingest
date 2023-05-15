@@ -183,6 +183,10 @@ Dans le répertoire `etc/logstash`, créez les deux fichiers suivants :
 
 - `easy-pipeline.conf` dans lequel vous tapez la configuration suivante:
 
+⚠️ CHANGEZ l'ADRESSE IP en renseignant l'adresse IP PRIVEE ⚠️
+⚠️ SI vous avez changé le mot de passe, changez-le également dans le champ password :warning:
+
+
 ```
 input {
   file {
@@ -195,7 +199,7 @@ output {
     hosts => ["https://IP-ADRESS:9200"]
     index => "hello-logstash-%{+YYYY.MM.dd}"
     user => "elastic"
-    password => "elastic"
+    password => "elastic" 
     ssl => true
     cacert => "/etc/logstash/config/certs/http_ca.crt"
   }
