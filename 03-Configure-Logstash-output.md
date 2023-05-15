@@ -102,7 +102,7 @@ cat /etc/logstash/config/certs/ca/ca.crt
   --name client \
   --ca-cert /etc/logstash/config/certs/ca/ca.crt \
   --ca-key /etc/logstash/config/certs/ca/ca.key \
-  --pem
+  --pem \
   --out /etc/logstash/config/certs/client.zip
 ```
 Extrayez le fichier zip :
@@ -121,7 +121,7 @@ unzip /etc/logstash/config/certs/client.zip
   --name logstash \
   --ca-cert /etc/logstash/config/certs/ca/ca.crt \
   --ca-key /etc/logstash/config/certs/ca/ca.key \
-  --pem
+  --pem \
    --out /etc/logstash/config/certs/logstash.zip
 
 ```
