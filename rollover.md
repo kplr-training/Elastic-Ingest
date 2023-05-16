@@ -49,6 +49,8 @@ La durée de rétention du rollover peut être déterminée en fonction des beso
 
 Il convient de noter que la durée de rétention du rollover est généralement configurable et peut être ajustée en fonction des politiques de rétention des données de l'entreprise ou des exigences réglementaires.
 
+## Exemples
+
 Dans Elasticsearch, vous pouvez configurer la durée de rétention des données en utilisant la fonctionnalité de rollover combinée avec des politiques d'indexation et de suppression. Voici quelques exemples de configuration :
 
 ### Exemple 1: Durée de rétention basée sur la date
