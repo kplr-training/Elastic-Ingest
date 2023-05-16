@@ -14,6 +14,10 @@ Vous aurez toute la liste des canaux de journal d'événements disponibles affic
 
 - **Ce qui nous intèresse c'est le canal `Microsoft-Windows-WMI-Activity/Operational` qu'on va ingérer par la suite** 
 
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/768eeaed-a283-4773-b634-54a553f1746f)
+
+![image](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/ece60e4f-777a-45d9-8bd8-68b2f988512d)
+
 ## Création d'un Ingest Pipeline
 
 Vous pouvez créer votre Ingest Pipeline de deux façons: 
