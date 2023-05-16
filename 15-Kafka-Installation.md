@@ -140,7 +140,7 @@ kafka-console-consumer --topic test-topic --from-beginning --bootstrap-server lo
 - Maintenant, vous allez produire des données à l'aide du producer pour vérifier que Kafka fonctionne correctement. Pour ce faire, tapez cette commande en ajoutant votre adresse IP interne:  
 
 ```
-bin/kafka-console-producer --broker-list YOUR-PRIVATE-IP-ADRESS:9092 --topic test-topic
+kafka-console-producer --broker-list YOUR-PRIVATE-IP-ADRESS:9092 --topic test-topic
 ```
 
 - Ensuite saisissez des messages aléatoires pour tester et visualisez le résultat dans le consumer:
