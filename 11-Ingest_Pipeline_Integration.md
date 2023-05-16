@@ -57,6 +57,23 @@ Votre processeur Grok sera utilisé pour extraire: l'adresse IP, le nom de la vi
 
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/d26b94f3-b921-4388-be4d-ee86a990888d)
 
+#### Notes:
+
+Voici les motifs Grok couramment utilisés :
+- ``%{WORD}` : Matche un mot d'une ou plusieurs lettres.
+- `%{NUMBER}` : Matche un nombre (entier ou décimal).
+- `%{IP}` : Matche une adresse IP (v4 ou v6).
+- `%{URI}` : Matche une URI générique.
+- `%{URLHOST}` : Matche un nom de domaine.
+- `%{PATH}` : Matche un chemin de fichier ou d'URL.
+- `%{GREEDYDATA}` : Matche toute la chaîne de caractères jusqu'à la fin de la ligne.
+- `%{TIMESTAMP_ISO8601}` : Matche une date et une heure au format ISO 8601.
+- `%{SYSLOG5424SD}` : Matche les données structurées (SD) dans les messages Syslog au format RFC5424.
+- `%{LOGLEVEL}` : Matche un niveau de log (DEBUG, INFO, WARN, ERROR, FATAL).
+
+**Le motif Grok %{GREEDYDATA} est extrêmement utile lorsqu'il s'agit de traiter des chaînes de caractères non structurées ou de longueurs variables.**
+
+**L'utilité de %{GREEDYDATA} réside dans le fait qu'il peut être utilisé pour capturer des parties de texte qui peuvent varier d'une ligne de log à l'autre, sans avoir à spécifier un motif précis pour chaque cas possible. Cela permet de traiter des logs avec des formats non standardisés ou des messages avec des informations variables.**
 
 - N'oubliez pas de valider !
 
