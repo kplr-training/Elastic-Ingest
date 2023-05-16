@@ -5,11 +5,9 @@ Dans Elasticsearch, le rollover est un mécanisme intégré qui permet la gestio
 Le rollover est souvent utilisé pour gérer la croissance des données, maintenir des performances élevées et simplifier la gestion des index. Il est couramment utilisé dans les cas où les volumes de données sont importants et nécessitent une répartition efficace pour éviter les problèmes de performance.
 
 ### Liens importants
-- https://www.elastic.co/guide/en/elasticsearch/reference/current/index-rollover.html
-- https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-rollover-index.html
 - https://www.elastic.co/guide/en/elasticsearch/reference/current/ilm-rollover.html
-- 
-
+- https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-rollover-index.html
+- https://www.elastic.co/guide/en/elasticsearch/reference/current/index-rollover.html
 
 ### Comment fonctionne le rollover dans Elasticsearch?
 
