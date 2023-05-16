@@ -60,7 +60,7 @@ Votre processeur Grok sera utilisé pour extraire: l'adresse IP, le nom de la vi
 #### Notes:
 
 Voici les motifs Grok couramment utilisés :
-- ``%{WORD}` : Matche un mot d'une ou plusieurs lettres.
+- `%{WORD}` : Matche un mot d'une ou plusieurs lettres.
 - `%{NUMBER}` : Matche un nombre (entier ou décimal).
 - `%{IP}` : Matche une adresse IP (v4 ou v6).
 - `%{URI}` : Matche une URI générique.
