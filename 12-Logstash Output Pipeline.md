@@ -92,6 +92,10 @@ Selectionnez l'onglet settings
 ![Image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/efa4863c-d4b5-4177-b26d-6359b5e2db87)
 
 - Pour pouvoir utiliser l'Output de type Logstash, vous devez avoir une licence.
+
+![Screenshot 2023-05-16 at 14 30 53](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/bd7823af-85cb-4c8f-876a-e8fd8575c709)
+
+
 - Autrement, l'option logstash est disponible mais grisée : 
 
 ![grayedout](https://github.com/kplr-training/Elastic-Ingest/assets/123651815/ebaaf97b-3a9a-411d-a272-007967679068)
