@@ -188,3 +188,4 @@ output {
 ![image](https://github.com/kplr-training/Elastic-Ingest/assets/123748177/e6a74035-0816-4627-ae81-fdb2bf8d133e)
 
 **Et Voilà! vous pouvez bien vérifiez que le message est bien stocké dans le datastream et vous avez ainsi le champ `a_logstash_field` qui est ajouté** 
+
