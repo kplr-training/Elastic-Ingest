@@ -92,9 +92,11 @@ confluent local services kafka start
 
 <details><summary>
   <sub>lacement manuel (non nécessaire)</sub></summary> 
+
+Starting zookeper
 ```
 bin/zookeeper-server-start.sh config/zookeeper.properties > zk.log &
-```
+``` 
 
 cette commande lance le serveur ZooKeeper en utilisant la configuration spécifiée dans config/zookeeper.properties, redirige la sortie vers le fichier zk.log et exécute le processus en arrière-plan pour assurer le bon fonctionnement de ZooKeeper dans l'environnement Kafka.
 
